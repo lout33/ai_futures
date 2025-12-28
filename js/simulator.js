@@ -41,6 +41,7 @@ class NarrativeEngine {
                     this.update();
                     this.clearPresetSelection();
                     this.updateLastUpdate();
+                    this.highlightNarrativeSection(key);
                 });
                 
                 this.sliders[key].addEventListener('mouseenter', () => this.highlightFactor(key));
@@ -269,10 +270,13 @@ class NarrativeEngine {
             const sectionContent = yearData.sections[factorKey][level];
             
             narrativeHTML += `
-                <div class="narrative-section-block">
-                    <div class="section-header">
+                <div class="narrative-section-block" data-factor="${factorKey}">
+                    <div class="section-header" onclick="window.narrativeEngine.toggleSection(this)">
                         <span class="section-icon">${factorIcons[factorKey]}</span>
                         <span class="section-title">${FACTORS[factorKey].name}</span>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
                     </div>
                     <p class="section-content">${sectionContent}</p>
                 </div>
@@ -370,6 +374,32 @@ class NarrativeEngine {
         }
     }
 
+    toggleSection(headerEl) {
+        const block = headerEl.closest('.narrative-section-block');
+        if (block) {
+            block.classList.toggle('expanded');
+        }
+    }
+
+    highlightNarrativeSection(factorKey) {
+        // Remove previous highlights
+        document.querySelectorAll('.narrative-section-block.highlighted').forEach(el => {
+            el.classList.remove('highlighted');
+        });
+        
+        // Find and highlight the matching section
+        const section = document.querySelector(`.narrative-section-block[data-factor="${factorKey}"]`);
+        if (section) {
+            section.classList.add('highlighted', 'expanded');
+            section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Remove highlight after animation
+            setTimeout(() => {
+                section.classList.remove('highlighted');
+            }, 1500);
+        }
+    }
+
     updateLastUpdate() {
         if (this.lastUpdate) {
             this.lastUpdate.textContent = 'just now';
@@ -461,4 +491,5 @@ Tips:
 document.addEventListener('DOMContentLoaded', () => {
     const engine = new NarrativeEngine();
     engine.loadFromURL();
+    window.narrativeEngine = engine;
 });
