@@ -1,0 +1,246 @@
+{
+  "predictionMarkets": {
+    "metaculus": {
+      "name": "Metaculus",
+      "agiQuestion": "https://www.metaculus.com/questions/5121/date-of-artificial-general-intelligence/",
+      "conditionalAgi": "https://www.metaculus.com/questions/17124/conditional-date-of-artificial-general-intelligence/",
+      "description": "Community forecasting platform with rigorous methodology"
+    },
+    "manifold": {
+      "name": "Manifold Markets",
+      "agiTimelines": "https://manifold.markets/news/agi",
+      "agiBefore2030": "https://manifold.markets/RemNi/will-we-get-agi-before-2030",
+      "agiBefore2028": "https://manifold.markets/MarioCannistra/will-we-get-agi-before-2028",
+      "description": "Play-money prediction market"
+    },
+    "polymarket": {
+      "name": "Polymarket",
+      "aiMarkets": "https://polymarket.com/predictions/artificial-intelligence",
+      "openaiAgi2027": "https://polymarket.com/event/openai-announces-it-has-achieved-agi-before-2027",
+      "openaiAgi2025": "https://polymarket.com/event/openai-announces-it-has-achieved-agi-in-2025",
+      "description": "Real-money prediction market, high liquidity"
+    },
+    "kalshi": {
+      "name": "Kalshi",
+      "agiMarket": "https://kalshi.com/markets/kxoaiagi/openai-achieves-agi",
+      "aiMarkets": "https://kalshi.com/markets/oaiagi/openai-achieves-agi",
+      "description": "CFTC-regulated prediction market, institutional credibility"
+    },
+    "agiDashboard": {
+      "name": "AGI Timelines Dashboard",
+      "url": "https://agi.goodheartlabs.com/",
+      "vercel": "https://agi-timelines-dashboard.vercel.app/",
+      "description": "Aggregates Metaculus, Manifold, and Kalshi forecasts"
+    }
+  },
+
+  "benchmarks": {
+    "sweBench": {
+      "name": "SWE-bench",
+      "leaderboard": "https://www.swebench.com/",
+      "verified": "https://llm-stats.com/benchmarks/swe-bench-verified",
+      "pro": "https://scale.com/leaderboard/swe_bench_pro_public",
+      "description": "Real GitHub issue resolution benchmark"
+    },
+    "arcAgi": {
+      "name": "ARC-AGI",
+      "main": "https://arcprize.org/",
+      "o3Breakthrough": "https://arcprize.org/blog/oai-o3-pub-breakthrough",
+      "arcAgi2": "https://arcprize.org/blog/announcing-arc-agi-2-and-arc-prize-2025",
+      "description": "Abstraction and reasoning benchmark for novel problem-solving"
+    },
+    "gpqa": {
+      "name": "GPQA",
+      "leaderboard": "https://llm-stats.com/benchmarks/gpqa",
+      "vals": "https://www.vals.ai/benchmarks/gpqa-03-11-2025",
+      "description": "Graduate-level Google-Proof Q&A. PhD-level science questions"
+    },
+    "mmluPro": {
+      "name": "MMLU-Pro",
+      "huggingface": "https://huggingface.co/spaces/TIGER-Lab/MMLU-Pro",
+      "github": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+      "artificialAnalysis": "https://artificialanalysis.ai/evaluations/mmlu-pro",
+      "llmStats": "https://llm-stats.com/benchmarks/mmlu-pro",
+      "description": "10-option graduate-level questions across 14 subjects"
+    },
+    "simpleQA": {
+      "name": "SimpleQA",
+      "openai": "https://openai.com/index/introducing-simpleqa/",
+      "description": "Factual accuracy benchmark. 4,326 fact-seeking questions"
+    },
+    "humanEval": {
+      "name": "HumanEval",
+      "description": "Code generation benchmark. 164 Python programming problems"
+    },
+    "frontierMath": {
+      "name": "FrontierMath",
+      "epochAi": "https://epoch.ai/frontiermath",
+      "description": "Research-level math. Expert problems taking hours to days to solve"
+    },
+    "epochAi": {
+      "name": "Epoch AI Benchmarks",
+      "url": "https://epoch.ai/benchmarks",
+      "description": "Comprehensive AI benchmarks tracking"
+    },
+    "lmCouncil": {
+      "name": "LM Council Benchmarks",
+      "url": "https://lmcouncil.ai/benchmarks",
+      "description": "AI model benchmarks comparison"
+    },
+    "llmStats": {
+      "name": "LLM Stats",
+      "url": "https://llm-stats.com",
+      "benchmarks": "https://llm-stats.com/benchmarks",
+      "description": "Comprehensive LLM benchmark leaderboards"
+    }
+  },
+
+  "news": {
+    "openai": {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/",
+      "changelog": "https://platform.openai.com/docs/changelog"
+    },
+    "anthropic": {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news"
+    },
+    "deepmind": {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/discover/blog/"
+    },
+    "techCrunch": {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/"
+    },
+    "theDecoder": {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/",
+      "description": "AI news and analysis"
+    }
+  },
+
+  "regulation": {
+    "whitehouse": {
+      "name": "White House AI Policy",
+      "trumpEO": "https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/",
+      "description": "Executive orders and federal AI policy"
+    },
+    "nyRaiseAct": {
+      "name": "NY RAISE Act",
+      "announcement": "https://www.governor.ny.gov/news/governor-hochul-signs-nation-leading-legislation-require-ai-frameworks-ai-frontier-models",
+      "techcrunch": "https://techcrunch.com/2025/12/20/new-york-governor-kathy-hochul-signs-raise-act-to-regulate-ai-safety/"
+    },
+    "euAiAct": {
+      "name": "EU AI Act",
+      "url": "https://artificialintelligenceact.eu/",
+      "description": "European Union AI regulation"
+    }
+  },
+
+  "safety": {
+    "anthropicRsp": {
+      "name": "Anthropic RSP",
+      "current": "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy",
+      "original": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+      "description": "Responsible Scaling Policy with ASL levels"
+    },
+    "openaiPreparedness": {
+      "name": "OpenAI Preparedness",
+      "description": "OpenAI's risk-informed development policy"
+    },
+    "fasAnalysis": {
+      "name": "FAS RSP Analysis",
+      "url": "https://fas.org/publication/scaling-ai-safety/",
+      "description": "Federation of American Scientists analysis of scaling policies"
+    }
+  },
+
+  "analysis": {
+    "80000hours": {
+      "name": "80,000 Hours AGI Forecasts",
+      "url": "https://80000hours.org/2025/03/when-do-experts-expect-agi-to-arrive/",
+      "description": "Expert forecast analysis"
+    },
+    "lesswrong": {
+      "name": "LessWrong",
+      "forecastingAgi": "https://www.lesswrong.com/posts/dRbvHfEwb6Cuf6xn3/forecasting-agi-insights-from-prediction-markets-and-1",
+      "description": "AI safety and forecasting community"
+    },
+    "stanfordAiIndex": {
+      "name": "Stanford AI Index",
+      "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report/technical-performance",
+      "description": "Annual comprehensive AI progress report"
+    },
+    "crunchbase": {
+      "name": "Crunchbase AI Funding",
+      "url": "https://news.crunchbase.com/ai/big-funding-trends-charts-eoy-2025/",
+      "description": "AI investment and funding data"
+    },
+    "goldmanSachs": {
+      "name": "Goldman Sachs AI Research",
+      "url": "https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026",
+      "description": "Financial analysis of AI sector"
+    }
+  },
+
+  "scenarios": {
+    "ai2027": {
+      "name": "AI-2027",
+      "url": "https://ai-2027.com/",
+      "description": "Month-by-month AGI scenario by Kokotajlo & Alexander"
+    },
+    "situationalAwareness": {
+      "name": "Situational Awareness",
+      "url": "https://situational-awareness.ai/",
+      "description": "Leopold Aschenbrenner's thesis"
+    },
+    "machinesOfLovingGrace": {
+      "name": "Machines of Loving Grace",
+      "url": "https://www.darioamodei.com/essay/machines-of-loving-grace",
+      "description": "Dario Amodei's optimistic vision"
+    },
+    "ukGov": {
+      "name": "UK Government AI Scenarios",
+      "url": "https://www.gov.uk/government/publications/frontier-ai-capabilities-and-risks-discussion-paper",
+      "description": "Official UK policy scenarios"
+    },
+    "garyMarcus": {
+      "name": "Gary Marcus Substack",
+      "url": "https://garymarcus.substack.com/",
+      "description": "AI skeptic perspective"
+    }
+  },
+
+  "experts": {
+    "hinton": {
+      "name": "Geoffrey Hinton",
+      "cnn": "https://www.cnn.com/2025/08/13/tech/ai-geoffrey-hinton",
+      "wbur": "https://www.wbur.org/onpoint/2025/01/10/ai-geoffrey-hinton-physics-nobel-prize",
+      "description": "Godfather of AI, Nobel laureate"
+    },
+    "lecun": {
+      "name": "Yann LeCun",
+      "fastcompany": "https://www.fastcompany.com/91462273/yann-lecun-artificial-general-intelligence-databricks-google-gemini-3-flash",
+      "fortune": "https://fortune.com/2025/12/19/yann-lecun-ami-labs-ai-startup-valuation-meta-departure/",
+      "description": "Meta AI Chief (departed Dec 2025), Turing Award winner"
+    },
+    "altman": {
+      "name": "Sam Altman",
+      "time": "https://time.com/7205596/sam-altman-superintelligence-agi/",
+      "description": "OpenAI CEO"
+    },
+    "amodei": {
+      "name": "Dario Amodei",
+      "benzinga": "https://www.benzinga.com/tech/24/11/41928832/anthropic-ceo-says-ai-similar-to-human-intelligence-could-be-around-the-corner-well-get-there-by-2026-or-2027",
+      "cnn": "https://edition.cnn.com/2025/05/29/business/anthropic-amodei-cnn-anderson-cooper-takeaways",
+      "description": "Anthropic CEO"
+    },
+    "ord": {
+      "name": "Toby Ord",
+      "precipice": "https://www.tobyord.com/writing/the-precipice-revisited",
+      "research": "https://www.tobyord.com/research",
+      "description": "Oxford philosopher, author of The Precipice"
+    }
+  }
+}

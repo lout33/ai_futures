@@ -1,0 +1,260 @@
+{
+  "lastUpdated": "2025-12-21",
+
+  "experts": [
+    {
+      "id": "hinton",
+      "name": "Geoffrey Hinton",
+      "title": "Godfather of AI",
+      "affiliation": "University of Toronto (former Google)",
+      "credentials": "2024 Nobel Prize in Physics, Turing Award winner",
+      "stance": "moderate",
+      "predictions": {
+        "agiTimeline": "5-20 years",
+        "mostLikely": "10-20 years",
+        "existentialRisk": 0.15,
+        "existentialRiskRange": [0.10, 0.20]
+      },
+      "quotes": [
+        {
+          "text": "A reasonable bet is sometime between five and 20 years.",
+          "date": "2025-08",
+          "source": "Ai4 Conference"
+        },
+        {
+          "text": "I think it's going to be between 10 and 20 years before we have things more intelligent than ourselves.",
+          "date": "2025-07",
+          "source": "Interview"
+        },
+        {
+          "text": "AI has developed even faster than I thought.",
+          "date": "2025-04",
+          "source": "CBS Interview"
+        }
+      ],
+      "keyViews": [
+        "AI agents are more dangerous than question-answering AI",
+        "10-20% chance of AI eventually taking control from humans",
+        "Concerned about massive unemployment from AI"
+      ],
+      "sourceUrls": [
+        "https://www.cnn.com/2025/08/13/tech/ai-geoffrey-hinton",
+        "https://www.wbur.org/onpoint/2025/01/10/ai-geoffrey-hinton-physics-nobel-prize"
+      ]
+    },
+    {
+      "id": "lecun",
+      "name": "Yann LeCun",
+      "title": "AI Skeptic",
+      "affiliation": "AMI Labs (former Meta AI Chief)",
+      "credentials": "Turing Award winner",
+      "stance": "skeptic",
+      "predictions": {
+        "agiTimeline": "decades",
+        "mostLikely": "10+ years with long tail",
+        "llmsWillAchieveAgi": false
+      },
+      "quotes": [
+        {
+          "text": "The path to superintelligence - just train up the LLMs...is complete bullshit. It's just never going to work.",
+          "date": "2025-12",
+          "source": "AMI Labs announcement"
+        },
+        {
+          "text": "AGI is not around the corner. Creating it will take years, if not decades.",
+          "date": "2025-01",
+          "source": "Davos WEF"
+        },
+        {
+          "text": "I would be happy if at the end of my career, AI systems would be as smart as a cat.",
+          "date": "2025",
+          "source": "Interview"
+        }
+      ],
+      "keyViews": [
+        "LLMs cannot achieve human-level intelligence",
+        "Need fundamentally new approaches (world models)",
+        "AGI will not be a single event but gradual",
+        "Human intelligence is not 'general' - it's specialized"
+      ],
+      "sourceUrls": [
+        "https://www.fastcompany.com/91462273/yann-lecun-artificial-general-intelligence-databricks-google-gemini-3-flash",
+        "https://fortune.com/2025/12/19/yann-lecun-ami-labs-ai-startup-valuation-meta-departure/"
+      ]
+    },
+    {
+      "id": "altman",
+      "name": "Sam Altman",
+      "title": "OpenAI CEO",
+      "affiliation": "OpenAI",
+      "credentials": "Y Combinator President (former)",
+      "stance": "accelerationist",
+      "predictions": {
+        "agiTimeline": "2025-2028",
+        "mostLikely": "During Trump's term",
+        "confidence": "high"
+      },
+      "quotes": [
+        {
+          "text": "We are now confident we know how to build AGI as we have traditionally understood it.",
+          "date": "2025-01",
+          "source": "Personal blog"
+        },
+        {
+          "text": "In 2025, we may see the first AI agents 'join the workforce' and materially change the output of companies.",
+          "date": "2025-01",
+          "source": "Personal blog"
+        },
+        {
+          "text": "AGI will probably get developed during [Trump's] term.",
+          "date": "2025-01",
+          "source": "Bloomberg Interview"
+        }
+      ],
+      "keyViews": [
+        "Path to AGI is clear, now an engineering problem",
+        "AGI term has become sloppy",
+        "AI agents will join workforce in 2025"
+      ],
+      "sourceUrls": [
+        "https://time.com/7205596/sam-altman-superintelligence-agi/"
+      ]
+    },
+    {
+      "id": "amodei",
+      "name": "Dario Amodei",
+      "title": "Anthropic CEO",
+      "affiliation": "Anthropic",
+      "credentials": "Former VP Research at OpenAI",
+      "stance": "accelerationist",
+      "predictions": {
+        "agiTimeline": "2026-2027",
+        "mostLikely": "2-3 years from late 2024",
+        "jobImpact": "50% of entry-level white-collar jobs"
+      },
+      "quotes": [
+        {
+          "text": "We'll get there by 2026 or 2027.",
+          "date": "2024-11",
+          "source": "Lex Fridman Podcast"
+        },
+        {
+          "text": "Over the next two or three years...models that are yes, assistants to humans but that gradually get better than us at almost everything.",
+          "date": "2025-01",
+          "source": "Davos WEF"
+        }
+      ],
+      "keyViews": [
+        "AGI by 2026-2027 if current pace continues",
+        "Potential roadblocks: data scarcity, cluster scaling, geopolitics",
+        "AI could eliminate 50% of entry-level jobs",
+        "Unemployment could reach 20% in 1-5 years"
+      ],
+      "sourceUrls": [
+        "https://www.benzinga.com/tech/24/11/41928832/anthropic-ceo-says-ai-similar-to-human-intelligence-could-be-around-the-corner-well-get-there-by-2026-or-2027",
+        "https://edition.cnn.com/2025/05/29/business/anthropic-amodei-cnn-anderson-cooper-takeaways"
+      ]
+    },
+    {
+      "id": "ord",
+      "name": "Toby Ord",
+      "title": "Existential Risk Researcher",
+      "affiliation": "Oxford University",
+      "credentials": "Author of The Precipice, founder of Giving What We Can",
+      "stance": "moderate",
+      "predictions": {
+        "existentialRisk": 0.10,
+        "timeframe": "100 years",
+        "aiVsOtherRisks": "Roughly twice all other anthropogenic risks combined"
+      },
+      "quotes": [
+        {
+          "text": "I put AI risk as the biggest existential risk, albeit the most uncertain as well, and I would still say that.",
+          "date": "2025",
+          "source": "Interview"
+        }
+      ],
+      "keyViews": [
+        "10% existential catastrophe risk from AI over 100 years",
+        "AI is biggest existential risk but most uncertain",
+        "Existential catastrophe includes lock-in scenarios, not just extinction"
+      ],
+      "sourceUrls": [
+        "https://www.tobyord.com/writing/the-precipice-revisited",
+        "https://www.tobyord.com/research"
+      ]
+    },
+    {
+      "id": "hassabis",
+      "name": "Demis Hassabis",
+      "title": "Google DeepMind CEO",
+      "affiliation": "Google DeepMind",
+      "credentials": "2024 Nobel Prize in Chemistry",
+      "stance": "moderate",
+      "predictions": {
+        "agiTimeline": "10+ years",
+        "breakthroughsNeeded": "several major"
+      },
+      "quotes": [
+        {
+          "text": "Several major breakthroughs are still needed to achieve AGI and this could take at least a decade.",
+          "date": "2025",
+          "source": "Various interviews"
+        }
+      ],
+      "keyViews": [
+        "Multiple breakthroughs still needed",
+        "More cautious than OpenAI/Anthropic timelines"
+      ],
+      "sourceUrls": []
+    },
+    {
+      "id": "marcus",
+      "name": "Gary Marcus",
+      "title": "AI Skeptic",
+      "affiliation": "Independent researcher",
+      "credentials": "NYU Professor Emeritus, author",
+      "stance": "skeptic",
+      "predictions": {
+        "agiTimeline": "2035+",
+        "llmsWillAchieveAgi": false
+      },
+      "quotes": [
+        {
+          "text": "AGI is obviously not going to be here this year.",
+          "date": "2025",
+          "source": "Substack"
+        }
+      ],
+      "keyViews": [
+        "LLMs are not the path to AGI",
+        "Current hype is overblown",
+        "Need fundamentally new approaches like neurosymbolic AI",
+        "Lab leaders' AGI predictions keep shifting"
+      ],
+      "sourceUrls": [
+        "https://garymarcus.substack.com/"
+      ]
+    }
+  ],
+
+  "summary": {
+    "accelerationists": {
+      "experts": ["Sam Altman", "Dario Amodei"],
+      "medianTimeline": "2026-2027",
+      "view": "AGI imminent, path is clear"
+    },
+    "moderates": {
+      "experts": ["Geoffrey Hinton", "Demis Hassabis", "Toby Ord"],
+      "medianTimeline": "2030-2035",
+      "view": "AGI likely this decade, but significant risks"
+    },
+    "skeptics": {
+      "experts": ["Yann LeCun", "Gary Marcus"],
+      "medianTimeline": "2035+",
+      "view": "LLMs won't get there, need new paradigms"
+    }
+  },
+
+  "notes": "Expert predictions have wide variance. Accelerationists at major labs predict 2-3 years. Skeptics say decades. This disagreement itself is a signal - the field lacks consensus on fundamental questions."
+}

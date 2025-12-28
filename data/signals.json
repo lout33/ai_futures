@@ -1,0 +1,323 @@
+{
+  "lastUpdated": "2025-12-21",
+
+  "predictionMarkets": {
+    "metaculus": {
+      "agiBy2027": 0.25,
+      "agiBy2030": 0.50,
+      "agiBy2031": 0.50,
+      "weakAgiDate": "2027-10-31",
+      "forecasters": 1700,
+      "notes": "1,700 forecasters predict weak AGI by Oct 2027"
+    },
+    "manifold": {
+      "agiBy2025": 0.14,
+      "agiBy2028": 0.47,
+      "agiBy2030": 0.52,
+      "agiBy2035": 0.74,
+      "notes": "Play-money prediction market"
+    },
+    "polymarket": {
+      "openaiAgiBy2027": 0.15,
+      "openaiAgiBy2025": 0.05,
+      "volume": 6900,
+      "notes": "Real-money market, $6.9k volume on AGI 2027 question"
+    },
+    "kalshi": {
+      "hasAgiMarket": true,
+      "regulated": true,
+      "notes": "CFTC-regulated, institutional credibility"
+    },
+    "combined": {
+      "agiMedian": "2030",
+      "confidence80": ["2026", "2047"],
+      "source": "AGI Timelines Dashboard",
+      "notes": "Aggregates Metaculus, Manifold, Kalshi forecasts"
+    }
+  },
+
+  "capabilities": {
+    "sweBenchVerified": {
+      "topScore": 0.71,
+      "topModel": "Warp",
+      "claudeSonnet37": 0.703,
+      "notes": "Benchmark largely saturated, most top models >70%"
+    },
+    "sweBenchPro": {
+      "topScore": 0.233,
+      "topModel": "GPT-5",
+      "claudeOpus41": 0.231,
+      "notes": "New harder benchmark, significant drop from Verified"
+    },
+    "arcAgi": {
+      "o3Low": 0.757,
+      "o3High": 0.875,
+      "o1": 0.32,
+      "gpt4o": 0.05,
+      "humanLevel": 0.85,
+      "notes": "o3 breakthrough - first to approach human level"
+    },
+    "arcAgi2": {
+      "o3PreviewLow": 0.04,
+      "o3High": 0.20,
+      "notes": "New harder benchmark, scores much lower"
+    },
+    "gpqa": {
+      "gpt52Pro": 0.932,
+      "gemini3Pro": 0.919,
+      "claudeExtendedThinking": 0.833,
+      "gpt5": 0.857,
+      "humanExpert": 0.898,
+      "notes": "PhD-level science questions. GPT-5.2 Pro leads at 93.2%"
+    },
+    "mmluPro": {
+      "gemini3Pro": 0.901,
+      "deepseekGlm": 0.845,
+      "gpt4o": 0.726,
+      "saturated": true,
+      "notes": "10-option graduate-level questions. Benchmark largely saturated"
+    },
+    "simpleQA": {
+      "gemini": 0.721,
+      "gpt45": 0.625,
+      "gpt4o": 0.384,
+      "claude35Sonnet": 0.289,
+      "notes": "Factual accuracy benchmark. Most models <50%"
+    },
+    "humanEval": {
+      "o1": 0.963,
+      "claudeSonnet4": 0.951,
+      "claude35Sonnet": 0.92,
+      "gpt4o": 0.902,
+      "notes": "Code generation. Top models now >95%"
+    },
+    "frontierMath": {
+      "o4MiniHigh": 0.17,
+      "o3High": 0.10,
+      "o3Mini": 0.12,
+      "notes": "Research-level math. Very challenging - top score 17%"
+    },
+    "codeforces": {
+      "o3Rating": 2727,
+      "notes": "Grandmaster level competitive programming"
+    },
+    "aime2024": {
+      "o3Score": 0.967,
+      "notes": "Missed only 1 question"
+    }
+  },
+
+  "expertForecasts": {
+    "file": "experts.json",
+    "summary": {
+      "accelerationists": ["Sam Altman", "Dario Amodei"],
+      "moderates": ["Geoffrey Hinton", "Demis Hassabis"],
+      "skeptics": ["Yann LeCun", "Gary Marcus"],
+      "medianAgiYear": 2028,
+      "notes": "Wide disagreement. Range from 2025 to 'decades away'"
+    }
+  },
+
+  "aiResearcherSurveys": {
+    "aiImpacts2023": {
+      "name": "AI Impacts 2023 Survey",
+      "respondents": 2778,
+      "medianHLMI": 2047,
+      "p10HLMI": 2027,
+      "p90HLMI": 2100,
+      "hlmiBy2030": 0.10,
+      "hlmiBy2050": 0.50,
+      "notes": "High-Level Machine Intelligence survey of AI researchers. Median estimate 2047, but 10% chance by 2027.",
+      "source": "https://aiimpacts.org/2023-ai-survey/"
+    },
+    "epochSurvey2024": {
+      "name": "Epoch AI Survey 2024",
+      "respondents": 500,
+      "medianAgi": 2040,
+      "notes": "Survey of ML researchers at top conferences",
+      "source": "https://epochai.org"
+    },
+    "superforecasters2024": {
+      "name": "Superforecaster Estimates",
+      "medianAgi": 2035,
+      "notes": "Good Judgment superforecasters tend to be more conservative than prediction markets"
+    },
+    "combined": {
+      "academicMedian": 2040,
+      "industryMedian": 2030,
+      "gap": 10,
+      "notes": "Academic researchers more conservative than industry leaders by ~10 years"
+    }
+  },
+
+  "economic": {
+    "totalAiInvestment2025": {
+      "amount": 202300000000,
+      "currency": "USD",
+      "yoyGrowth": 0.75,
+      "shareOfGlobalVC": 0.50,
+      "notes": "$202.3B in 2025, up 75% YoY, ~50% of all global VC"
+    },
+    "openaiAnthropicQ1": {
+      "combined": 44500000000,
+      "shareOfUsVC": 0.49,
+      "notes": "OpenAI + Anthropic raised $44.5B in Q1 2025 alone"
+    },
+    "valuations": {
+      "openai": 500000000000,
+      "anthropic": 350000000000,
+      "notes": "OpenAI at $500B (largest private company ever), Anthropic ~$350B"
+    },
+    "revenue": {
+      "openaiAnnualized": 10000000000,
+      "anthropicRunRate": 5000000000,
+      "notes": "OpenAI $10B ARR by June 2025, Anthropic $5B by Aug 2025"
+    },
+    "computeCosts": {
+      "h100CloudHourly": 3.00,
+      "h100CloudPeak": 10.00,
+      "priceDecline2025": 0.65,
+      "notes": "H100 cloud dropped ~65% from peak ($10/hr to $3/hr)"
+    },
+    "trainingCosts": {
+      "gpt4": 78000000,
+      "geminiUltra": 191000000,
+      "notes": "Stanford AI Index 2025 estimates"
+    }
+  },
+
+  "safety": {
+    "rspFrameworks": {
+      "anthropic": {
+        "name": "Responsible Scaling Policy",
+        "hasFramework": true,
+        "aslLevels": true,
+        "currentLevel": "ASL-3",
+        "notes": "Updated 2024-2025. ASL-4 not yet defined"
+      },
+      "openai": {
+        "name": "Preparedness Framework",
+        "hasFramework": true,
+        "notes": "Living document, includes CBRN and persuasion risks"
+      },
+      "deepmind": {
+        "name": "Frontier Safety Framework",
+        "hasFramework": true,
+        "notes": "Similar approach to Anthropic/OpenAI"
+      }
+    },
+    "safetyPauses": 0,
+    "voluntaryCommitments": {
+      "whitehousePledge": true,
+      "signatories": ["OpenAI", "Anthropic", "Google", "Meta", "Microsoft"],
+      "notes": "July 2023 voluntary commitments"
+    },
+    "alignmentResearch": {
+      "labsWithDedicatedTeams": 4,
+      "notes": "Anthropic, OpenAI, DeepMind, Meta all have safety teams"
+    },
+    "existentialRiskEstimates": {
+      "tobyOrd": 0.10,
+      "hinton": 0.15,
+      "notes": "Ord: 10% AI x-risk over 100 years. Hinton: 10-20%"
+    }
+  },
+
+  "recentEvents": [
+    {
+      "date": "2025-12-20",
+      "event": "NY Governor signs RAISE Act - AI safety legislation",
+      "impact": "slowdown",
+      "magnitude": "medium",
+      "scenario": "regulation"
+    },
+    {
+      "date": "2025-12-19",
+      "event": "Yann LeCun leaves Meta, starts AMI Labs at $3.5B valuation",
+      "impact": "neutral",
+      "magnitude": "medium",
+      "scenario": "research"
+    },
+    {
+      "date": "2025-12-11",
+      "event": "Trump EO blocks state AI regulations, pushes federal framework",
+      "impact": "accelerates",
+      "magnitude": "medium",
+      "scenario": "deregulation"
+    },
+    {
+      "date": "2025-11-18",
+      "event": "Anthropic valued at $350B after Microsoft/Nvidia investment",
+      "impact": "accelerates",
+      "magnitude": "high",
+      "scenario": "investment"
+    },
+    {
+      "date": "2025-09-02",
+      "event": "Anthropic raises $13B at $183B valuation",
+      "impact": "accelerates",
+      "magnitude": "high",
+      "scenario": "investment"
+    },
+    {
+      "date": "2025-06-10",
+      "event": "OpenAI releases o3-pro - 'most capable model yet'",
+      "impact": "accelerates",
+      "magnitude": "high",
+      "scenario": "capabilities"
+    },
+    {
+      "date": "2025-04-16",
+      "event": "OpenAI releases o3 and o4-mini",
+      "impact": "accelerates",
+      "magnitude": "high",
+      "scenario": "capabilities"
+    },
+    {
+      "date": "2025-04-01",
+      "event": "OpenAI raises $40B from SoftBank - largest private tech round ever",
+      "impact": "accelerates",
+      "magnitude": "very_high",
+      "scenario": "investment"
+    },
+    {
+      "date": "2024-12-20",
+      "event": "o3 announced - scores 87.5% on ARC-AGI",
+      "impact": "accelerates",
+      "magnitude": "very_high",
+      "scenario": "capabilities"
+    }
+  ],
+
+  "labBehavior": {
+    "safetyPauses": 0,
+    "majorReleases2025": 6,
+    "openSourceMajorReleases": 3,
+    "governmentPartnerships": 3,
+    "notes": "No voluntary pauses, rapid release cadence continues"
+  },
+
+  "regulation": {
+    "usExecutiveOrders": {
+      "proAcceleration": 1,
+      "proSafety": 0,
+      "notes": "Trump admin favoring deregulation"
+    },
+    "stateLaws": {
+      "passed": 2,
+      "states": ["California", "New York"],
+      "notes": "RAISE Act and CA safety bill"
+    },
+    "euAiAct": {
+      "status": "in_force",
+      "enforcementDate": "2025-08-02"
+    }
+  },
+
+  "industrySignals": {
+    "anthropicOpenAISupportRegulation": true,
+    "majorLabsRacing": true,
+    "chinaCompetition": "intensifying",
+    "notes": "Labs publicly support regulation while competing intensely"
+  }
+}
