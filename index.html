@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Futures Simulator - Narrative Engine</title>
+    <meta name="description" content="Explore how different choices shape the future of AI. An interactive simulator showing how key factors influence whether we head toward flourishing or decline.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Futures Simulator - <span class="accent">NARRATIVE ENGINE</span></h1>
+        </header>
+
+        <div class="main-content">
+            <!-- LEFT SIDE: Factor Configuration (45%) -->
+            <div class="left-panel">
+                <div class="panel-label">FACTOR CONFIGURATION</div>
+                
+                <div class="factors-container">
+                    <!-- Factor 1: AI Autonomy -->
+                    <div class="factor-card" data-factor="autonomy">
+                        <div class="factor-header">
+                            <span class="factor-label-left">HUMAN-IN-THE-LOOP</span>
+                            <span class="factor-title">AI Autonomy</span>
+                            <span class="factor-label-right">FULL AUTONOMY</span>
+                        </div>
+                        <div class="slider-track">
+                            <input type="range" id="autonomy" min="0" max="100" value="25">
+                            <div class="slider-glow"></div>
+                        </div>
+                        <div class="impact-preview" id="impact-autonomy">
+                            Moderate increase in independent system decision making, leading to faster optimization but requiring robust oversight.
+                        </div>
+                        <div class="connection-line" data-target="safety-concerns"></div>
+                    </div>
+
+                    <!-- Factor 2: Data Privacy -->
+                    <div class="factor-card" data-factor="privacy">
+                        <div class="factor-header">
+                            <span class="factor-label-left">STRICT PROTECTION</span>
+                            <span class="factor-title">Data Privacy</span>
+                            <span class="factor-label-right">OPEN ACCESS</span>
+                        </div>
+                        <div class="slider-track">
+                            <input type="range" id="privacy" min="0" max="100" value="30">
+                            <div class="slider-glow"></div>
+                        </div>
+                        <div class="impact-preview" id="impact-privacy">
+                            High focus on individual rights and consent limits data availability, slowing some AI advancements but boosting public trust.
+                        </div>
+                        <div class="connection-line" data-target="data-regulations"></div>
+                    </div>
+
+                    <!-- Factor 3: Technological Speed -->
+                    <div class="factor-card" data-factor="speed">
+                        <div class="factor-header">
+                            <span class="factor-label-left">SLOW & STEADY</span>
+                            <span class="factor-title">Technological Speed</span>
+                            <span class="factor-label-right">RAPID INNOVATION</span>
+                        </div>
+                        <div class="slider-track">
+                            <input type="range" id="speed" min="0" max="100" value="50">
+                            <div class="slider-glow"></div>
+                        </div>
+                        <div class="impact-preview" id="impact-speed">
+                            Balanced pace of development allows for regulatory adaptation but risks falling behind in global competition.
+                        </div>
+                    </div>
+
+                    <!-- Factor 4: Socioeconomic Impact -->
+                    <div class="factor-card" data-factor="economy">
+                        <div class="factor-header">
+                            <span class="factor-label-left">UNIVERSAL BASIC INCOME</span>
+                            <span class="factor-title">Socioeconomic Impact</span>
+                            <span class="factor-label-right">MARKET-DRIVEN ADAPTATION</span>
+                        </div>
+                        <div class="slider-track">
+                            <input type="range" id="economy" min="0" max="100" value="75">
+                            <div class="slider-glow"></div>
+                        </div>
+                        <div class="impact-preview" id="impact-economy">
+                            Emphasis on retraining and market solutions for displaced workers, creating initial instability but potentially new job sectors.
+                        </div>
+                        <div class="connection-line" data-target="workforce-transition"></div>
+                    </div>
+
+                    <!-- Factor 5: Environmental Focus -->
+                    <div class="factor-card" data-factor="environment">
+                        <div class="factor-header">
+                            <span class="factor-label-left">SUSTAINABLE DEVELOPMENT</span>
+                            <span class="factor-title">Environmental Focus</span>
+                            <span class="factor-label-right">RESOURCE EXTRACTION</span>
+                        </div>
+                        <div class="slider-track">
+                            <input type="range" id="environment" min="0" max="100" value="40">
+                            <div class="slider-glow"></div>
+                        </div>
+                        <div class="impact-preview" id="impact-environment">
+                            Prioritizes green technologies and carbon neutrality, necessitating slower industrial growth and higher initial costs.
+                        </div>
+                        <div class="connection-line" data-target="sustainability"></div>
+                    </div>
+
+                    <!-- Factor 6: Global Cooperation -->
+                    <div class="factor-card" data-factor="cooperation">
+                        <div class="factor-header">
+                            <span class="factor-label-left">ISOLATIONISM</span>
+                            <span class="factor-title">Global Cooperation</span>
+                            <span class="factor-label-right">UNIFIED GOVERNANCE</span>
+                        </div>
+                        <div class="slider-track">
+                            <input type="range" id="cooperation" min="0" max="100" value="90">
+                            <div class="slider-glow"></div>
+                        </div>
+                        <div class="impact-preview" id="impact-cooperation">
+                            Strong international agreements and shared standards facilitate coordinated global AI deployment and regulation.
+                        </div>
+                        <div class="connection-line" data-target="coordinated-standards"></div>
+                    </div>
+                </div>
+
+                <!-- Configuration Summary -->
+                <div class="config-summary">
+                    <div class="summary-label">CONFIGURATION SUMMARY</div>
+                    <div class="summary-icons">
+                        <div class="summary-icon" id="icon-privacy">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            <span>Strict Protection</span>
+                        </div>
+                        <div class="summary-icon" id="icon-autonomy">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="5"/>
+                                <path d="M12 13v3"/>
+                                <circle cx="12" cy="19" r="2"/>
+                            </svg>
+                            <span>Human-In-The-Loop</span>
+                        </div>
+                        <div class="summary-icon" id="icon-speed">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="3" x2="12" y2="21"/>
+                                <line x1="3" y1="12" x2="21" y2="12"/>
+                                <path d="M5 5l14 14"/>
+                            </svg>
+                            <span>Balanced Speed</span>
+                        </div>
+                        <div class="summary-icon" id="icon-economy">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                            <span>Market Adaptation</span>
+                        </div>
+                        <div class="summary-icon" id="icon-environment">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1-6.18-2.73A10 10 0 0 1 2 12a10 10 0 0 1 10-10z"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            </svg>
+                            <span>Sustainable Dev</span>
+                        </div>
+                        <div class="summary-icon" id="icon-cooperation">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                            <span>Unified Governance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connection Arrows SVG Layer -->
+            <svg class="connection-arrows" id="connectionArrows">
+                <!-- Arrows will be drawn dynamically -->
+            </svg>
+
+            <!-- RIGHT SIDE: The Generated Story (55%) -->
+            <div class="right-panel">
+                <div class="panel-label">THE GENERATED STORY</div>
+                
+                <div class="story-container">
+                    <!-- Header with outcome and probability -->
+                    <div class="story-header">
+                        <div class="outcome-title">
+                            YOUR FUTURE: <span class="outcome-label" id="outcomeLabel">STABLE</span>
+                        </div>
+                        <div class="probability-ring">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                                <circle class="ring-fill" id="probabilityRing" cx="50" cy="50" r="45"/>
+                            </svg>
+                            <div class="probability-text">
+                                <span class="probability-value" id="probabilityValue">38%</span>
+                                <span class="probability-label">PROBABILITY</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Narrative -->
+                    <div class="narrative-section">
+                        <div class="narrative-label">THE NARRATIVE</div>
+                        <div class="narrative-content" id="narrativeContent">
+                            <p>The year is <span class="year-highlight" id="currentYearText">2025</span>. The world stands at a cautious crossroads. Due to your configuration, the development of AI has seen moderate but deliberate progress.</p>
+                            
+                            <p>There are significant <span class="highlight" id="safety-concerns" data-factor="autonomy">safety concerns</span> as society navigates the introduction of more autonomous systems.</p>
+                            
+                            <p>While efficiency has improved, a widespread <span class="highlight" id="workforce-transition" data-factor="economy">workforce transition</span> is underway, with many industries shifting towards hybrid human-AI collaboration models.</p>
+                            
+                            <p>Public trust is tentatively maintained through <span class="highlight" id="data-regulations" data-factor="privacy">strict data regulations</span>, though this has led to some stagnation in personalization features.</p>
+                            
+                            <p>Global relations show signs of strengthening through <span class="highlight" id="coordinated-standards" data-factor="cooperation">coordinated standards</span>, fostering a shared, albeit slower, approach to managing AI risks.</p>
+                            
+                            <p>The focus on <span class="highlight" id="sustainability" data-factor="environment">sustainability</span> is evident in the rise of green data centers, though it requires continued investment.</p>
+                            
+                            <p class="narrative-conclusion">Overall, the path forward is one of careful steps, balancing innovation with societal well-being, leading to a future that is relatively stable but requires constant vigilance and adaptation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Year Timeline -->
+                    <div class="timeline-section">
+                        <div class="year-tabs" id="yearTabs">
+                            <button class="year-tab active" data-year="2025">2025</button>
+                            <button class="year-tab" data-year="2026">2026</button>
+                            <button class="year-tab" data-year="2027">2027</button>
+                            <button class="year-tab" data-year="2028">2028</button>
+                            <button class="year-tab" data-year="2029">2029</button>
+                            <button class="year-tab" data-year="2030">2030</button>
+                        </div>
+                        <div class="timeline-footer">
+                            <span class="causation-hint">Explicit Causation: Trace any story element back to the factor that created it.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/content.js"></script>
+    <script src="js/simulator.js"></script>
+</body>
+</html>
