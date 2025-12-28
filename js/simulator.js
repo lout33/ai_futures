@@ -8,7 +8,11 @@ class NarrativeEngine {
     init() {
         this.cacheElements();
         this.bindEvents();
+        this.updateSliderFills();
+        this.updateFactorValues();
         this.update();
+        this.updateTimelineProgress();
+        this.updateLastUpdate();
     }
 
     cacheElements() {
@@ -20,15 +24,23 @@ class NarrativeEngine {
         this.probabilityValue = document.getElementById('probabilityValue');
         this.probabilityRing = document.getElementById('probabilityRing');
         this.narrativeContent = document.getElementById('narrativeContent');
-        this.yearTabs = document.querySelectorAll('.year-tab-top');
+        this.yearNodes = document.querySelectorAll('.year-node');
+        this.timelineProgress = document.getElementById('timelineProgress');
+        this.divergenceScore = document.getElementById('divergenceScore');
+        this.confidenceLevel = document.getElementById('confidenceLevel');
+        this.lastUpdate = document.getElementById('lastUpdate');
     }
 
     bindEvents() {
+        // Slider events
         for (const key in this.sliders) {
             if (this.sliders[key]) {
                 this.sliders[key].addEventListener('input', () => {
-                    this.updateSliderFill();
+                    this.updateSliderFills();
+                    this.updateFactorValues();
                     this.update();
+                    this.clearPresetSelection();
+                    this.updateLastUpdate();
                 });
                 
                 this.sliders[key].addEventListener('mouseenter', () => this.highlightFactor(key));
@@ -36,18 +48,50 @@ class NarrativeEngine {
             }
         }
 
-        this.yearTabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                const year = parseInt(e.target.dataset.year);
+        // Year timeline events
+        this.yearNodes.forEach(node => {
+            node.addEventListener('click', (e) => {
+                const year = parseInt(e.currentTarget.dataset.year);
                 this.selectYear(year);
             });
         });
 
+        // Preset events
         document.querySelectorAll('.preset-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const presetName = e.currentTarget.dataset.preset;
                 this.loadPreset(presetName);
             });
+        });
+
+        // Reset button
+        const resetBtn = document.getElementById('resetBtn');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                this.loadPreset('current');
+            });
+        }
+
+        // Share button
+        const shareBtn = document.getElementById('shareBtn');
+        if (shareBtn) {
+            shareBtn.addEventListener('click', () => {
+                this.shareScenario();
+            });
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '?') {
+                this.showHelp();
+            }
+            // Year navigation with arrow keys
+            if (e.key === 'ArrowRight') {
+                this.navigateYear(1);
+            }
+            if (e.key === 'ArrowLeft') {
+                this.navigateYear(-1);
+            }
         });
     }
 
@@ -104,27 +148,87 @@ class NarrativeEngine {
             btn.classList.toggle('active', btn.dataset.preset === presetName);
         });
         
-        this.updateSliderFill();
+        this.updateSliderFills();
+        this.updateFactorValues();
         this.update();
+        this.updateLastUpdate();
     }
 
-    updateSliderFill() {
+    clearPresetSelection() {
+        // Don't clear - check if current values match any preset
+        const values = this.getValues();
+        let matchedPreset = null;
+        
+        for (const presetName in PRESETS) {
+            const preset = PRESETS[presetName];
+            let matches = true;
+            for (const key in preset) {
+                if (values[key] !== preset[key]) {
+                    matches = false;
+                    break;
+                }
+            }
+            if (matches) {
+                matchedPreset = presetName;
+                break;
+            }
+        }
+        
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.preset === matchedPreset);
+        });
+    }
+
+    updateSliderFills() {
         for (const key in this.sliders) {
             const slider = this.sliders[key];
+            if (!slider) continue;
+            
             const value = parseInt(slider.value);
-            const percentage = `${value}%`;
-            slider.style.setProperty('--slider-pos', percentage);
+            const fill = document.getElementById(`${key}-fill`);
+            if (fill) {
+                fill.style.width = `${value}%`;
+            }
+        }
+    }
+
+    updateFactorValues() {
+        for (const key in this.sliders) {
+            const slider = this.sliders[key];
+            if (!slider) continue;
+            
+            const valueDisplay = document.getElementById(`${key}-value`);
+            if (valueDisplay) {
+                valueDisplay.textContent = slider.value;
+            }
         }
     }
 
     selectYear(year) {
         this.selectedYear = year;
         
-        this.yearTabs.forEach(tab => {
-            tab.classList.toggle('active', parseInt(tab.dataset.year) === year);
+        this.yearNodes.forEach(node => {
+            node.classList.toggle('active', parseInt(node.dataset.year) === year);
         });
         
+        this.updateTimelineProgress();
         this.updateNarrative();
+    }
+
+    navigateYear(direction) {
+        const years = [2025, 2026, 2027, 2028, 2029, 2030];
+        const currentIndex = years.indexOf(this.selectedYear);
+        const newIndex = Math.max(0, Math.min(years.length - 1, currentIndex + direction));
+        this.selectYear(years[newIndex]);
+    }
+
+    updateTimelineProgress() {
+        if (!this.timelineProgress) return;
+        
+        const years = [2025, 2026, 2027, 2028, 2029, 2030];
+        const index = years.indexOf(this.selectedYear);
+        const progress = (index / (years.length - 1)) * 100;
+        this.timelineProgress.style.width = `${progress}%`;
     }
 
     highlightFactor(factorKey) {
@@ -147,7 +251,16 @@ class NarrativeEngine {
         
         if (!yearData) return '';
         
-        let narrativeHTML = `<p class="narrative-intro">${yearData.intro} ${this.getOutcomeDescription(values)}</p>`;
+        let narrativeHTML = `<div class="narrative-intro">${yearData.intro}</div>`;
+        
+        const factorIcons = {
+            autonomy: '🤖',
+            privacy: '🔐',
+            speed: '⚡',
+            economy: '💰',
+            environment: '🌱',
+            cooperation: '🤝'
+        };
         
         const factorsToShow = ['autonomy', 'privacy', 'speed', 'economy', 'environment', 'cooperation'];
         factorsToShow.forEach(factorKey => {
@@ -157,7 +270,10 @@ class NarrativeEngine {
             
             narrativeHTML += `
                 <div class="narrative-section-block">
-                    <h3 class="section-header">${FACTORS[factorKey].name}</h3>
+                    <div class="section-header">
+                        <span class="section-icon">${factorIcons[factorKey]}</span>
+                        <span class="section-title">${FACTORS[factorKey].name}</span>
+                    </div>
                     <p class="section-content">${sectionContent}</p>
                 </div>
             `;
@@ -165,11 +281,11 @@ class NarrativeEngine {
         
         narrativeHTML += `
             <div class="narrative-block world-events">
-                <h4 class="block-header">🌍 World Events</h4>
+                <h4 class="block-header">Global Developments</h4>
                 <p>${yearData.worldEvents}</p>
             </div>
             <div class="narrative-block personal-impact">
-                <h4 class="block-header">👤 Your Life</h4>
+                <h4 class="block-header">Personal Impact</h4>
                 <p>${yearData.personalImpact}</p>
             </div>
         `;
@@ -183,18 +299,69 @@ class NarrativeEngine {
         return 'high';
     }
 
-    getOutcomeDescription(values) {
-        const score = this.calculateScore();
-        const outcome = this.getOutcome(score);
-        return outcome.label;
+    calculateDivergence() {
+        const values = this.getValues();
+        let divergence = 0;
+        
+        // Calculate deviation from "current" baseline
+        const baseline = PRESETS.current;
+        for (const key in values) {
+            divergence += Math.abs(values[key] - baseline[key]);
+        }
+        
+        return (divergence / 6).toFixed(1);
+    }
+
+    getConfidenceLevel(score) {
+        if (score < 30 || score > 80) return 'HIGH';
+        if (score < 40 || score > 70) return 'MED';
+        return 'LOW';
+    }
+
+    updateHeaderMetrics(score) {
+        if (this.divergenceScore) {
+            const divergence = this.calculateDivergence();
+            const sign = divergence >= 0 ? '+' : '';
+            this.divergenceScore.textContent = `${sign}${divergence}%`;
+        }
+        
+        if (this.confidenceLevel) {
+            this.confidenceLevel.textContent = this.getConfidenceLevel(score);
+        }
     }
 
     updateProbabilityRing(score) {
         if (!this.probabilityRing) return;
         
-        const circumference = 283;
+        // SVG circle with r=52, circumference = 2 * PI * 52 = 327
+        const circumference = 327;
         const offset = circumference - (score / 100) * circumference;
         this.probabilityRing.style.strokeDashoffset = offset;
+    }
+
+    updateOutcomeTags(outcome) {
+        const tagsContainer = document.querySelector('.outcome-tags');
+        if (!tagsContainer) return;
+        
+        const score = this.calculateScore();
+        let riskTag = '';
+        let signalTag = '';
+        
+        if (score < 30) {
+            riskTag = '<span class="tag negative">High Risk</span>';
+            signalTag = '<span class="tag warning">Concerning Trends</span>';
+        } else if (score < 50) {
+            riskTag = '<span class="tag warning">Elevated Risk</span>';
+            signalTag = '<span class="tag neutral">Mixed Signals</span>';
+        } else if (score < 70) {
+            riskTag = '<span class="tag positive">Moderate Risk</span>';
+            signalTag = '<span class="tag neutral">Stable Trajectory</span>';
+        } else {
+            riskTag = '<span class="tag positive">Low Risk</span>';
+            signalTag = '<span class="tag positive">Positive Signals</span>';
+        }
+        
+        tagsContainer.innerHTML = riskTag + signalTag;
     }
 
     updateNarrative() {
@@ -203,25 +370,95 @@ class NarrativeEngine {
         }
     }
 
+    updateLastUpdate() {
+        if (this.lastUpdate) {
+            this.lastUpdate.textContent = 'just now';
+        }
+    }
+
+    shareScenario() {
+        const values = this.getValues();
+        const params = new URLSearchParams();
+        
+        for (const key in values) {
+            params.set(key, values[key]);
+        }
+        params.set('year', this.selectedYear);
+        
+        const url = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+        
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Scenario URL copied to clipboard!');
+            }).catch(() => {
+                prompt('Copy this URL to share your scenario:', url);
+            });
+        } else {
+            prompt('Copy this URL to share your scenario:', url);
+        }
+    }
+
+    loadFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        let hasParams = false;
+        
+        for (const key in FACTORS) {
+            if (params.has(key)) {
+                hasParams = true;
+                const value = parseInt(params.get(key));
+                if (this.sliders[key] && value >= 0 && value <= 100) {
+                    this.sliders[key].value = value;
+                }
+            }
+        }
+        
+        if (params.has('year')) {
+            const year = parseInt(params.get('year'));
+            if (year >= 2025 && year <= 2030) {
+                this.selectedYear = year;
+            }
+        }
+        
+        if (hasParams) {
+            this.updateSliderFills();
+            this.updateFactorValues();
+            this.selectYear(this.selectedYear);
+        }
+    }
+
+    showHelp() {
+        alert(`Keyboard Shortcuts:
+        
+← → : Navigate years
+? : Show this help
+
+Tips:
+- Adjust sliders to change factor values
+- Click presets for quick scenarios
+- Click year nodes to explore timeline
+- Share button copies scenario URL`);
+    }
+
     update() {
         const score = this.calculateScore();
         const outcome = this.getOutcome(score);
         
         if (this.outcomeLabel) {
-            this.outcomeLabel.textContent = outcome.label;
-            this.outcomeLabel.style.color = outcome.color;
+            this.outcomeLabel.textContent = outcome.label.toUpperCase();
         }
         
         if (this.probabilityValue) {
-            this.probabilityValue.textContent = `${score}%`;
-            this.probabilityValue.style.color = outcome.color;
+            this.probabilityValue.textContent = score;
         }
         
         this.updateProbabilityRing(score);
+        this.updateHeaderMetrics(score);
+        this.updateOutcomeTags(outcome);
         this.updateNarrative();
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new NarrativeEngine();
+    const engine = new NarrativeEngine();
+    engine.loadFromURL();
 });
