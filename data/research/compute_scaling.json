@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "research_date": "2025-12-28",
+    "topic": "AI Compute Scaling & Hardware Trajectories 2025-2030",
+    "sources": ["Epoch AI", "Nvidia Investor Relations", "AMD", "SemiAnalysis", "IEA", "Hyperscaler Earnings"]
+  },
+
+  "summary": "AI compute projected to scale ~10,000x by 2030, with cluster costs reaching $100B+. Power availability emerges as primary constraint by 2027.",
+
+  "training_compute_projections": {
+    "current_state_2024_2025": {
+      "largest_training_runs_flops": "1e25-1e26",
+      "reference": "GPT-4 class models",
+      "training_run_costs_usd": "100M-500M",
+      "compute_doubling_time_months": "6-10"
+    },
+    "epoch_ai_projections": {
+      "2030_projection_flops": "2e29",
+      "multiplier_from_gpt4": "10000x",
+      "methodology": "Trend extrapolation from historical training compute growth",
+      "confidence": "High uncertainty - depends on continued investment and no hard bottlenecks"
+    },
+    "cost_trajectory": {
+      "2025": {"range_usd": "100M-500M", "description": "Standard frontier model training"},
+      "2026": {"range_usd": "500M-1B", "description": "Larger runs emerge"},
+      "2027": {"range_usd": "1B-5B", "description": "Multi-billion runs feasible"},
+      "2028": {"range_usd": "5B-10B", "description": "Stargate-class infrastructure"},
+      "2029": {"range_usd": "10B+", "description": "Frontier training runs"},
+      "2030": {"range_usd": "10B-100B", "description": "Individual runs $10B+, clusters $100B+"}
+    },
+    "scaling_laws_status": {
+      "current_assessment": "Still holding but debates intensifying",
+      "optimist_view": "Continued scaling with architectural improvements yields gains",
+      "pessimist_view": "Diminishing returns observed in late 2025 at frontier labs",
+      "emerging_paradigm": "Shift toward compound AI systems - reasoning, retrieval, multi-agent",
+      "key_uncertainty": "Whether pure scaling continues or requires algorithmic breakthroughs",
+      "test_time_compute": "New paradigm: spending more compute at inference (o1/o3 style reasoning)"
+    }
+  },
+
+  "hardware_roadmap": {
+    "nvidia": {
+      "H100": {
+        "status": "Current generation, widely deployed",
+        "memory_gb": 80,
+        "memory_type": "HBM3",
+        "bandwidth_tb_s": 3.35,
+        "tflops_fp16": 700
+      },
+      "B200_blackwell": {
+        "timeline": "2024-2025 ramp",
+        "memory_gb": 192,
+        "memory_type": "HBM3e",
+        "bandwidth_tb_s": 8,
+        "improvement_over_h100": "2-2.5x training performance"
+      },
+      "blackwell_ultra": {
+        "timeline": "H2 2025",
+        "description": "Enhanced Blackwell with higher memory"
+      },
+      "rubin": {
+        "timeline": "2026",
+        "memory_type": "HBM4",
+        "improvement": "~2x over Blackwell"
+      },
+      "rubin_ultra": {
+        "timeline": "2027",
+        "memory_type": "HBM4e"
+      },
+      "roadmap_cadence": "Annual architecture releases committed"
+    },
+    "amd": {
+      "MI300X": {
+        "status": "Current generation, shipping",
+        "memory_gb": 192,
+        "memory_type": "HBM3",
+        "competitive_position": "Competitive with H100"
+      },
+      "MI350": {
+        "timeline": "Mid-2025",
+        "architecture": "CDNA 4",
+        "memory_type": "HBM3e"
+      },
+      "MI400": {
+        "timeline": "2026",
+        "notes": "Next-gen successor"
+      }
+    },
+    "intel": {
+      "gaudi_status": "Gaudi 2/3 shipping, limited adoption",
+      "falcon_shores": {
+        "status": "CANCELLED",
+        "cancellation_date": "January 2025",
+        "reason": "Strategic refocus, competitive pressure"
+      },
+      "jaguar_shores": {
+        "timeline": "2026+",
+        "focus": "Rack-scale inference, system efficiency",
+        "strategic_shift": "From training to inference focus"
+      },
+      "sambanova_acquisition": {
+        "status": "Advanced talks as of Nov/Dec 2025",
+        "purpose": "Bolster AI accelerator portfolio"
+      }
+    },
+    "google_tpu": {
+      "current": "TPU v5e/v5p in cloud deployment",
+      "trillium_v6": {
+        "timeline": "2024-2025",
+        "improvement": "4.7x compute per chip vs v5e"
+      },
+      "future": "Continued scaling expected 2026-2028"
+    },
+    "custom_chips": {
+      "cerebras": {
+        "product": "WSE-3 (Wafer Scale Engine)",
+        "status": "Shipping, IPO discussions ongoing",
+        "niche": "Ultra-large models"
+      },
+      "groq": {
+        "status": "Nvidia licensing deal December 2025",
+        "impact": "LPU technology under Nvidia influence"
+      }
+    }
+  },
+
+  "memory_evolution": {
+    "HBM3": {"bandwidth_tb_s": "3-4", "status": "Current"},
+    "HBM3e": {"bandwidth_tb_s": "5.5-6", "timeline": "2024-2025"},
+    "HBM4": {"bandwidth_tb_s": "8-12", "timeline": "2026"},
+    "HBM4e": {"bandwidth_tb_s": "12+", "timeline": "2027+"},
+    "bottleneck_assessment": "Memory bandwidth remains key constraint for large model training"
+  },
+
+  "infrastructure": {
+    "largest_clusters_current": {
+      "meta": "24,000+ H100 GPUs (Llama training)",
+      "xai_colossus": "100,000 H100s (Memphis cluster)",
+      "microsoft_openai": "Multiple large H100 clusters",
+      "google": "Large TPU pods, details private"
+    },
+    "planned_megaclusters": {
+      "stargate": {
+        "partners": ["Microsoft", "OpenAI"],
+        "timeline": "~2028 operational",
+        "cost_usd": "100B",
+        "power_gw": 5,
+        "description": "Largest AI cluster ever attempted"
+      },
+      "xai_expansion": {
+        "target": "1M+ GPUs by 2026",
+        "location": "Memphis"
+      }
+    },
+    "datacenter_investments_2025_2030_usd": {
+      "microsoft": "80B+",
+      "google": "50B+ annual",
+      "amazon_aws": "75B+",
+      "meta": "40B+",
+      "total_hyperscaler": "300B+ cumulative"
+    },
+    "power_requirements": {
+      "current_large_run_mw": "10-50",
+      "2026_cluster_mw": "100-500",
+      "2028_megacluster_gw": "1-2",
+      "2030_projection_gw": "5",
+      "rack_density_kw": "50-60+"
+    }
+  },
+
+  "key_bottlenecks": {
+    "chip_supply": {
+      "constraint_level": "HIGH",
+      "details": "TSMC advanced node capacity (3nm, 2nm) limited",
+      "hbm_supply": "Samsung, SK Hynix ramping but constrained through 2026",
+      "cowos_packaging": "Advanced packaging remains bottleneck",
+      "mitigation": "New fabs coming online 2026-2028"
+    },
+    "power_availability": {
+      "constraint_level": "CRITICAL by 2027+",
+      "stressed_regions": ["Virginia", "Texas", "Ireland"],
+      "nuclear_interest": ["Microsoft", "Google", "Amazon"],
+      "projections": {
+        "2025": "Power available with planning",
+        "2027": "Major constraints in prime locations",
+        "2030": "Power becomes primary limiting factor"
+      }
+    },
+    "cooling": {
+      "constraint_level": "MODERATE - solvable with investment",
+      "trend": "Shift from air to liquid cooling",
+      "liquid_cooling_adoption_2027": "50%+ of AI datacenters",
+      "immersion_cooling": "Growing adoption for highest density"
+    },
+    "data_availability": {
+      "constraint_level": "HIGH and GROWING",
+      "problem": "Data wall - high-quality text/code largely exhausted",
+      "timeline": "May hit limits 2026-2028 for pure web text",
+      "mitigations": [
+        "Synthetic data generation (70%+ of future training data)",
+        "Reasoning traces and chain-of-thought data",
+        "Multimodal data (video, audio)",
+        "Licensed proprietary datasets"
+      ]
+    }
+  },
+
+  "year_by_year_milestones": {
+    "2025": {
+      "hardware": "B200/Blackwell ramp, MI350 launches, Trillium v6 scaling",
+      "training_runs": "$100M-$500M runs standard",
+      "infrastructure": "50-100MW clusters common",
+      "key_events": ["Falcon Shores cancelled", "Nvidia-Groq deal", "Intel-SambaNova talks"]
+    },
+    "2026": {
+      "hardware": "Rubin launches (HBM4), MI400 ships",
+      "training_runs": "$1B+ runs begin",
+      "infrastructure": "100-500MW clusters, liquid cooling standard",
+      "primary_bottleneck": "HBM and CoWoS packaging constraints peak"
+    },
+    "2027": {
+      "hardware": "Rubin Ultra (HBM4e)",
+      "training_runs": "$2-5B runs feasible",
+      "infrastructure": "1GW+ clusters under construction",
+      "primary_bottleneck": "Power availability becomes critical"
+    },
+    "2028": {
+      "hardware": "Next Nvidia arch (post-Rubin), TPU v7+",
+      "training_runs": "$5-10B runs emerging",
+      "infrastructure": "Stargate-class clusters operational (~1-2GW)",
+      "primary_bottleneck": "Nuclear/dedicated power deals critical"
+    },
+    "2029": {
+      "hardware": "Continued annual improvements",
+      "training_runs": "$10B+ runs for frontier models",
+      "infrastructure": "Multiple GW-scale facilities globally",
+      "primary_bottleneck": "Data quality, algorithmic efficiency"
+    },
+    "2030": {
+      "hardware": "HBM5 possible, 2nm/1.4nm nodes",
+      "training_runs": "2e29 FLOPs achievable",
+      "infrastructure": "5GW facilities, $100B+ clusters",
+      "primary_bottleneck": "Power, cooling, data remain constraints"
+    }
+  },
+
+  "key_uncertainties": {
+    "scaling_laws": {
+      "range": "Could plateau by 2027 OR continue exponentially",
+      "impact": "Determines whether $100B investments pay off"
+    },
+    "geopolitical": {
+      "risk": "China export controls, Taiwan supply chain",
+      "impact": "Could disrupt chip supply, force diversification"
+    },
+    "regulatory": {
+      "risk": "AI safety regulations, compute governance",
+      "impact": "Could limit training run sizes or require disclosure"
+    },
+    "algorithmic_breakthroughs": {
+      "upside": "Efficiency gains reduce compute requirements",
+      "current_trend": "Test-time compute scaling as new paradigm"
+    }
+  }
+}

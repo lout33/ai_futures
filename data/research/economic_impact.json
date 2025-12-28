@@ -1,0 +1,253 @@
+{
+  "metadata": {
+    "research_date": "2025-12-28",
+    "topic": "Economic Impact of AI 2025-2030",
+    "sources": ["Goldman Sachs", "McKinsey", "IMF", "World Bank", "Stanford AI Index", "Crunchbase", "Company Reports"]
+  },
+
+  "summary": "AI projected to affect 300M+ jobs globally, with white-collar roles most exposed. Productivity gains significant but uneven. Massive wealth concentration in AI companies.",
+
+  "job_displacement": {
+    "major_estimates": {
+      "goldman_sachs": {
+        "jobs_affected_global": 300000000,
+        "automation_rates": {
+          "administrative": 0.46,
+          "legal": 0.44,
+          "engineering": 0.37,
+          "life_sciences": 0.36,
+          "business_finance": 0.35
+        },
+        "source": "Goldman Sachs 2023-2024"
+      },
+      "mckinsey": {
+        "workers_changing_occupations": "75-375 million",
+        "us_transitions_by_2030": 12000000,
+        "hours_automatable": 0.30,
+        "source": "McKinsey Global Institute"
+      },
+      "imf": {
+        "global_jobs_exposed": 0.40,
+        "advanced_economies_exposed": 0.60,
+        "source": "IMF 2024"
+      },
+      "amodei_claim": {
+        "entry_level_white_collar_at_risk": 0.50,
+        "timeline": "5 years",
+        "unemployment_projection": "10-20%",
+        "source": "Dario Amodei interviews 2025"
+      }
+    },
+    "most_at_risk": [
+      "Administrative and clerical work",
+      "Legal document review",
+      "Entry-level programming",
+      "Customer service",
+      "Data entry and processing",
+      "Basic financial analysis",
+      "Content writing and translation"
+    ],
+    "relatively_protected": [
+      "Construction and skilled trades",
+      "Physical healthcare (nursing, surgery)",
+      "Transportation (near-term)",
+      "Creative direction and strategy",
+      "Complex interpersonal roles",
+      "Maintenance and repair"
+    ],
+    "timeline": {
+      "2025": "Early displacement in content, coding assistance",
+      "2026": "Customer service automation accelerates",
+      "2027": "Legal, finance see significant automation",
+      "2028": "Coding copilots become autonomous for many tasks",
+      "2029": "White-collar displacement widespread",
+      "2030": "New equilibrium or continued disruption"
+    }
+  },
+
+  "productivity_gains": {
+    "measured_improvements": {
+      "coding_simple_tasks": {
+        "improvement": 0.56,
+        "description": "56% faster for simple coding tasks",
+        "source": "GitHub Copilot studies"
+      },
+      "coding_complex_realistic": {
+        "improvement": -0.19,
+        "description": "19% SLOWER for experienced devs on complex tasks",
+        "source": "METR study 2024",
+        "note": "Counterintuitive finding - AI assistance can hurt expert performance"
+      },
+      "customer_service": {
+        "improvement": 0.138,
+        "description": "13.8% more issues resolved per hour",
+        "source": "Stanford/MIT study"
+      },
+      "legal_document_review": {
+        "cost_reduction": "70-90%",
+        "source": "Industry reports"
+      },
+      "writing_tasks": {
+        "improvement": "20-40%",
+        "description": "Time savings on drafting",
+        "source": "Various studies"
+      }
+    },
+    "gdp_projections": {
+      "pwc_2030": {
+        "global_gdp_boost_usd": "15.7T",
+        "source": "PwC"
+      },
+      "mckinsey_genai": {
+        "annual_value_usd": "2.6T-4.4T",
+        "source": "McKinsey 2023"
+      },
+      "goldman_sachs": {
+        "us_productivity_boost_10yr": "1.5% annually",
+        "source": "Goldman Sachs"
+      }
+    },
+    "sector_breakdown": {
+      "technology": "High adoption, significant gains",
+      "financial_services": "High adoption, efficiency focus",
+      "healthcare": "Growing adoption, diagnostic gains",
+      "legal": "Moderate adoption, document automation",
+      "manufacturing": "Process optimization, quality control",
+      "retail": "Customer service, inventory management"
+    }
+  },
+
+  "labor_market_adaptation": {
+    "retraining_effectiveness": {
+      "assessment": "Skeptical - traditional programs show limited results",
+      "brookings_view": "Be skeptical - small, short-lived gains historically",
+      "challenges": [
+        "Speed of AI change outpaces retraining",
+        "Skills become obsolete during training",
+        "Not everyone can retrain to high-skill roles"
+      ]
+    },
+    "emerging_job_categories": {
+      "ai_engineer": {"growth": 1.43, "description": "143% growth"},
+      "prompt_engineer": {"growth": 1.36, "description": "136% growth"},
+      "ai_content_creator": {"growth": 1.35, "description": "135% growth"},
+      "ai_safety_researcher": {"status": "High demand, limited supply"},
+      "ai_ethics_officer": {"status": "Emerging role"},
+      "human_ai_collaboration_specialist": {"status": "New category"}
+    },
+    "wage_effects": {
+      "polarization": 0.30,
+      "description": "30% polarization in studied markets",
+      "pattern": "Middle-skill jobs hollowing out",
+      "high_skill": "Premium for AI-complementary skills",
+      "low_skill": "Compression at bottom"
+    }
+  },
+
+  "universal_basic_income": {
+    "current_pilots": {
+      "us_pilots": {
+        "typical_amount_monthly": "500-1000",
+        "cities": ["Stockton", "Chicago", "Various"],
+        "results": "Mixed - modest improvements in wellbeing, job search"
+      },
+      "international": {
+        "brazil": "Bolsa Familia expansion",
+        "kenya": "GiveDirectly long-term study",
+        "india": "Various state experiments"
+      }
+    },
+    "altman_worldcoin": {
+      "status": "No actual UBI yet",
+      "current_focus": "Identity network (World ID)",
+      "vision": "Eventually distribute AI dividends",
+      "challenges": "Privacy concerns, adoption hurdles"
+    },
+    "political_feasibility": {
+      "assessment": "Challenging without major reforms",
+      "barriers": [
+        "Cost (trillions annually)",
+        "Political opposition",
+        "Work incentive concerns",
+        "Implementation complexity"
+      ],
+      "enablers": [
+        "Visible mass unemployment",
+        "AI company taxation",
+        "Automation anxiety"
+      ]
+    }
+  },
+
+  "wealth_concentration": {
+    "valuations_dec_2025": {
+      "openai": {"valuation_usd": 500000000000, "note": "Largest private company ever"},
+      "anthropic": {"valuation_usd": "183B-350B", "note": "Range from various rounds"},
+      "xai": {"valuation_usd": "200B-230B"},
+      "meta_ai": {"note": "Part of $1.4T Meta"},
+      "google_deepmind": {"note": "Part of $2T Alphabet"}
+    },
+    "concentration_concerns": {
+      "compute_concentration": "Top 4 cloud providers control majority",
+      "talent_concentration": "Top labs employ most AI researchers",
+      "data_concentration": "Big Tech has data moats",
+      "regulatory_capture_risk": "Labs influence policy"
+    },
+    "power_dynamics": {
+      "who_captures_value": [
+        "AI company founders and investors",
+        "Cloud infrastructure providers",
+        "Early AI adopters",
+        "Holders of scarce data"
+      ],
+      "who_loses": [
+        "Displaced workers",
+        "Companies slow to adopt",
+        "Regions without AI infrastructure",
+        "Those without retraining access"
+      ]
+    }
+  },
+
+  "investment_landscape": {
+    "total_ai_investment": {
+      "2024_vc_usd": 110000000000,
+      "2024_yoy_growth": 0.62,
+      "ai_share_of_all_vc": "45-50%",
+      "source": "Crunchbase"
+    },
+    "hyperscaler_capex_2025": {
+      "big_4_combined_usd": 320000000000,
+      "microsoft": "80B+",
+      "google": "75B+",
+      "amazon": "100B+",
+      "meta": "65B+"
+    },
+    "notable_raises_2025": {
+      "openai_softbank": {"amount_usd": 40000000000, "description": "Largest private tech round ever"},
+      "anthropic_total_2025": {"amount_usd": "13B+"},
+      "xai": {"amount_usd": 6000000000}
+    },
+    "trends": {
+      "concentration": "Funding increasingly to top 5 AI companies",
+      "infrastructure": "Shift from model companies to infrastructure",
+      "enterprise": "B2B AI applications growing"
+    }
+  },
+
+  "key_uncertainties": {
+    "displacement_speed": {
+      "fast_scenario": "Mass displacement by 2027-2028",
+      "slow_scenario": "Gradual transition through 2030s",
+      "key_variable": "Rate of AI capability improvement"
+    },
+    "adaptation_capacity": {
+      "optimistic": "New jobs emerge faster than old disappear",
+      "pessimistic": "Structural unemployment for decades"
+    },
+    "policy_response": {
+      "proactive": "UBI, retraining, AI taxation implemented early",
+      "reactive": "Crisis-driven policy after mass unemployment"
+    }
+  }
+}

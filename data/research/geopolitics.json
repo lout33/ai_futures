@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "research_date": "2025-12-28",
+    "topic": "AI Geopolitics & US-China Competition 2025-2030",
+    "sources": ["CSIS", "Brookings", "RAND", "SemiAnalysis", "Export Control Data", "Epoch AI", "News Reports"]
+  },
+
+  "summary": "US-China AI gap narrowed to 3-6 months. Export controls partially effective but China adapting. Taiwan remains critical chokepoint. Race dynamics accelerating with national security implications.",
+
+  "us_china_capability_gap": {
+    "current_assessment": {
+      "gap_months": "3-6",
+      "comparison_basis": "Frontier language models",
+      "trend": "Narrowing despite export controls",
+      "key_evidence": {
+        "deepseek_v3": {
+          "performance": "Comparable to GPT-4o, Claude 3.5",
+          "training_cost_usd": 5600000,
+          "efficiency": "~20x cheaper than US equivalents",
+          "released": "December 2025",
+          "significance": "Proves China can match frontier with less compute"
+        },
+        "qwen_2_5": {
+          "developer": "Alibaba",
+          "performance": "Strong across benchmarks",
+          "status": "Open weights"
+        },
+        "bytedance_doubao": {
+          "status": "Competitive Chinese LLM ecosystem"
+        }
+      }
+    },
+    "historical_gap": {
+      "2022": "12-18 months behind US frontier",
+      "2023": "6-12 months behind",
+      "2024": "3-6 months behind",
+      "2025": "Near parity on many benchmarks"
+    },
+    "gap_by_domain": {
+      "language_models": "Near parity",
+      "multimodal": "China competitive",
+      "robotics": "China strong in manufacturing",
+      "autonomous_vehicles": "China leading in deployment (Baidu, Pony.ai)",
+      "chips": "Significant gap remains (2+ generations)",
+      "research_talent": "Narrowing - many Chinese researchers in US labs"
+    }
+  },
+
+  "export_controls": {
+    "us_chip_controls": {
+      "october_2022": {
+        "scope": "Advanced chips and equipment to China",
+        "targets": ["A100", "H100", "Advanced lithography"],
+        "goal": "Maintain US lead, limit China military AI"
+      },
+      "october_2023_update": {
+        "expanded": ["More countries", "Lower chip thresholds", "Cloud access"],
+        "a800_h800_banned": true,
+        "description": "Closed loopholes from 2022 controls"
+      },
+      "2024_updates": {
+        "hbm_controls": "High-bandwidth memory added",
+        "entity_list_expansion": "More Chinese firms added",
+        "smee_targeted": "Chinese lithography efforts blocked"
+      }
+    },
+    "effectiveness": {
+      "assessment": "Partially effective, significant leakage",
+      "successes": [
+        "Slowed China's access to cutting-edge chips",
+        "Forced inefficient workarounds",
+        "Limited advanced node production"
+      ],
+      "failures": [
+        "Smuggling networks (Singapore, Malaysia routes)",
+        "Cloud access workarounds",
+        "Stockpiling before controls",
+        "Spurred domestic chip investment"
+      ],
+      "smuggling_evidence": {
+        "nvidia_chips_in_china": "Documented in Huawei, research labs",
+        "cloud_resellers": "AWS, Azure access via third parties",
+        "estimated_leakage": "Significant but unquantified"
+      }
+    },
+    "allied_coordination": {
+      "netherlands_asml": {
+        "status": "Aligned with US controls",
+        "impact": "EUV machines blocked to China",
+        "duv_restrictions": "Expanding"
+      },
+      "japan": {
+        "status": "Aligned on equipment controls",
+        "companies_affected": ["Tokyo Electron", "Nikon"]
+      },
+      "south_korea": {
+        "status": "Partial alignment",
+        "tension": "Samsung, SK Hynix China fabs exemptions"
+      }
+    }
+  },
+
+  "china_response": {
+    "domestic_chip_efforts": {
+      "investment": {
+        "big_fund_iii_usd": 47500000000,
+        "total_semiconductor_investment_2014_2030_usd": "150B+",
+        "timeline": "Accelerated post-2022 controls"
+      },
+      "smic_progress": {
+        "current_node": "7nm (N+2)",
+        "method": "Multi-patterning with older DUV",
+        "yields": "Lower than TSMC",
+        "huawei_mate_60": "Used SMIC 7nm chip (Kirin 9000S)",
+        "5nm_status": "Attempting, significant challenges"
+      },
+      "huawei": {
+        "ascend_chips": "AI accelerators (910B)",
+        "performance_vs_nvidia": "~50-70% of H100",
+        "supply": "Limited by domestic fab capacity"
+      }
+    },
+    "efficiency_innovation": {
+      "deepseek_approach": {
+        "technique": "Mixture of Experts, aggressive optimization",
+        "training_efficiency": "20x cheaper than US labs",
+        "inference_cost": "Dramatically lower",
+        "implication": "Less compute can achieve similar results"
+      },
+      "algorithmic_focus": "Compensating for hardware limits with software"
+    },
+    "talent": {
+      "returning_researchers": "Incentives for overseas Chinese AI talent",
+      "domestic_programs": "Massive STEM education investment",
+      "brain_drain_concern": "Top talent still prefers US/UK labs"
+    }
+  },
+
+  "taiwan_semiconductor_risk": {
+    "tsmc_criticality": {
+      "advanced_logic_share": "90%+ of <7nm chips",
+      "ai_chip_dependency": "Nearly all Nvidia, AMD, Apple AI chips",
+      "single_point_of_failure": true
+    },
+    "invasion_scenarios": {
+      "timeline_estimates": {
+        "xi_directive": "Capability by 2027",
+        "us_intelligence": "Credible threat 2027+",
+        "uncertainty": "High - political decision"
+      },
+      "ai_impact_if_invasion": {
+        "chip_supply": "Catastrophic disruption",
+        "global_ai_progress": "Set back years",
+        "economic_damage": "Trillions USD"
+      },
+      "scorched_earth": {
+        "scenario": "TSMC fabs destroyed in conflict",
+        "recovery_time": "5-10+ years",
+        "implication": "Neither side 'wins' on chips"
+      }
+    },
+    "diversification_efforts": {
+      "tsmc_arizona": {
+        "fab_1": "4nm, 2025 production",
+        "fab_2": "3nm, 2028 target",
+        "fab_3": "2nm, announced 2024",
+        "investment_usd": 65000000000,
+        "challenges": ["Worker shortages", "Cost overruns", "Yield ramp"]
+      },
+      "tsmc_japan": {
+        "kumamoto_fab": "28nm, operational 2024",
+        "advanced_fab": "Planned"
+      },
+      "intel_foundry": {
+        "status": "Struggling to compete",
+        "18a_node": "2025 target, behind schedule"
+      },
+      "samsung": {
+        "texas_expansion": "Ongoing",
+        "yield_issues": "Significant vs TSMC"
+      }
+    }
+  },
+
+  "ai_arms_race_dynamics": {
+    "military_ai": {
+      "us_programs": {
+        "maven": "AI for drone imagery",
+        "jaic": "Joint AI Center (merged into CDAO)",
+        "cdao": "Chief Digital and AI Office",
+        "autonomous_weapons": "Development ongoing, doctrine evolving"
+      },
+      "china_programs": {
+        "pla_ai_integration": "Extensive military AI development",
+        "autonomous_drones": "Swarm technology",
+        "surveillance": "AI-powered domestic and military"
+      },
+      "lethal_autonomous_weapons": {
+        "status": "No international ban",
+        "un_discussions": "Ongoing, limited progress",
+        "deployment": "Low autonomy systems already in use"
+      }
+    },
+    "race_to_agi": {
+      "us_position": {
+        "stated": "Maintain AI leadership",
+        "labs": ["OpenAI", "Anthropic", "Google", "Meta", "xAI"],
+        "advantage": "Talent, capital, compute (for now)"
+      },
+      "china_position": {
+        "stated": "AI superpower by 2030",
+        "labs": ["Baidu", "Alibaba", "Tencent", "ByteDance", "DeepSeek"],
+        "strategy": "State-directed coordination"
+      },
+      "implications": {
+        "safety_pressure": "Race may reduce safety investment",
+        "first_mover": "Advantage to whoever achieves AGI first",
+        "cooperation_challenges": "National security concerns limit collaboration"
+      }
+    }
+  },
+
+  "other_players": {
+    "europe": {
+      "strategy": "Regulatory leadership, limited compute",
+      "notable_labs": ["Mistral (France)", "Aleph Alpha (Germany)"],
+      "challenges": "Brain drain to US, capital gap",
+      "strength": "Regulatory influence (Brussels Effect)"
+    },
+    "uk": {
+      "strategy": "AI safety leadership, attract labs",
+      "ai_safety_institute": true,
+      "labs_present": ["DeepMind", "Anthropic UK office"],
+      "compute_investment": "Announced but limited vs US"
+    },
+    "uae_saudi": {
+      "investment": "Billions in AI sovereign funds",
+      "g42": "UAE AI company, US partnership tensions",
+      "talent_acquisition": "Recruiting from Western labs",
+      "compute_ambitions": "Building large clusters"
+    },
+    "india": {
+      "strategy": "AI talent source, growing domestic efforts",
+      "strengths": "Large developer population",
+      "challenges": "Limited frontier research labs"
+    }
+  },
+
+  "year_by_year_projections": {
+    "2025": {
+      "gap": "US-China gap may shrink further",
+      "controls": "Export controls expanded but circumvention continues",
+      "taiwan": "Heightened monitoring, no immediate crisis",
+      "key_event": "Trump administration AI policy direction unclear"
+    },
+    "2026": {
+      "gap": "China may claim parity on some benchmarks",
+      "chips": "SMIC 5nm attempts, TSMC Arizona ramps",
+      "tension": "Chip war intensifies"
+    },
+    "2027": {
+      "taiwan_risk": "Peak concern window (Xi 2027 deadline)",
+      "diversification": "TSMC fab diversification progress",
+      "military_ai": "More autonomous systems deployed"
+    },
+    "2028": {
+      "scenarios": {
+        "cooperation": "Arms control talks, safety cooperation",
+        "competition": "Intensified race, decoupling accelerates",
+        "conflict": "Taiwan crisis disrupts everything"
+      }
+    },
+    "2030": {
+      "range": "From new cold war to cautious cooperation",
+      "key_variable": "Taiwan, AGI race outcome, major incidents"
+    }
+  },
+
+  "key_uncertainties": {
+    "taiwan_invasion": {
+      "probability": "Unknown but non-trivial",
+      "impact": "Catastrophic for AI industry",
+      "timeline": "2027+ is concern window"
+    },
+    "export_control_effectiveness": {
+      "question": "Can controls stay ahead of circumvention?",
+      "trend": "Cat and mouse game"
+    },
+    "algorithmic_vs_compute": {
+      "question": "Can efficiency gains offset compute limits?",
+      "china_bet": "Yes - DeepSeek evidence"
+    },
+    "domestic_chip_success": {
+      "question": "Can China achieve advanced node independence?",
+      "timeline": "5-10 years if ever"
+    }
+  }
+}

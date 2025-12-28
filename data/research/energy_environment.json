@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "research_date": "2025-12-28",
+    "topic": "AI Energy Consumption & Environmental Impact 2025-2030",
+    "sources": ["IEA", "Goldman Sachs", "Epoch AI", "EPRI", "Morgan Stanley", "Company Sustainability Reports"]
+  },
+
+  "summary": "Global DC energy ~415 TWh (2024) → 945 TWh (2030). US from 4% to 8% of grid. AI infrastructure ~56 MtCO2/year. Big Tech emissions rising despite renewable commitments.",
+
+  "current_energy_consumption": {
+    "global_data_centers": {
+      "2024_twh": 415,
+      "2025_twh_projected": 536,
+      "percent_global_electricity_2024": 1.5,
+      "percent_global_electricity_2025": 2.0,
+      "source": "IEA Energy & AI Report 2025"
+    },
+    "us_data_centers": {
+      "2023_twh": 176,
+      "2024_twh": 183,
+      "percent_us_electricity_2023": 4.4,
+      "source": "Lawrence Berkeley National Laboratory, IEA"
+    },
+    "training_energy_costs": {
+      "gpt_4": {
+        "training_mwh": 1750,
+        "equivalent_homes_annual": 160
+      },
+      "gpt_3": {
+        "training_mwh": 1287,
+        "co2_tonnes": "500-626"
+      },
+      "gpt_5_estimate": {
+        "training_mwh": "thousands (unconfirmed)",
+        "inference_wh_per_query": "18-40"
+      },
+      "gemini": {
+        "inference_wh_per_prompt": 0.24
+      }
+    },
+    "inference_vs_training_split": {
+      "inference_percent": 80,
+      "training_percent": 20,
+      "source": "Schneider Electric 2023",
+      "notes": "Meta estimates 65% inference for LLMs; ChatGPT ~60% inference when amortized"
+    }
+  },
+
+  "projections_2030": {
+    "iea_forecast": {
+      "global_data_centers_2030_twh": 945,
+      "multiplier_from_2024": 2.3,
+      "data_centers_share_of_global_demand_growth": 0.10,
+      "source": "IEA Energy & AI 2025"
+    },
+    "us_projections": {
+      "2028_twh_range": "325-580",
+      "2030_percent_us_electricity": 0.08,
+      "source": "Goldman Sachs, LBNL"
+    },
+    "ten_percent_claim_analysis": {
+      "claim": "AI will use 10% of US electricity by 2030",
+      "verdict": "OVERSTATED - upper-bound scenario",
+      "central_estimate": "8% for all data centers (AI is subset)",
+      "ai_specific_share": "~5% of US power capacity",
+      "source": "Goldman Sachs, Epoch AI, EPRI"
+    },
+    "epoch_ai_projections": {
+      "us_ai_power_2024_gw": 5,
+      "us_ai_power_2030_gw": "50+",
+      "multiplier": "10x",
+      "frontier_training_run_2030_gw": "4-16",
+      "source": "EPRI-Epoch AI 2025"
+    },
+    "goldman_sachs": {
+      "global_demand_increase_by_2027": 0.50,
+      "global_demand_increase_by_2030": 1.65,
+      "us_data_center_share_2030": 0.08,
+      "ai_share_of_dc_power_2030": 0.20,
+      "annual_growth_rate": 0.15
+    }
+  },
+
+  "carbon_footprint": {
+    "ai_infrastructure_global": {
+      "2024_co2_tonnes_range": "33-80 million",
+      "central_estimate_tonnes": 56000000,
+      "comparison": "equivalent to Singapore's annual emissions",
+      "source": "De Vries & Gao 2024-2025"
+    },
+    "industry_comparisons": {
+      "aviation_annual_co2_tonnes": "900-1000 million",
+      "ai_as_percent_of_aviation": "5-7%",
+      "cryptocurrency_comparison": "AI now comparable to or exceeding Bitcoin mining",
+      "data_centers_crypto_ai_combined": {
+        "percent_global_electricity": 2,
+        "percent_global_emissions": 1
+      },
+      "source": "IMF 2024"
+    },
+    "per_service_emissions": {
+      "chatgpt_monthly_kg_co2": 261000,
+      "equivalent_transatlantic_flights": 260,
+      "gemini_per_prompt_g_co2": 0.03
+    },
+    "lifecycle_emissions": {
+      "manufacturing": {
+        "description": "Chip fabrication, fluorinated gases, packaging",
+        "share": "Comparable to or larger than training for clean grids",
+        "category": "Scope 3 capital goods"
+      },
+      "operation": {
+        "description": "Electricity for training and inference",
+        "gpt3_training_tonnes_co2": "500-626"
+      },
+      "disposal": {
+        "description": "Recycling, landfill, transport",
+        "share": "Smaller fraction, growing concern due to rapid hardware turnover"
+      }
+    },
+    "big_tech_emissions": {
+      "microsoft": {
+        "2023_total_tonnes_co2e": 17100000,
+        "change_from_2020": 0.29,
+        "scope_3_increase": 0.309,
+        "driver": "AI data center expansion"
+      },
+      "google": {
+        "2023_vs_2022_increase": 0.13,
+        "2023_vs_2019_increase": 0.48,
+        "driver": "AI compute intensity"
+      },
+      "amazon": {
+        "2021_2022_tonnes_co2e": "71-80 million",
+        "notes": "AI growth preventing faster emissions decline"
+      }
+    }
+  },
+
+  "sustainability_efforts": {
+    "renewable_commitments": {
+      "google": {
+        "renewable_match": "100% annual since 2017",
+        "total_clean_energy_contracts_gw": 22,
+        "2024_new_contracts_gw": 8,
+        "2030_target": "24/7 carbon-free on every grid"
+      },
+      "microsoft": {
+        "contracted_carbon_free_gw": 34,
+        "countries": 24,
+        "2030_targets": ["carbon negative", "water positive", "zero waste"],
+        "operational_emissions_change": -0.30,
+        "total_emissions_change": 0.23
+      },
+      "amazon": {
+        "status": "Largest corporate renewable buyer",
+        "2030_target": "Water positive"
+      }
+    },
+    "nuclear_deals": {
+      "microsoft_three_mile_island": {
+        "partner": "Constellation",
+        "plant": "Three Mile Island Unit 1 (Crane Clean Energy Center)",
+        "capacity_mw": 837,
+        "contract_years": 20,
+        "target_restart": 2028,
+        "investment_billion_usd": 1.6,
+        "equivalent_homes_powered": 800000
+      },
+      "amazon_susquehanna": {
+        "partner": "Talen Energy",
+        "plant": "Susquehanna Nuclear",
+        "capacity_mw": "up to 1920",
+        "contract_end": 2042,
+        "additional_plans": "SMR exploration, plant uprates"
+      },
+      "total_new_nuclear_for_ai_gw": "2.7+"
+    },
+    "efficiency_improvements": {
+      "google_pue": {
+        "2024_fleet_average": 1.09,
+        "industry_average": 1.56,
+        "overhead_reduction": 0.84
+      },
+      "aws_new_designs": {
+        "mechanical_energy_reduction": 0.46,
+        "embodied_carbon_concrete_reduction": 0.35
+      },
+      "cooling_innovations": [
+        "Zero-water cooling systems (Microsoft)",
+        "Chip-level liquid cooling closed loop",
+        "Renewable diesel backup power",
+        "Mass-timber data center structures",
+        "Higher server inlet temperatures"
+      ]
+    }
+  },
+
+  "water_usage": {
+    "per_query_consumption": {
+      "chatgpt_session_10_50_prompts_liters": 0.5,
+      "per_prompt_ml": "10-50",
+      "includes": "Cooling + power sector water",
+      "notes": "2-3x higher in hot climates/water-intensive grids"
+    },
+    "company_totals_liters_annual": {
+      "google": {
+        "2022": 20000000000,
+        "2023_withdrawn": 29000000000,
+        "2023_consumed": 23000000000,
+        "single_facility_council_bluffs_annual": "3.7-3.8 billion"
+      },
+      "microsoft": {
+        "2022": 6400000000,
+        "2023": 7800000000,
+        "increase_2022_vs_2021": 0.34,
+        "wue_2024_liters_per_kwh": 0.30,
+        "wue_improvement_since_2021": 0.39
+      },
+      "combined_major_players_2023": "40+ billion liters"
+    },
+    "facility_scale": {
+      "100mw_data_center_daily_liters": 2000000,
+      "equivalent_households_daily": 2900,
+      "average_wue_industry": 1.9
+    },
+    "regional_water_stress": {
+      "arizona": {
+        "status": "High stress",
+        "issues": ["Limited groundwater", "Over-allocated rivers", "Ongoing drought"],
+        "response": "Microsoft piloting zero-evaporation cooling in Phoenix"
+      },
+      "texas": {
+        "status": "Periodic scarcity, future stress",
+        "response": "Increasing reclaimed/recycled water use"
+      }
+    },
+    "projections": {
+      "us_hyperscale_2028_liters": "60-124 billion",
+      "global_ai_2027_trillion_liters": "4.2-6.6"
+    }
+  },
+
+  "compute_efficiency": {
+    "inference_cost_reduction": {
+      "gpt_3_5_level_2022_to_2024": "280x cheaper",
+      "hardware_annual_cost_decline": 0.30,
+      "energy_efficiency_annual_gain": 0.40,
+      "source": "2024 AI industry analysis"
+    },
+    "smaller_models": {
+      "phi_3_mini": {
+        "parameters_billion": 3.8,
+        "mmlu_score": "60%+",
+        "comparison": "PaLM 540B achieved similar in 2022",
+        "size_reduction": "142x"
+      },
+      "open_vs_closed_gap": {
+        "2023": 0.08,
+        "2024": 0.017
+      }
+    },
+    "inference_optimization_techniques": [
+      "Quantization-Aware Distillation (QAD)",
+      "Speculative Decoding (EAGLE-3) - 30x speedup",
+      "KV/Semantic Caching - 10x latency/cost improvement",
+      "Mixture of Experts (sparse activation)"
+    ]
+  },
+
+  "key_takeaways": {
+    "energy": "Global DC energy ~415 TWh (2024) → 945 TWh (2030), US from 4% to 8% of grid",
+    "ten_percent_claim": "Overstated. Central estimate: 8% for all DCs, ~5% AI-specific",
+    "carbon": "AI infra ~56 MtCO2/year (2024), ~5-7% of aviation, Big Tech emissions rising 20-30%",
+    "water": "~10-50mL per prompt, 40+ billion liters/year from major players combined",
+    "nuclear": "Microsoft (837 MW TMI), Amazon (1920 MW Susquehanna) = 2.7+ GW new nuclear for AI",
+    "efficiency": "280x inference cost reduction 2022-2024, but growth outpacing gains"
+  }
+}

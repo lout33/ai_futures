@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "research_date": "2025-12-28",
+    "topic": "AI Safety & Governance Frameworks 2025-2030",
+    "sources": ["Anthropic RSP", "OpenAI Safety", "EU AI Act", "NIST AI RMF", "UK AI Safety Institute", "US Executive Orders", "Academic Papers"]
+  },
+
+  "summary": "Safety landscape dominated by voluntary RSP frameworks at labs and emerging mandatory EU/UK regulation. US policy in flux post-Trump EO revocation. ASL/preparedness frameworks define capability thresholds but remain self-assessed.",
+
+  "lab_safety_frameworks": {
+    "anthropic_rsp": {
+      "name": "Responsible Scaling Policy",
+      "version": "3.0",
+      "published": "October 2024",
+      "asl_levels": {
+        "ASL-1": {
+          "description": "No significant uplift over existing tools",
+          "current_models": "Pre-Claude",
+          "safeguards": "Standard deployment practices"
+        },
+        "ASL-2": {
+          "description": "Models with some uplift but below weapons/cyber thresholds",
+          "current_models": "Claude 3, Claude 3.5",
+          "safeguards": ["Red teaming", "Usage policies", "Monitoring"],
+          "status": "Current operational level"
+        },
+        "ASL-3": {
+          "description": "Significantly increases risk from non-state actors for CBRN or cyber",
+          "threshold": "Model provides meaningful uplift for creating biological or cyber weapons",
+          "safeguards_required": ["Enhanced security", "Deployment restrictions", "Extensive evals"],
+          "status": "Not yet triggered as of Dec 2025"
+        },
+        "ASL-4": {
+          "description": "Could contribute to catastrophic harm if misused or misaligned",
+          "threshold": "Model can autonomously accomplish complex malicious tasks",
+          "safeguards_required": ["Formal verification", "Interpretability", "Unprecedented security"],
+          "status": "Future threshold"
+        },
+        "ASL-5": {
+          "description": "ASI-level capabilities, transformative societal impact",
+          "threshold": "Exceeds human experts across virtually all domains",
+          "safeguards_required": "Undefined - would require new governance paradigms",
+          "status": "Speculative"
+        }
+      },
+      "key_commitments": [
+        "Pre-commit to safeguards before reaching next ASL",
+        "Pause development if safeguards insufficient",
+        "Regular capability evaluations",
+        "Transparency with AI Safety Institute"
+      ]
+    },
+    "openai_preparedness": {
+      "name": "Preparedness Framework",
+      "published": "December 2023",
+      "risk_categories": {
+        "cybersecurity": {
+          "levels": ["Low", "Medium", "High", "Critical"],
+          "current_assessment": "Medium for GPT-4"
+        },
+        "CBRN": {
+          "levels": ["Low", "Medium", "High", "Critical"],
+          "focus": "Biological and chemical weapons uplift"
+        },
+        "persuasion": {
+          "levels": ["Low", "Medium", "High", "Critical"],
+          "focus": "Manipulation, propaganda, influence operations"
+        },
+        "model_autonomy": {
+          "levels": ["Low", "Medium", "High", "Critical"],
+          "focus": "Self-replication, resource acquisition, deception"
+        }
+      },
+      "deployment_rules": {
+        "critical": "Cannot deploy",
+        "high": "Can develop, cannot deploy without mitigations",
+        "medium": "Can deploy with monitoring",
+        "low": "Standard deployment"
+      },
+      "governance": {
+        "safety_advisory_group": true,
+        "board_oversight": true,
+        "external_audits": "Planned but limited implementation"
+      }
+    },
+    "deepmind_frontier_safety": {
+      "approach": "Capability evaluations and safety cases",
+      "key_papers": ["Model Spec", "Frontier Safety Framework"],
+      "focus_areas": [
+        "Dangerous capability evaluations",
+        "Alignment techniques (RLHF, Constitutional AI)",
+        "Interpretability research"
+      ]
+    },
+    "meta_approach": {
+      "strategy": "Open weights with responsible release",
+      "safety_measures": [
+        "Acceptable use policy",
+        "Red teaming before release",
+        "Model cards with limitations"
+      ],
+      "criticism": "Less restrictive than closed labs"
+    }
+  },
+
+  "government_regulation": {
+    "eu_ai_act": {
+      "status": "Law as of August 2024",
+      "effective_dates": {
+        "prohibited_ai": "February 2025",
+        "gpai_provisions": "August 2025",
+        "high_risk_systems": "August 2026",
+        "full_enforcement": "August 2027"
+      },
+      "risk_tiers": {
+        "unacceptable": {
+          "examples": ["Social scoring", "Real-time biometric in public", "Subliminal manipulation"],
+          "status": "Banned"
+        },
+        "high_risk": {
+          "examples": ["Employment AI", "Education AI", "Credit scoring", "Law enforcement"],
+          "requirements": ["Conformity assessment", "Human oversight", "Transparency", "Record-keeping"]
+        },
+        "limited_risk": {
+          "examples": ["Chatbots", "Deepfakes"],
+          "requirements": ["Transparency obligations", "Disclosure to users"]
+        },
+        "minimal_risk": {
+          "examples": ["Spam filters", "Recommendation systems"],
+          "requirements": "Voluntary codes of conduct"
+        }
+      },
+      "gpai_provisions": {
+        "all_gpai": ["Model cards", "Training data documentation", "Copyright compliance"],
+        "systemic_risk_gpai": {
+          "threshold_flops": "1e25",
+          "additional_requirements": [
+            "Model evaluations",
+            "Adversarial testing",
+            "Serious incident reporting",
+            "Cybersecurity measures"
+          ]
+        }
+      },
+      "penalties": {
+        "prohibited_violations_eur": "35M or 7% global revenue",
+        "other_violations_eur": "15M or 3% global revenue"
+      }
+    },
+    "uk_ai_safety_institute": {
+      "established": "November 2023",
+      "mandate": "Evaluate frontier AI models for safety",
+      "activities": [
+        "Pre-deployment model testing",
+        "Safety research",
+        "International coordination"
+      ],
+      "access_agreements": ["Anthropic", "OpenAI", "Google DeepMind"],
+      "limitations": "Advisory, no enforcement power yet"
+    },
+    "us_policy": {
+      "biden_eo_14110": {
+        "issued": "October 2023",
+        "key_provisions": [
+          "Reporting requirements for large training runs",
+          "Red teaming requirements",
+          "AI safety standards development"
+        ],
+        "status": "REVOKED by Trump January 2025"
+      },
+      "trump_administration": {
+        "eo_revocation": "January 20, 2025",
+        "new_direction": "Pro-innovation, minimal regulation",
+        "stated_goals": ["American AI dominance", "Reduce regulatory burden"],
+        "impact": "Federal AI safety requirements largely eliminated"
+      },
+      "nist_ai_rmf": {
+        "status": "Voluntary framework, still available",
+        "adoption": "Mixed - some enterprise use"
+      },
+      "state_level": {
+        "california_sb1047": {
+          "status": "Vetoed by Governor Newsom (September 2024)",
+          "would_have_required": ["Safety testing", "Kill switch", "Liability provisions"]
+        },
+        "colorado_ai_act": {
+          "status": "Enacted",
+          "scope": "High-risk AI decision systems",
+          "effective": "2026"
+        }
+      }
+    },
+    "china": {
+      "approach": "State-directed regulation with national security focus",
+      "key_regulations": [
+        "Generative AI Service Regulations (Aug 2023)",
+        "Algorithm Recommendation Regulations",
+        "Deep Synthesis Regulations"
+      ],
+      "requirements": [
+        "Content aligned with socialist values",
+        "Registration of AI services",
+        "Training data review"
+      ]
+    }
+  },
+
+  "international_coordination": {
+    "ai_safety_summits": {
+      "bletchley_park_2023": {
+        "outcome": "Bletchley Declaration signed by 28 countries",
+        "commitments": ["Cooperation on frontier AI risks", "Information sharing"]
+      },
+      "seoul_2024": {
+        "outcome": "Frontier AI Safety Commitments",
+        "signatories": ["Anthropic", "OpenAI", "Google", "Meta", "Microsoft", "xAI", "others"],
+        "commitments": [
+          "Publish safety frameworks",
+          "Red team before deployment",
+          "Report serious vulnerabilities",
+          "Invest in safety research"
+        ]
+      },
+      "paris_2025": {
+        "date": "February 2025",
+        "focus": "Implementation and enforcement",
+        "status": "Upcoming"
+      }
+    },
+    "multilateral_bodies": {
+      "un": {
+        "advisory_body": "UN AI Advisory Body established 2024",
+        "focus": "Global governance frameworks",
+        "power": "Advisory only"
+      },
+      "oecd": {
+        "ai_principles": "Updated 2024",
+        "membership": "38 countries + partners"
+      },
+      "g7": {
+        "hiroshima_process": "Code of conduct for AI developers",
+        "status": "Voluntary commitments"
+      }
+    }
+  },
+
+  "safety_research_state": {
+    "alignment_techniques": {
+      "rlhf": {
+        "status": "Standard practice at all major labs",
+        "limitations": ["Reward hacking", "Sycophancy", "Jailbreaks persist"]
+      },
+      "constitutional_ai": {
+        "developer": "Anthropic",
+        "approach": "AI self-critique against principles",
+        "status": "Deployed in Claude"
+      },
+      "dpo": {
+        "name": "Direct Preference Optimization",
+        "status": "Gaining adoption, simpler than RLHF"
+      }
+    },
+    "interpretability": {
+      "progress": "Limited but accelerating",
+      "techniques": [
+        "Sparse autoencoders",
+        "Activation patching",
+        "Circuit analysis"
+      ],
+      "state": "Can understand small components, full model understanding far off"
+    },
+    "evaluations": {
+      "dangerous_capability_evals": {
+        "labs_conducting": ["Anthropic", "OpenAI", "DeepMind", "UK AISI"],
+        "focus_areas": ["Bioweapons uplift", "Cyber offense", "Deception", "Autonomy"],
+        "limitations": "No standardized benchmarks, self-assessment"
+      },
+      "alignment_evals": {
+        "status": "Nascent",
+        "challenge": "How to verify model is aligned vs appearing aligned"
+      }
+    },
+    "open_problems": [
+      "Scalable oversight (how to supervise smarter-than-human AI)",
+      "Deceptive alignment (model appearing aligned while not)",
+      "Goal stability (ensuring goals don't drift with self-improvement)",
+      "Value learning (correctly inferring human values)",
+      "Corrigibility (AI that allows itself to be corrected)"
+    ]
+  },
+
+  "key_debates": {
+    "open_vs_closed": {
+      "open_advocates": ["Meta", "Some academics", "Open source community"],
+      "arguments_for": ["Democratization", "Faster safety research", "Competition", "Transparency"],
+      "closed_advocates": ["Anthropic", "OpenAI initially", "Some safety researchers"],
+      "arguments_against": ["Proliferation risk", "Cannot undo release", "Bad actors access"]
+    },
+    "race_dynamics": {
+      "concern": "Competitive pressure reduces safety investment",
+      "evidence": ["Rushed releases", "Safety team departures", "Pace of deployment"],
+      "counter": "Competition drives capability AND safety improvements"
+    },
+    "regulation_timing": {
+      "regulate_now": "Need guardrails before more powerful systems",
+      "wait_and_see": "Don't stifle innovation with premature rules",
+      "current_state": "EU regulated, US deregulating, UK advisory"
+    }
+  },
+
+  "year_by_year_projections": {
+    "2025": {
+      "regulatory": "EU AI Act GPAI provisions effective Aug 2025",
+      "labs": "ASL-3 may be reached by year-end",
+      "us": "Minimal federal oversight post-EO revocation"
+    },
+    "2026": {
+      "regulatory": "EU high-risk provisions effective, enforcement begins",
+      "international": "More countries adopt AI laws",
+      "labs": "Pressure to demonstrate safety increases"
+    },
+    "2027": {
+      "regulatory": "EU AI Act fully enforced",
+      "capabilities": "ASL-4 thresholds may be approached",
+      "pressure": "Public incidents could drive emergency regulation"
+    },
+    "2028": {
+      "scenario_dependent": "Major incident vs smooth progress",
+      "regulation": "US may re-engage depending on administration",
+      "international": "Global coordination either strengthens or fragments"
+    },
+    "2030": {
+      "range": "From minimal regulation to strict international treaty",
+      "key_variable": "Whether major AI incidents occur"
+    }
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "research_date": "2025-12-28",
+    "topic": "AI Futures Scenarios & Expert Discourse 2025-2030",
+    "sources": ["Situational Awareness", "AI-2027", "Metaculus", "Polymarket", "Expert Interviews", "Academic Surveys"]
+  },
+
+  "summary": "Expert timelines vary wildly: median AGI estimate 2047 (surveys) vs 2027 (AI-2027 scenario). P(doom) estimates range 10-95%. Key disagreement on takeoff speed, alignment difficulty, and whether we're in a capabilities overhang.",
+
+  "major_scenarios": {
+    "ai_2027": {
+      "author": "Anonymous (claimed AI researcher)",
+      "published": "2024",
+      "timeline": {
+        "2025": "Agents deployed, coding AI handles 20% of tasks",
+        "2026": "AI scientists emerge, superhuman narrow domains",
+        "2027": "AGI achieved, recursive self-improvement begins",
+        "2028": "ASI possible if no slowdown"
+      },
+      "key_claims": [
+        "Intelligence explosion is default outcome",
+        "Current architectures sufficient for AGI",
+        "Labs are 12-18 months from transformative AI",
+        "Government will nationalize or heavily intervene"
+      ],
+      "reception": {
+        "believers": "Plausible extrapolation of current trends",
+        "skeptics": "Too aggressive, underestimates bottlenecks",
+        "mainstream": "Possible but not median expectation"
+      }
+    },
+    "situational_awareness": {
+      "author": "Leopold Aschenbrenner",
+      "published": "June 2024",
+      "background": "Former OpenAI researcher (left/fired 2024)",
+      "key_claims": {
+        "timeline": "AGI by 2027, superintelligence by 2030",
+        "scaling": "Current scaling sufficient, no new breakthroughs needed",
+        "compute": "$100B+ clusters by 2027-2028",
+        "geopolitics": "US-China race is existential, US must win",
+        "security": "Labs are not secure enough for AGI"
+      },
+      "proposed_actions": [
+        "Massive compute buildout",
+        "National security integration",
+        "Aggressive safety research",
+        "US-led international coordination"
+      ],
+      "reception": {
+        "influence": "Widely read, cited by policymakers",
+        "criticism": "Overconfident, accelerationist framing",
+        "support": "Taken seriously by many in AI community"
+      }
+    },
+    "slow_takeoff": {
+      "advocates": ["Paul Christiano", "Many AI researchers"],
+      "timeline": "AGI 2030-2040, gradual transition",
+      "key_claims": [
+        "Bottlenecks will slow progress",
+        "Economic integration takes time",
+        "Society can adapt incrementally",
+        "Alignment can be solved in time"
+      ],
+      "implications": "More time for safety, less dramatic transition"
+    },
+    "stagnation": {
+      "advocates": ["Some ML researchers", "Gary Marcus", "Skeptics"],
+      "key_claims": [
+        "Scaling laws will hit walls",
+        "Current architectures fundamentally limited",
+        "AGI requires conceptual breakthroughs",
+        "Decades away or never with current paradigm"
+      ],
+      "evidence_cited": [
+        "Diminishing returns on some benchmarks",
+        "Persistent failure modes (reasoning, planning)",
+        "Data exhaustion"
+      ]
+    }
+  },
+
+  "expert_discourse": {
+    "key_figures": {
+      "eliezer_yudkowsky": {
+        "affiliation": "MIRI",
+        "p_doom": 0.95,
+        "timeline": "Soon (years, not decades)",
+        "key_positions": [
+          "Alignment is extremely hard",
+          "Default outcome is extinction",
+          "Current safety efforts insufficient",
+          "May need to halt AI development"
+        ],
+        "influence": "High in AI safety community, controversial in ML"
+      },
+      "dario_amodei": {
+        "affiliation": "Anthropic CEO",
+        "p_doom": "10-25%",
+        "timeline": "Powerful AI by 2026-2027",
+        "key_positions": [
+          "Optimistic case for AI is extraordinary",
+          "Safety is achievable with effort",
+          "Responsible scaling is the path",
+          "50% entry-level white collar jobs at risk in 5 years"
+        ],
+        "influence": "Very high - leads major safety lab"
+      },
+      "sam_altman": {
+        "affiliation": "OpenAI CEO",
+        "timeline": "AGI coming soon, then superintelligence",
+        "key_positions": [
+          "AI will be the most transformative technology",
+          "Benefits outweigh risks",
+          "Need global governance",
+          "OpenAI's mission is safe AGI"
+        ],
+        "controversy": "Board fired/rehired 2023, safety team departures 2024",
+        "influence": "Highest profile AI figure"
+      },
+      "leopold_aschenbrenner": {
+        "affiliation": "Former OpenAI",
+        "p_doom": "~10-15%",
+        "timeline": "AGI 2027, ASI 2030",
+        "key_positions": [
+          "In the decade that decides everything",
+          "US must lead, security is critical",
+          "Scaling will continue working"
+        ],
+        "influence": "Growing, Situational Awareness widely read"
+      },
+      "paul_christiano": {
+        "affiliation": "Alignment Research Center (ARC)",
+        "p_doom": "40-50%",
+        "timeline": "Transformative AI 2030-2040",
+        "key_positions": [
+          "Alignment is hard but tractable",
+          "Slow takeoff more likely",
+          "Need better evals and oversight"
+        ],
+        "influence": "High among technical safety researchers"
+      },
+      "yann_lecun": {
+        "affiliation": "Meta Chief AI Scientist",
+        "p_doom": "Very low",
+        "timeline": "AGI far off, current path insufficient",
+        "key_positions": [
+          "LLMs are not the path to AGI",
+          "World models needed",
+          "Doom concerns overblown",
+          "Open source is good for safety"
+        ],
+        "influence": "High in ML research community"
+      },
+      "geoffrey_hinton": {
+        "affiliation": "Former Google (resigned 2023)",
+        "p_doom": "10-20%",
+        "timeline": "Could be soon",
+        "key_positions": [
+          "Changed mind on AI risk (now concerned)",
+          "Digital intelligence may surpass biological",
+          "Needs more attention to safety"
+        ],
+        "influence": "Very high - 'Godfather of AI'"
+      },
+      "demis_hassabis": {
+        "affiliation": "Google DeepMind CEO",
+        "timeline": "AGI possible within decade",
+        "key_positions": [
+          "Need careful, safety-focused approach",
+          "AGI will transform science",
+          "Concerned about misuse"
+        ],
+        "influence": "Very high - leads DeepMind"
+      }
+    },
+    "key_debates": {
+      "takeoff_speed": {
+        "fast_takeoff": {
+          "claim": "Weeks to months from AGI to ASI",
+          "mechanism": "Recursive self-improvement",
+          "advocates": ["Yudkowsky", "Some at OpenAI"]
+        },
+        "slow_takeoff": {
+          "claim": "Years to decades, gradual transition",
+          "mechanism": "Bottlenecks, deployment friction",
+          "advocates": ["Christiano", "Many researchers"]
+        },
+        "current_evidence": "Unclear - no AGI to observe takeoff"
+      },
+      "alignment_difficulty": {
+        "very_hard": {
+          "claim": "Default is misalignment, very unlikely to solve",
+          "advocates": ["MIRI", "Yudkowsky"],
+          "implication": "Need to slow down or stop"
+        },
+        "tractable": {
+          "claim": "Hard but solvable with effort",
+          "advocates": ["Anthropic", "Christiano"],
+          "implication": "Invest heavily in safety"
+        },
+        "easy": {
+          "claim": "Current techniques will scale",
+          "advocates": ["Some at Meta", "LeCun"],
+          "implication": "Proceed with development"
+        }
+      },
+      "open_vs_closed": {
+        "open": {
+          "argument": "Democratization, transparency, distributed safety",
+          "advocates": ["LeCun", "Meta", "Open source community"],
+          "risk": "Bad actors get access"
+        },
+        "closed": {
+          "argument": "Control, prevent misuse, staged deployment",
+          "advocates": ["OpenAI initially", "Some safety researchers"],
+          "risk": "Concentration of power"
+        }
+      }
+    }
+  },
+
+  "prediction_markets": {
+    "metaculus": {
+      "agi_median": {
+        "date": "2040",
+        "definition_dependent": true,
+        "note": "Varies by question framing"
+      },
+      "weak_agi_2030": {
+        "probability": 0.25,
+        "definition": "AI that can do most knowledge work"
+      },
+      "transformative_ai": {
+        "median": "2035-2040"
+      }
+    },
+    "polymarket": {
+      "agi_by_2025": {
+        "probability": 0.04,
+        "as_of": "December 2025"
+      },
+      "agi_by_2030": {
+        "probability": 0.15,
+        "note": "Definition sensitive"
+      }
+    },
+    "expert_surveys": {
+      "ai_impacts_2022": {
+        "median_hlmi": 2059,
+        "p_50_by_2033": 0.50,
+        "note": "High-Level Machine Intelligence"
+      },
+      "anthropic_survey_2023": {
+        "researcher_median": "2040s"
+      },
+      "grace_et_al_2024": {
+        "median_full_automation": 2047,
+        "10_percent_chance_by": 2027
+      }
+    },
+    "track_record": {
+      "assessment": "Expert predictions historically very wrong",
+      "examples": [
+        "1960s: 20 years to AGI",
+        "1980s: AI winter followed predictions of success",
+        "2010s: Rapid progress exceeded many expectations"
+      ],
+      "implication": "Wide error bars appropriate"
+    }
+  },
+
+  "p_doom_estimates": {
+    "distribution": {
+      "very_high_95_plus": ["Yudkowsky", "Some MIRI researchers"],
+      "high_40_60": ["Christiano"],
+      "moderate_10_25": ["Amodei", "Hinton", "Aschenbrenner"],
+      "low_1_10": ["Many ML researchers"],
+      "very_low_under_1": ["LeCun", "Some accelerationists"]
+    },
+    "what_counts": {
+      "extinction": "Literal human extinction",
+      "catastrophe": "Severe civilization damage",
+      "loss_of_control": "AI systems we can't steer",
+      "value_lock_in": "Wrong values permanently embedded"
+    },
+    "disagreements": {
+      "alignment_difficulty": "Core crux",
+      "takeoff_speed": "Fast → less time to correct",
+      "deceptive_alignment": "Will AI hide misalignment?",
+      "multipolar_vs_unipolar": "One ASI or many agents?"
+    }
+  },
+
+  "year_by_year_milestones": {
+    "2025": {
+      "capability": "Coding agents, multi-step reasoning, tool use",
+      "milestone_if_true": {
+        "agi_progress": "AI systems autonomously complete software projects",
+        "safety_progress": "Interpretability breakthroughs on medium models"
+      },
+      "key_questions": [
+        "Do o3-style reasoning models show new capabilities?",
+        "Does DeepSeek R1 match Western reasoning models?",
+        "Any major AI incidents?"
+      ]
+    },
+    "2026": {
+      "capability": "AI researchers, scientific discovery assistance",
+      "milestone_if_true": {
+        "agi_progress": "AI makes novel scientific contributions",
+        "economic": "Visible job displacement begins"
+      },
+      "key_questions": [
+        "Does AI-assisted research accelerate?",
+        "How do labor markets respond?"
+      ]
+    },
+    "2027": {
+      "capability": "Potential AGI window (AI-2027, Situational Awareness)",
+      "scenario_fork": {
+        "fast_scenario": "AGI achieved, intense focus on alignment",
+        "medium_scenario": "Very capable systems, AGI not yet",
+        "slow_scenario": "Progress slower than expected, barriers hit"
+      },
+      "key_questions": [
+        "Is there a 'fire alarm' for AGI?",
+        "How do governments respond?"
+      ]
+    },
+    "2028": {
+      "conditional_on_agi": {
+        "if_agi_2027": "Race to align, possible ASI emergence",
+        "if_no_agi": "Continued capability scaling"
+      },
+      "key_questions": [
+        "Can alignment scale to AGI?",
+        "What does post-AGI economy look like?"
+      ]
+    },
+    "2030": {
+      "range_of_outcomes": {
+        "optimistic": "Aligned AGI solving major problems",
+        "neutral": "Powerful narrow AI, AGI still ahead",
+        "pessimistic": "Misaligned AGI or catastrophic misuse",
+        "stagnation": "Scaling walls hit, current paradigm insufficient"
+      }
+    }
+  },
+
+  "key_uncertainties": {
+    "scaling_continuation": {
+      "question": "Will scaling laws continue to AGI?",
+      "optimist": "Yes, just needs compute",
+      "pessimist": "Diminishing returns, need new ideas"
+    },
+    "alignment_solvability": {
+      "question": "Can we align AGI in time?",
+      "optimist": "Tractable with investment",
+      "pessimist": "Fundamental barriers, may be impossible"
+    },
+    "takeoff_dynamics": {
+      "question": "How fast from AGI to ASI?",
+      "fast": "Weeks to months",
+      "slow": "Years to decades"
+    },
+    "societal_adaptation": {
+      "question": "Can institutions adapt fast enough?",
+      "optimist": "Humans are adaptable",
+      "pessimist": "Too fast for institutions"
+    }
+  }
+}
