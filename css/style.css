@@ -114,13 +114,14 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 1800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: var(--space-md) var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
     display: flex;
     flex-direction: column;
     height: 100vh;
     max-height: 100vh;
+    overflow: hidden;
 }
 
 /* ============================================
@@ -288,10 +289,11 @@ body {
 
 .main-content {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: minmax(300px, 380px) 1fr;
     gap: var(--space-md);
     flex: 1;
     min-height: 0;
+    overflow: hidden;
 }
 
 /* ============================================
@@ -306,6 +308,19 @@ body {
     border: 1px solid var(--border-default);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    max-width: 100%;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    border: 1px solid var(--border-default);
+    border-left: 2px solid var(--accent);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    max-width: 100%;
 }
 
 .panel-header {
@@ -339,6 +354,11 @@ body {
 /* ============================================
    PRESETS SECTION
    ============================================ */
+
+.timeline-section {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--border-subtle);
+}
 
 .presets-section {
     padding: var(--space-sm) var(--space-md);
@@ -788,6 +808,10 @@ input[type="range"]::-moz-range-thumb {
    RIGHT PANEL - Generated Narrative
    ============================================ */
 
+/* ============================================
+   RIGHT PANEL - Generated Narrative
+   ============================================ */
+
 .right-panel {
     display: flex;
     flex-direction: column;
@@ -941,15 +965,14 @@ input[type="range"]::-moz-range-thumb {
 
 .year-timeline {
     position: relative;
-    margin-bottom: var(--space-lg);
-    padding: var(--space-md) 0;
+    padding: var(--space-sm) 0;
 }
 
 .timeline-track {
     position: absolute;
     top: 50%;
-    left: 24px;
-    right: 24px;
+    left: 12px;
+    right: 12px;
     height: 2px;
     background: var(--border-default);
     transform: translateY(-50%);
@@ -967,8 +990,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .timeline-years {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xs);
     position: relative;
     z-index: 1;
 }
@@ -977,17 +1001,17 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-xs);
+    gap: 2px;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: var(--space-sm);
+    padding: var(--space-xs);
     transition: all 0.2s ease;
 }
 
 .year-dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background: var(--bg-elevated);
     border: 2px solid var(--border-strong);
     border-radius: 50%;
@@ -1007,7 +1031,7 @@ input[type="range"]::-moz-range-thumb {
 
 .year-label {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: var(--text-muted);
     transition: color 0.2s ease;
@@ -1019,19 +1043,18 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .year-phase {
-    font-size: 0.5rem;
+    font-size: 0.45rem;
     color: var(--text-dim);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    opacity: 0;
-    transform: translateY(-4px);
+    opacity: 0.7;
     transition: all 0.2s ease;
+    text-align: center;
 }
 
 .year-node:hover .year-phase,
 .year-node.active .year-phase {
     opacity: 1;
-    transform: translateY(0);
 }
 
 .year-node.active .year-phase {
@@ -1046,6 +1069,9 @@ input[type="range"]::-moz-range-thumb {
     flex: 1;
     overflow-y: auto;
     padding-right: var(--space-sm);
+    column-count: 2;
+    column-gap: var(--space-lg);
+    column-fill: auto;
 }
 
 .narrative-intro {
@@ -1059,6 +1085,8 @@ input[type="range"]::-moz-range-thumb {
     background: linear-gradient(135deg, var(--accent-subtle), transparent);
     border-radius: var(--radius-md);
     border-left: 3px solid var(--accent);
+    break-inside: avoid;
+    column-span: all;
 }
 
 .narrative-section-block {
@@ -1122,6 +1150,8 @@ input[type="range"]::-moz-range-thumb {
     border-radius: var(--radius-md);
     border: 1px solid var(--border-subtle);
     position: relative;
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .narrative-block.world-events {
@@ -1187,6 +1217,8 @@ input[type="range"]::-moz-range-thumb {
     position: relative;
     overflow: visible;
     transition: all 0.3s ease;
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .narrative-section-block::before {
