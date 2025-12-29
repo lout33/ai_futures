@@ -93,7 +93,32 @@ class NarrativeEngine {
             if (e.key === 'ArrowLeft') {
                 this.navigateYear(-1);
             }
+            // Close modal on Escape
+            if (e.key === 'Escape') {
+                this.closeSourcesModal();
+            }
         });
+
+        // Sources modal
+        const sourcesBtn = document.getElementById('sourcesBtn');
+        if (sourcesBtn) {
+            sourcesBtn.addEventListener('click', () => this.openSourcesModal());
+        }
+
+        const closeSourcesModal = document.getElementById('closeSourcesModal');
+        if (closeSourcesModal) {
+            closeSourcesModal.addEventListener('click', () => this.closeSourcesModal());
+        }
+
+        // Close modal on overlay click
+        const sourcesModal = document.getElementById('sourcesModal');
+        if (sourcesModal) {
+            sourcesModal.addEventListener('click', (e) => {
+                if (e.target === sourcesModal) {
+                    this.closeSourcesModal();
+                }
+            });
+        }
     }
 
     getValues() {
@@ -483,6 +508,79 @@ Tips:
 - Click presets for quick scenarios
 - Click year nodes to explore timeline
 - Share button copies scenario URL`);
+    }
+
+    // Sources Modal Methods
+    openSourcesModal() {
+        const modal = document.getElementById('sourcesModal');
+        if (modal) {
+            this.populateSourcesModal();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    closeSourcesModal() {
+        const modal = document.getElementById('sourcesModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    populateSourcesModal() {
+        this.populateKeyClaims();
+        this.populateAllSources();
+    }
+
+    populateKeyClaims() {
+        const container = document.getElementById('keyClaimsList');
+        if (!container || typeof KEY_CLAIMS === 'undefined') return;
+
+        container.innerHTML = KEY_CLAIMS.map(claim => {
+            const sourceNames = claim.sources.map(sourceId => {
+                const source = SOURCES[sourceId];
+                return source ? `<span class="claim-source-tag">${source.source}</span>` : '';
+            }).join('');
+
+            const factorName = FACTORS[claim.factor]?.name || claim.factor;
+
+            return `
+                <div class="claim-card">
+                    <span class="claim-factor">${factorName}</span>
+                    <div class="claim-text">${claim.claim}</div>
+                    <div class="claim-sources">${sourceNames}</div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    populateAllSources() {
+        const container = document.getElementById('allSourcesList');
+        if (!container || typeof SOURCES === 'undefined') return;
+
+        container.innerHTML = Object.entries(SOURCES).map(([id, source]) => {
+            return `
+                <div class="source-card" data-source-id="${id}">
+                    <div class="source-header">
+                        <div class="source-title">${source.title}</div>
+                    </div>
+                    <div class="source-meta">
+                        <span class="source-org">${source.source}</span>
+                        <span class="source-date">${source.date}</span>
+                    </div>
+                    <div class="source-quote">"${source.quote}"</div>
+                    <a href="${source.url}" target="_blank" rel="noopener noreferrer" class="source-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                        View Source
+                    </a>
+                </div>
+            `;
+        }).join('');
     }
 
     update() {
