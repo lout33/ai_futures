@@ -17,7 +17,7 @@ Help people navigate the AI transition by showing that **the future isn't fixed*
 ### Interactive Simulation
 - **6 Key Factors**: Adjust sliders to configure different AI future scenarios
 - **Dynamic Narrative**: Real-time story generation based on your choices
-- **Multiple Timelines**: Explore outcomes across 2025-2030
+- **Multiple Timelines**: Explore outcomes across 2026-2030
 - **Outcome Visualization**: See probability distributions for different futures
 
 ### Research-Backed
