@@ -1,7 +1,7 @@
 class NarrativeEngine {
     constructor() {
         this.sliders = {};
-        this.selectedYear = 2025;
+        this.selectedYear = 2026;
         this.init();
     }
 
@@ -258,7 +258,7 @@ class NarrativeEngine {
     }
 
     navigateYear(direction) {
-        const years = [2025, 2026, 2027, 2028, 2029, 2030];
+        const years = [2026, 2027, 2028, 2029, 2030];
         const currentIndex = years.indexOf(this.selectedYear);
         const newIndex = Math.max(0, Math.min(years.length - 1, currentIndex + direction));
         this.selectYear(years[newIndex]);
@@ -267,7 +267,7 @@ class NarrativeEngine {
     updateTimelineProgress() {
         if (!this.timelineProgress) return;
         
-        const years = [2025, 2026, 2027, 2028, 2029, 2030];
+        const years = [2026, 2027, 2028, 2029, 2030];
         const index = years.indexOf(this.selectedYear);
         const progress = (index / (years.length - 1)) * 100;
         this.timelineProgress.style.width = `${progress}%`;
@@ -482,7 +482,7 @@ class NarrativeEngine {
         
         if (params.has('year')) {
             const year = parseInt(params.get('year'));
-            if (year >= 2025 && year <= 2030) {
+            if (year >= 2026 && year <= 2030) {
                 this.selectedYear = year;
             }
         }
