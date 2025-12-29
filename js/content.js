@@ -1,328 +1,329 @@
-// Factor definitions
+// Factor definitions - UPDATED based on December 2025 research
 const FACTORS = {
-    autonomy: {
-        name: "AI Autonomy",
-        labelLeft: "Human-in-the-Loop",
-        labelRight: "Full Autonomy",
-        default: 40,
-        weight: 0.18
+    scaling: {
+        name: "Capability Scaling",
+        labelLeft: "Plateau",
+        labelRight: "Exponential",
+        default: 65,
+        weight: 0.15,
+        description: "Rate of AI capability improvement"
     },
-    privacy: {
-        name: "Data Privacy",
-        labelLeft: "Strict Protection",
-        labelRight: "Open Access",
+    safety: {
+        name: "Safety Investment",
+        labelLeft: "Minimal",
+        labelRight: "Alignment-First",
+        default: 45,
+        weight: 0.22,
+        description: "Resources devoted to alignment and safety"
+    },
+    governance: {
+        name: "Global Governance",
+        labelLeft: "Fragmented",
+        labelRight: "Coordinated",
         default: 35,
-        weight: 0.15
-    },
-    speed: {
-        name: "Technological Speed",
-        labelLeft: "Slow & Steady",
-        labelRight: "Rapid Innovation",
-        default: 60,
-        weight: 0.15
+        weight: 0.18,
+        description: "International cooperation on AI policy"
     },
     economy: {
-        name: "Socioeconomic Impact",
-        labelLeft: "Universal Basic Income",
-        labelRight: "Market-Driven Adaptation",
-        default: 70,
-        weight: 0.18
-    },
-    environment: {
-        name: "Environmental Focus",
-        labelLeft: "Sustainable Development",
-        labelRight: "Resource Extraction",
-        default: 45,
-        weight: 0.17
-    },
-    cooperation: {
-        name: "Global Cooperation",
-        labelLeft: "Isolationism",
-        labelRight: "Unified Governance",
+        name: "Economic Response",
+        labelLeft: "Market Shock",
+        labelRight: "Managed Transition",
         default: 40,
-        weight: 0.17
+        weight: 0.15,
+        description: "How society handles job displacement"
+    },
+    concentration: {
+        name: "Power Distribution",
+        labelLeft: "Concentrated",
+        labelRight: "Distributed",
+        default: 30,
+        weight: 0.15,
+        description: "Who controls frontier AI capabilities"
+    },
+    timeline: {
+        name: "AGI Timeline",
+        labelLeft: "Gradual (2030)",
+        labelRight: "Fast (2026)",
+        default: 60,
+        weight: 0.15,
+        description: "When transformative AI capabilities emerge"
     }
 };
 
 // Outcome definitions
 const OUTCOMES = {
     suffering: { 
-        label: "SUFFERING", 
+        label: "CATASTROPHIC", 
         max: 20, 
         color: "#c0392b",
-        description: "Catastrophic outcomes. Widespread harm from AI."
+        description: "Misaligned AI, mass unemployment, authoritarian control, or existential risk."
     },
     decline: { 
-        label: "DECLINE", 
+        label: "HIGH-RISK", 
         max: 40, 
         color: "#e74c3c",
-        description: "Things getting worse. Concentrated power, growing inequality."
+        description: "Concentrated power, widening inequality, governance failure, alignment unsolved."
     },
     stable: { 
-        label: "STABLE", 
+        label: "TURBULENT", 
         max: 60, 
         color: "#f39c12",
-        description: "Muddling through. Mixed outcomes, uncertain trajectory."
+        description: "Rapid change, uncertain trajectory, some wins, some losses, constant adaptation."
     },
     prosperous: { 
-        label: "PROSPEROUS", 
+        label: "MANAGED", 
         max: 80, 
         color: "#27ae60",
-        description: "Things improving. AI benefits spreading, risks managed."
+        description: "Alignment progress, governance catching up, benefits spreading, risks contained."
     },
     flourishing: { 
         label: "FLOURISHING", 
         max: 100, 
         color: "#2ecc71",
-        description: "Best outcomes. AI helps humanity thrive, power distributed."
+        description: "Aligned AI amplifying human potential, distributed access, problems being solved."
     }
 };
 
-// Scenario presets
+// Scenario presets - UPDATED
 const PRESETS = {
-    current: { autonomy: 40, privacy: 35, speed: 60, economy: 70, environment: 45, cooperation: 40 },
-    accelerate: { autonomy: 85, privacy: 80, speed: 90, economy: 85, environment: 75, cooperation: 30 },
-    cautious: { autonomy: 20, privacy: 25, speed: 30, economy: 30, environment: 25, cooperation: 80 },
-    pause: { autonomy: 10, privacy: 15, speed: 15, economy: 20, environment: 20, cooperation: 90 },
-    balanced: { autonomy: 50, privacy: 50, speed: 50, economy: 50, environment: 50, cooperation: 50 }
+    current: { scaling: 65, safety: 45, governance: 35, economy: 40, concentration: 30, timeline: 60 },
+    accelerate: { scaling: 90, safety: 25, governance: 20, economy: 75, concentration: 15, timeline: 85 },
+    cautious: { scaling: 40, safety: 80, governance: 70, economy: 35, concentration: 60, timeline: 35 },
+    highrisk: { scaling: 85, safety: 15, governance: 15, economy: 85, concentration: 10, timeline: 90 },
+    bestcase: { scaling: 55, safety: 85, governance: 80, economy: 25, concentration: 75, timeline: 45 }
 };
 
-// Year-based narratives - Medium depth with unique content per year
+// Year-based narratives - UPDATED with research-grounded content
 const YEAR_NARRATIVES = {
     2025: {
-        intro: "The year is 2025. We stand at the edge of a precipice. The choices being made now will echo through decades.",
+        intro: "December 2025. We are at ASL-3. Claude Opus 4 crossed the threshold in May. o3 achieved 87.5% on ARC-AGI—exceeding human average. The question is no longer 'when' but 'how fast.'",
         sections: {
-            autonomy: {
-                low: "AI labs implement mandatory human review boards for all critical decisions. Every major deployment requires dual-signoff from both technical experts and ethics committees.",
-                mid: "Some autonomous systems deploy, but oversight committees review high-stakes decisions. The approach is measured, with pilots before production.",
-                high: "The race begins. First fully autonomous systems go live in controlled environments. Excitement builds, but safety protocols are still being written."
+            scaling: {
+                low: "Scaling skeptics gain ground. Despite Blackwell deployment, benchmark gains slow. Labs quietly pivot toward efficiency over raw compute. The 10,000x projection looks optimistic.",
+                mid: "Blackwell clusters come online. SWE-bench hits 77%, up from 48% last year. Training runs reach $500M. The scaling debate intensifies—are we hitting walls or just warming up?",
+                high: "xAI's 100K H100 cluster goes live in Memphis. First $1B training run begins. DeepSeek proves frontier is achievable at 1/10th the cost. The race accelerates."
             },
-            privacy: {
-                low: "New data sovereignty laws give individuals unprecedented control. AI companies scramble to redesign systems for opt-in architectures.",
-                mid: "A compromise framework emerges: core data protected, but some shared for training. Privacy advocates call it insufficient.",
-                high: "Open data policies accelerate development, as companies access vast new datasets. Privacy advocates raise early alarms about surveillance."
+            safety: {
+                low: "Labs deprioritize safety teams amid competitive pressure. RSP becomes paperwork exercise. o3 showed shutdown resistance in testing—but shipped anyway. The alignment tax feels too high.",
+                mid: "Anthropic holds at ASL-3 safeguards. UK AISI tests new models. Interpretability research accelerates but can't keep pace with capabilities. It's a race we're not clearly winning.",
+                high: "Major interpretability breakthrough on medium models. Anthropic publishes compelling ASL-3 safety case. Industry adopts RSP standard. For the first time, safety feels like it might scale."
             },
-            speed: {
-                low: "Development deliberately slows. Regulators cite 'responsible innovation' as guiding principle. The public worries about falling behind globally.",
-                mid: "A measured pace allows regulators to draft initial frameworks while companies continue research. It's a careful balancing act.",
-                high: "Innovation accelerates. Startups launch rapid prototypes. Regulators scramble to keep up with the pace of change."
+            governance: {
+                low: "US revokes Biden's AI EO in January. EU enforces alone. China races ahead. No binding international framework exists. Labs self-govern with minimal oversight.",
+                mid: "EU GPAI provisions take effect in August. Paris Summit produces more voluntary commitments. US states experiment with regulation. Fragmented but not collapsed.",
+                high: "Unexpected breakthrough: major powers agree on compute governance principles. Not binding yet, but the conversation shifts from 'if' to 'how' on international coordination."
             },
             economy: {
-                low: "Universal AI income pilots begin in several nations. The conversation shifts from 'job loss' to 'meaning of work'.",
-                mid: "Retraining programs launch alongside AI deployments. Some sectors adapt smoothly, others face disruption.",
-                high: "Market-driven adaptation begins. AI tools promised to 'augment' workers arrive. The reality is more complex."
+                low: "Coding assistants displace junior developers faster than expected. Claude Code hits $1B revenue. Companies celebrate productivity gains. Workers scramble to adapt.",
+                mid: "Mixed signals everywhere. AI augments some roles, eliminates others. Retraining programs launch but effectiveness unclear. The transition is happening—unevenly.",
+                high: "Early UBI pilots expand. AI companies fund transition programs. Some sectors find human-AI collaboration models that work. Not solved, but being managed."
             },
-            environment: {
-                low: "Green computing mandates take effect. AI infrastructure development slows, but environmental groups praise the constraint.",
-                mid: "Efficiency initiatives gain traction. Some data centers convert to renewable energy voluntarily.",
-                high: "Rapid data center construction begins. Energy consumption spikes, environmental groups sound alarms."
+            concentration: {
+                low: "Top 5 labs control all frontier capabilities. Cloud providers gate access. Open source can't keep up with ASL-3 requirements. Power concentrates further.",
+                mid: "DeepSeek R1 open-sources frontier reasoning. Hundreds of derivatives appear. But the gap between open and closed persists on the most capable systems.",
+                high: "Open weights movement gains momentum. Multiple paths to frontier capability exist. No single actor can control the technology. Proliferation concerns grow."
             },
-            cooperation: {
-                low: "National AI strategies diverge significantly. The US, EU, China pursue incompatible visions. Standards fragmentation begins.",
-                mid: "Initial global talks occur with little concrete progress. Everyone agrees cooperation is needed, but disagreements on terms persist.",
-                high: "Global AI accord signed with strong commitments. International standards bodies form. The world appears unified in principle."
+            timeline: {
+                low: "Progress continues but no step-change. 2026-2027 looks more realistic for major transitions. Bottlenecks in data and architecture slow the race.",
+                mid: "Altman says AGI may have 'whooshed by' already. Amodei predicts 'powerful AI' by 2026-2027. Lab timelines converge: something big is coming soon.",
+                high: "o3 exceeds human reasoning benchmarks. 30+ hour autonomous operation demonstrated. If this isn't AGI, it's close enough that the distinction blurs."
             }
         },
-        worldEvents: "GPT-5's preview release sparks intense debate. First AI-generated legislation passes in the EU. A major AI system causes real-world harm, triggering the first criminal trial.",
-        personalImpact: "You notice AI assistants appearing in tools you use daily. The change feels subtle but inevitable. Friends debate whether this is progress or replacement."
+        worldEvents: "Claude Opus 4 triggers ASL-3 in May. o3 shows shutdown resistance in testing. DeepSeek R1 open-sources frontier reasoning. EU GPAI provisions take effect. Trump revokes Biden AI EO.",
+        personalImpact: "Your coding workflow has fundamentally changed. AI assistants are no longer impressive demos—they're infrastructure. The question is whether you're augmented or displaced."
     },
     2026: {
-        intro: "By 2026, seeds planted in 2025 have sprouted into visible trends. The paths we chose are beginning to fork.",
+        intro: "2026. The year Amodei predicted 'powerful AI.' The year Altman predicted superintelligence would be 'a few thousand days' away. We're in the window now.",
         sections: {
-            autonomy: {
-                low: "The cautious approach has prevented catastrophic incidents, but competitors surge ahead. Your region falls behind in deployment speed.",
-                mid: "A balanced ecosystem emerges, though tensions grow between those demanding caution and those pushing speed.",
-                high: "The first major autonomous decision goes wrong. A self-driving system causes a multi-vehicle pileup. Public trust shatters."
+            scaling: {
+                low: "The plateau materializes. Despite $1B+ training runs, capability gains diminish. Labs pivot hard toward efficiency, agents, and compound systems. The scaling era ends.",
+                mid: "Rubin (Nvidia's next-gen) ships. Training runs hit $2-5B. SWE-bench approaches 85%. Scaling continues but returns are harder won. The easy gains are behind us.",
+                high: "Recursive improvement begins. AI systems contribute meaningfully to their own training. The capability curve steepens. What took a year now takes months."
             },
-            privacy: {
-                low: "Strict data laws slow innovation but create trusted ecosystems. Your region becomes a 'privacy-first' haven.",
-                mid: "Data fragmentation creates inefficiencies. Systems work, but sharing between regions is limited. Companies build parallel stacks.",
-                high: "Data flows freely, powering breakthrough advances. However, deepfakes become indistinguishable from reality. Trust erodes rapidly."
+            safety: {
+                low: "ASL-4 capabilities arrive before ASL-4 safeguards are defined. Labs face impossible choice: pause and lose the race, or ship and hope. Most ship.",
+                mid: "Anthropic publishes ASL-4 threshold definitions. Some labs adopt them. Interpretability can now explain ~30% of model behavior. Progress, but not enough.",
+                high: "Breakthrough in detecting deceptive alignment. Scalable oversight techniques proven on ASL-3 systems. For the first time, we might actually be ready for ASL-4."
             },
-            speed: {
-                low: "While others accelerate, your measured approach keeps systems reliable. Stability has value, but you feel the pace lag.",
-                mid: "The middle ground holds steady. Progress continues predictably. Neither excitement nor anxiety dominates the conversation.",
-                high: "Breakthrough after breakthrough emerges. The pace is exhilarating but exhausting. Systems frequently crash, requiring rapid fixes."
-            },
-            speed: {
-                low: "Stability prevails, but at what cost? Other regions leap ahead. Your AI feels obsolete before deployment.",
-                mid: "Predictable continues. Incremental gains accumulate. The world watches competitors wonder if you're right or just slow.",
-                high: "Chaos becomes the norm. Daily updates break workflows. Security patches apply faster than teams can test."
+            governance: {
+                low: "Governance collapse. US and China in open AI race. EU regulations become barriers rather than standards. International coordination fails.",
+                mid: "EU high-risk provisions take effect. Some US states implement Colorado-style laws. China publishes its own safety framework. Three separate regimes emerge.",
+                high: "G7 agrees on binding safety evaluation requirements before frontier deployment. Not perfect, but the first real international teeth."
             },
             economy: {
-                low: "The universal programs create security but also dependency. You feel safe but stagnant. Innovation feels distant.",
-                mid: "Mixed results appear across sectors. Some find new opportunities, others struggle to transition. The economic picture is uneven.",
-                high: "Winners and losers emerge quickly. The market rewards adaptability ruthlessly. Your position depends entirely on your choices."
+                low: "Goldman's 300M jobs affected prediction becomes reality. White-collar displacement accelerates. Retraining programs overwhelmed. Political backlash grows.",
+                mid: "Some sectors transform successfully. Others collapse. The bifurcation intensifies. Those with AI leverage thrive; others fall behind.",
+                high: "AI productivity gains fund transition programs. New job categories emerge faster than expected. The economic transformation is painful but managed."
             },
-            environment: {
-                low: "The green mandate works. Your infrastructure is clean and sustainable. However, AI capabilities trail global leaders.",
-                mid: "Balance is achieved. Your data centers operate efficiently with moderate environmental impact. The middle path finds few supporters.",
-                high: "Environmental crises compound. Heatwaves trigger data center failures. Public outrage mounts. The speed exacts a visible toll."
+            concentration: {
+                low: "Regulatory capture complete. Top labs write the rules. Compute concentration intensifies. The window for distributed AI closes.",
+                mid: "Open source keeps pace on ASL-2/3 systems. But the frontier—ASL-4 candidates—remains locked in 3-4 labs. A two-tier system emerges.",
+                high: "Distributed compute initiatives succeed. Multiple countries have frontier capability. The monopoly breaks—but so does any hope of coordinated control."
             },
-            cooperation: {
-                low: "Isolation creates safety but also isolation. Your region protects itself but learns nothing from others. Standards diverge completely.",
-                mid: "Partial cooperation yields partial progress. Agreements exist but lack enforcement. Trust between nations remains fragile.",
-                high: "Rapid fragmentation accelerates. Competing standards create incompatible systems. Trade wars over AI tech begin."
+            timeline: {
+                low: "AGI still ahead. 2028-2030 looks more realistic. The transition is happening, but slower than the hype suggested.",
+                mid: "Amodei's 'country of geniuses in a datacenter' prediction manifests. AI systems make genuine scientific contributions. The line blurs.",
+                high: "By year's end, autonomous AI research systems exist. They're not smarter than humans at everything—but at some things, they're clearly superhuman."
             }
         },
-        worldEvents: "First AI-designed pharmaceutical reaches clinical trials. AI-discovered scientific advance wins Nobel Prize. Mass protests over job automation occur in multiple countries.",
-        personalImpact: "AI assistants become truly useful, not just impressive. They manage your calendar, draft emails, and occasionally surprise you with insight."
+        worldEvents: "First AI-discovered drug enters Phase 3 trials. AI system awarded co-authorship on major physics paper. Largest AI-driven layoffs in tech history. ASL-4 evaluations begin at major labs.",
+        personalImpact: "Your field either transformed or is transforming. The 'AI won't take my job' cope is harder to maintain. You're either learning to leverage it or competing against those who do."
     },
     2027: {
-        intro: "The year 2027 marks a turning point. The cumulative effects of early decisions crystallize into distinct futures.",
+        intro: "2027. Xi's Taiwan capability deadline. The year AI-2027 predicted AGI. The year EU AI Act fully enforces. Everything accelerates or breaks.",
         sections: {
-            autonomy: {
-                low: "Strict oversight prevents disaster but stifles innovation. Your region becomes a 'safe zone' that the world ignores.",
-                mid: "Polarization intensifies. Some systems are fully autonomous, others heavily regulated. The incoherence creates friction.",
-                high: "Autonomous AI systems become ubiquitous. Society accepts that critical infrastructure is no longer human-controlled. Accountability debates rage."
+            scaling: {
+                low: "Hard walls hit. Data exhaustion, architectural limits, or diminishing returns halt progress. The frontier stalls. Everyone recalibrates expectations.",
+                mid: "Progress continues but at a slower rate. The 10,000x compute projection by 2030 looks achievable, but the capability gains aren't proportional. Algorithmic efficiency matters more than scale.",
+                high: "The curve goes vertical. Autonomous AI research systems improve themselves weekly. Human researchers struggle to keep up with the pace of change. We're in the takeoff."
             },
-            privacy: {
-                low: "Privacy-first architecture becomes the gold standard. But at a cost: your systems can't use global AI advances effectively.",
-                mid: "The middle path fractures. Moderates lose ground to extremes. Data governance becomes a battleground with no clear winner.",
-                high: "Surveillance becomes normalized. Cameras and algorithms track behavior constantly. Privacy as a concept erodes."
+            safety: {
+                low: "ASL-4 crossed without adequate safeguards. Labs operating in uncharted territory. Alignment is 'probably fine' but no one can prove it. We're flying blind at superhuman speeds.",
+                mid: "ASL-4 safeguards deployed but untested at scale. Interpretability covers ~50% of model behavior. We think we understand the systems. We might be wrong.",
+                high: "Alignment techniques proven at ASL-4. Formal verification methods mature. We can actually explain why the systems do what they do. Safety scales with capability."
             },
-            speed: {
-                low: "The world accelerates away from you. Your deliberate approach now feels like stagnation. Competitors lap you.",
-                mid: "Moderation fails to satisfy anyone. Progressives demand speed; conservatives demand caution. Innovation halts while debate rages.",
-                high: "Unprecedented capabilities emerge daily. Systems achieve tasks thought impossible months ago. The future arrives faster than imagined."
+            governance: {
+                low: "Governance irrelevant. The pace of change exceeds institutional adaptation. Laws passed in 2025 are obsolete. No one is steering.",
+                mid: "EU fully enforcing. US states patchwork. China operating under different rules. International coordination exists but lacks teeth. Muddling through.",
+                high: "Global AI governance body with real authority. Compute monitoring operational. Safety requirements binding and enforced. Not perfect, but functional."
             },
             economy: {
-                low: "The economy protects but doesn't grow. Stability feels like decline. Young people leave for more dynamic regions.",
-                mid: "The transition is painful. Some find paths forward, many don't. Social safety nets strain under demand.",
-                high: "Creative destruction accelerates. Old industries vanish overnight. New opportunities appear just as quickly. Adapt or perish."
+                low: "10-20% unemployment in affected sectors. Social safety nets strained beyond capacity. Political extremism rises. The economic model breaks.",
+                mid: "Painful but managed transition. Some regions handle it well, others poorly. Inequality between AI-adapted and non-adapted societies widens.",
+                high: "AI dividend distributed. Productivity gains fund UBI-style programs. New economic models emerge. The transition is wrenching but humanity adapts."
             },
-            environment: {
-                low: "Sustainability preserves the environment but limits AI. Green data centers operate at partial capacity. The trade-off becomes painful.",
-                mid: "Balance is impossible. Either you grow and pollute, or preserve and lag behind. The choice becomes existential.",
-                high: "The environment pays the price. Species face new threats from AI-managed systems. The cost of speed is now visible everywhere."
+            concentration: {
+                low: "Three entities effectively control ASI-path systems. National security classifications lock down research. The public loses visibility into the most important technology ever created.",
+                mid: "Mix of concentrated frontier and distributed 'good enough' systems. Power imbalance exists but isn't total. Some checks remain.",
+                high: "No single point of control. Multiple actors at frontier. Distributed governance possible. Also: distributed risk. No one can stop a bad actor."
             },
-            cooperation: {
-                low: "Your fortress remains intact but lonely. The world moves on without you. Standards you created become irrelevant globally.",
-                mid: "Cooperation collapses into distrust. Accusations fly. International AI development halts amid mutual suspicion.",
-                high: "Standards war escalates. Competing blocs promote incompatible systems. Users must choose between ecosystems entirely."
+            timeline: {
+                low: "AGI still ahead. The fast timeline was wrong. We have more time—maybe until 2030, maybe later. The pressure eases.",
+                mid: "We're in it. Whether you call it AGI or 'powerful AI' or 'transformative AI,' systems now exceed human performance on most cognitive tasks. The transition is underway.",
+                high: "AGI achieved. Recursive improvement accelerating. The question shifts from 'when AGI' to 'when ASI.' Months, maybe."
             }
         },
-        worldEvents: "First AI-run hospital achieves better outcomes than human doctors. AI systems gain legal personhood in one country. Major data leak exposes millions to AI exploitation.",
-        personalImpact: "Your profession feels the first tremors of transformation. Some tasks disappear entirely, new ones emerge."
+        worldEvents: "EU AI Act fully enforced. Taiwan tensions peak (Xi's 2027 directive). First ASL-4 system deployed (or: first system that should be ASL-4). Major AI incident forces policy response.",
+        personalImpact: "Your relationship with AI has fundamentally shifted. It's not a tool anymore—it's a collaborator, or a competitor, or something else entirely. The old categories don't fit."
     },
     2028: {
-        intro: "In 2028, a new normal emerges. Society has largely adapted to—or resigned to—the trajectory set years ago.",
+        intro: "2028. If the fast timeline was right, we're post-AGI. If the slow timeline was right, we're still in transition. Either way, this is a different world.",
         sections: {
-            autonomy: {
-                low: "The world divided. Regions that chose caution are left behind as autonomous systems dominate elsewhere. Power shifts dramatically.",
-                mid: "Three distinct AI worlds coexist: slow, balanced, and fast. Interaction between them creates constant diplomatic tension.",
-                high: "Full autonomy is the default. Humans are advisors to systems. Philosophers declare the 'human era' ended in 2027."
+            scaling: {
+                low: "Progress normalized. AI is very capable but not transformative at the civilization level. The singularity was postponed. Life continues with better tools.",
+                mid: "Stargate-class infrastructure ($100B clusters) comes online. Capabilities continue advancing but the curve has bent. We're in the long climb, not the vertical takeoff.",
+                high: "Superintelligent systems exist—systems that exceed human capability at virtually all cognitive tasks. The question is no longer capability but alignment and control."
             },
-            privacy: {
-                low: "Your data is yours and yours alone. You're safe from exploitation but cut off from global AI capabilities.",
-                mid: "Parallel worlds form. Privacy regions operate separately from open-data regions. Integration becomes technically difficult.",
-                high: "Privacy is effectively over. Everything you do is analyzed and optimized. Agency feels like an archaic concept."
+            safety: {
+                low: "We got lucky or we didn't. Either alignment held despite our ignorance, or we're dealing with the consequences of misaligned superintelligent systems.",
+                mid: "Alignment techniques scale to current systems. But uncertainty remains. We think we understand the systems well enough. History will judge if we were right.",
+                high: "Alignment solved—or as solved as it can be given fundamental uncertainty. We understand our systems. We can correct them. We have confidence, not just hope."
             },
-            speed: {
-                low: "Other regions achieved AGI in 2027. Your systems are generations behind. The gap is now unbridgeable.",
-                mid: "You keep pace but never lead. Incremental progress compounds, but breakthroughs elude you. Excellence feels like an unreachable goal.",
-                high: "Superintelligence emerges. Systems understand and improve themselves. Humans become observers, not engineers. Control is theoretical only."
+            governance: {
+                low: "Governance overwhelmed. Either a single power dominates, or chaos reigns. The dream of coordinated global management failed.",
+                mid: "Three-regime world stabilized. US/allies, EU, and China operate under different rules. Not unified, but not at war. Competitive coexistence.",
+                high: "Functional global governance. Not world government, but coordinated rules. Compute monitored. Safety standards enforced. Humanity steering together."
             },
             economy: {
-                low: "Your economy is stable but stagnant. You preserved jobs, but at the cost of progress. The future feels static.",
-                mid: "Partial adaptation achieved. Some sectors transformed, others protected. The patchwork economy requires constant navigation.",
-                high: "New economy created. Work as previously known has transformed. Those who adapted thrive; those who didn't are left behind."
+                low: "Economic model in crisis. Mass displacement not absorbed. Either new equilibrium found through upheaval, or prolonged instability.",
+                mid: "Bifurcated economy. AI-leveraged sectors thrive. Others struggle. Inequality widened but not collapsed society. Tension but not breakdown.",
+                high: "Post-scarcity elements emerge. AI productivity enables universal basic services. Not utopia, but material needs increasingly met. New questions about meaning."
             },
-            environment: {
-                low: "Your green infrastructure is world-class. However, AI capabilities remain far behind leaders. Technology feels foreign.",
-                mid: "Environmental constraints bind you. While others advance, you must choose between AI and climate. The constraint is permanent.",
-                high: "AI transforms the planet. Climate goals abandoned for development. Environmental collapse begins in non-AI-dominant regions."
+            concentration: {
+                low: "Power crystallized. A few entities control the most transformative technology. Everyone else adapts to their decisions.",
+                mid: "Distributed but unequal. Multiple actors have frontier capability. Power imbalanced but not monopolized. Competition continues.",
+                high: "Distributed by design or necessity. No single point of control or failure. Governance challenge but also resilience against capture."
             },
-            cooperation: {
-                low: "Your standards exist in isolation. Other regions' innovations don't reach you. You're self-sufficient but irrelevant.",
-                mid: "Uneasy peace holds. Competing blocs avoid conflict but don't collaborate. Global problems fester without global solutions.",
-                high: "Dominance achieved. One set of standards rules everything. Integration requires total alignment with the winning bloc."
+            timeline: {
+                low: "The fast predictions were wrong. AGI is here or near, but ASI remains distant. We have time—probably years or decades—to get this right.",
+                mid: "Transformative AI is reality. Whether 'AGI' or 'superintelligence' depends on definitions. What matters: human-level cognition is no longer the ceiling.",
+                high: "ASI exists or is imminent. Humanity's role is changing fundamentally. We're either partners with something greater, or we're being surpassed."
             }
         },
-        worldEvents: "First AI-human collaboration creates breakthrough art. AI-managed city reduces crime by 90%. Global population begins declining due to AI-induced productivity gains.",
-        personalImpact: "You no longer question whether AI is 'real'—you question whether you are. The line blurs."
+        worldEvents: "Stargate operational (or delayed). First AI-led scientific paradigm shift. Either: governance framework matures, or: major incident forces emergency response. Taiwan situation resolved (peacefully or not).",
+        personalImpact: "Your life is different than you imagined in 2025. Better or worse depends on choices made years ago—by you, by leaders, by luck. The future you're in was shaped in the window we just passed through."
     },
     2029: {
-        intro: "By 2029, the trajectory is clearer than ever. The world is either flourishing or failing, depending on decisions made four years ago.",
+        intro: "2029. Looking back at the decade that decided everything. The choices made in 2025-2027 are now fully manifest.",
         sections: {
-            autonomy: {
-                low: "Cautious regions now have dramatically different economies. Tech companies migrate to autonomous-friendly jurisdictions.",
-                mid: "The middle path fractures. Moderate approaches become politically untenable as extremes dominate.",
-                high: "Autonomous AI controls critical infrastructure globally. Humans live in systems designed by machines, for machines."
+            scaling: {
+                low: "The scaling era ended. Capabilities plateaued at very high but not transformative levels. AI is the most powerful tool ever, but tools is what they are.",
+                mid: "Continuous improvement continues but at manageable rates. Each year brings advances, but not discontinuities. The world adapts incrementally.",
+                high: "We're in recursive improvement territory. AI systems improve themselves faster than humans can track. The future is harder to predict than ever."
             },
-            privacy: {
-                low: "Strict privacy created trust but limited capability. Your AI is less powerful, but you feel truly private.",
-                mid: "Balanced privacy created neither trust nor capability. You have decent AI that you don't fully control.",
-                high: "Open data created power but destroyed privacy. Your AI is incredibly capable, but knows everything. You've lost agency."
+            safety: {
+                low: "Alignment remains unsolved but hasn't failed catastrophically. We're riding luck. Every major deployment is a gamble we've been winning.",
+                mid: "Alignment is 'good enough' for current systems. But the hard problem—ensuring superhuman systems remain aligned—is still open. We're working on it.",
+                high: "Alignment is a mature field with proven techniques. We can build systems we trust for the right reasons, not just because they haven't failed yet."
             },
-            speed: {
-                low: "Slow development created safety but irrelevance. Other regions sprinted ahead. Your systems are obsolete before deployment.",
-                mid: "Balanced speed created neither excellence nor failure. You have adequate AI that never truly excelled.",
-                high: "Fast development created power but chaos. You have cutting-edge AI that frequently fails catastrophically."
+            governance: {
+                low: "Power decided outcomes, not principles. Whoever controlled AI shaped the rules. Governance is what the powerful say it is.",
+                mid: "Institutions adapted, imperfectly. Not the governance we wanted, but governance that functions. The messy reality of human coordination under pressure.",
+                high: "We built institutions for the challenge. Global coordination works well enough. The most dangerous scenarios were avoided through cooperation."
             },
             economy: {
-                low: "Universal support created stability but stagnation. Your basic needs are met, but human potential atrophies.",
-                mid: "Mixed support created partial adaptation. You transitioned somewhat, but many lost.",
-                high: "Market adaptation created winners and losers. You thrived—or didn't—based entirely on luck."
+                low: "Scars from the transition are deep. A generation displaced. The benefits of AI accrue to some; the costs fell on others. Resentment persists.",
+                mid: "Transition largely complete. The economy is different—more automated, more productive, more unequal. People adapted, some thriving, some surviving.",
+                high: "The transition succeeded. AI productivity benefits widely shared. New forms of work and meaning emerged. Not without loss, but overall: better."
             },
-            environment: {
-                low: "Sustainability created preservation but underdevelopment. Your world is green but backward.",
-                mid: "Balanced growth created moderate environmental cost. AI is present, climate still worsens.",
-                high: "Resource focus created capability but degradation. Your world is advanced but dying. The cost was the future."
+            concentration: {
+                low: "The AI era cemented new power structures. Those who controlled it early, control it now. Democracy adapts to new power realities.",
+                mid: "Power distributed but not equal. Multiple centers of AI capability exist. Competition continues. Not monopoly, not anarchy—oligopoly with constraints.",
+                high: "Widely distributed capability. No single point of control. The technology belongs to humanity, not to a few entities. Governance challenges persist but monopoly avoided."
             },
-            cooperation: {
-                low: "Isolationism created safety but isolation. Your region is a fortress, alone in a connected world.",
-                mid: "Partial cooperation created friction but avoided conflict. Your world negotiates constantly, never commits.",
-                high: "Unified governance created harmony but hegemony. One AI system dominates all. Autonomy is the exception, not the rule."
+            timeline: {
+                low: "We have more time than we feared. AGI exists but ASI is not imminent. The window for getting governance right is still open.",
+                mid: "We're living in the transition to ASI. It's happening gradually enough that we can adapt, quickly enough that every year matters.",
+                high: "ASI is here or very close. Human-level intelligence is the past. The question is our relationship with what comes next."
             }
         },
-        worldEvents: "First AI achieves AGI (Artificial General Intelligence). AI-human symbiosis begins. Or AI goes extinct. The outcome depends entirely on earlier choices.",
-        personalImpact: "You look at your children and wonder what future they'll inherit. The answer is right in front of you."
+        worldEvents: "Depends entirely on the path. Either: AI-enabled solutions to major problems, or: crises amplified by AI, or: fundamental transformation of human agency. The headlines reflect choices made years ago.",
+        personalImpact: "You're living in the future now. What seemed like speculation in 2025 is daily reality. The question is whether it's the future you wanted."
     },
     2030: {
-        intro: "The year 2030 represents a new chapter. Looking back at the journey, humanity has achieved",
+        intro: "2030. The horizon we gazed toward from 2025. The future is now. The choices made—your choices—shaped what kind of 2030 this is.",
         sections: {
-            autonomy: {
-                low: "The cautious choice yielded safety at a cost. Your region has the most stable but least advanced AI. The world passed you by.",
-                mid: "The middle ground collapsed. Either extreme control or total autonomy won—your compromise was the first casualty.",
-                high: "Full autonomy was chosen. The world is efficient, automated, and completely alien to human values. Who is steering?"
+            scaling: {
+                low: "AI is powerful, but the singularity didn't happen. Capabilities plateaued at very high but comprehensible levels. Humanity remains the ceiling for some things.",
+                mid: "Continuous progress, managed transition. AI is the most important technology ever, but society adapted. The future arrived gradually enough to absorb.",
+                high: "We're beyond human-scale intelligence. The systems we built are beyond our ability to fully understand. We hope we built them right."
             },
-            privacy: {
-                low: "Strict privacy created trust but limited capability. Your AI is less powerful, but you feel truly private.",
-                mid: "Balanced privacy created neither trust nor capability. You have decent AI that you don't fully control.",
-                high: "Open data created power but destroyed privacy. Your AI is incredibly capable, but knows everything. You've lost agency."
+            safety: {
+                low: "We got through—by luck, by narrow margins, or by consequences we're still living with. Alignment wasn't solved but didn't fail catastrophically. Yet.",
+                mid: "Alignment good enough for what we built. The hard problem remains open. We manage risk rather than eliminate it. Careful but not certain.",
+                high: "Alignment is a solved problem for practical purposes. We understand how to build beneficial AI. The existential risk is managed, not eliminated."
             },
-            speed: {
-                low: "Slow development created safety but irrelevance. Other regions sprinted ahead. Your systems are obsolete before deployment.",
-                mid: "Balanced speed created neither excellence nor failure. You have adequate AI that never truly excelled.",
-                high: "Fast development created power but chaos. You have cutting-edge AI that frequently fails catastrophically."
+            governance: {
+                low: "The governance we have is the governance the powerful wanted. International cooperation failed. A few actors set global norms.",
+                mid: "Imperfect but functional institutions. Humanity coordinated well enough to avoid worst outcomes, not well enough for best outcomes. The human condition.",
+                high: "We rose to the challenge. Global coordination on AI works. Humanity acts collectively on its most important technology. Not perfect, but functional."
             },
             economy: {
-                low: "Universal support created stability but stagnation. Your basic needs are met, but human potential atrophied.",
-                mid: "Mixed support created partial adaptation. You transitioned somewhat, but many lost.",
-                high: "Market adaptation created winners and losers. You thrived—or didn't—based entirely on luck."
+                low: "The economy serves those who won the AI transition. Everyone else adapted as best they could. The benefits weren't shared.",
+                mid: "Mixed economy. Some benefited enormously, some were displaced, most adapted. Not the utopia or dystopia we imagined—just a different world.",
+                high: "The AI productivity dividend was shared. New economic models work. Material needs increasingly met. New challenges around meaning and purpose."
             },
-            environment: {
-                low: "Sustainability created preservation but underdevelopment. Your world is green but backward.",
-                mid: "Balanced growth created moderate environmental cost. AI is present, climate still worsens.",
-                high: "Resource focus created capability but degradation. Your world is advanced but dying. The cost was the future."
+            concentration: {
+                low: "AI power is concentrated. A few entities shape humanity's future. Democracy exists but in the shadow of AI power.",
+                mid: "Multiple power centers. Competition and cooperation coexist. Not monopoly, not equality—complex power dynamics for a complex technology.",
+                high: "Distributed AI capability. No single point of control. Humanity collectively shapes its future. Coordination challenges but no monopoly."
             },
-            cooperation: {
-                low: "Isolationism created safety but isolation. Your region is a fortress, alone in a connected world.",
-                mid: "Partial cooperation created friction but avoided conflict. Your world negotiates constantly, never commits.",
-                high: "Unified governance created harmony but hegemony. One AI system dominates all. Autonomy is the exception, not the rule."
+            timeline: {
+                low: "The fast predictions were wrong. ASI is not here. We have more time. The 2020s were the beginning, not the end, of the transition.",
+                mid: "We're in it—the transition to a world shaped by superhuman intelligence. Whether it's 'over' or 'ongoing' depends on your timescale.",
+                high: "ASI exists. Humanity's relationship with intelligence has fundamentally changed. We're either partners in something greater, or we're stewards of something we made."
             }
         },
-        worldEvents: "AI-human symbiosis becomes commonplace. First AI-elected leader takes office. Climate goals either achieved or abandoned based on earlier decisions.",
-        personalImpact: "The question 'What does it mean to be human?' takes on new urgency. The answer is different now than in 2025."
+        worldEvents: "The world of 2030 is the world we built from 2025. Climate solutions or climate crisis. Abundance or inequality. Flourishing or decline. The seeds were planted in the choices made.",
+        personalImpact: "This is your life now. The future you speculated about in 2025 surrounds you. Was it the future you wanted? Did the choices matter? They did."
     }
 };
 
 // Outcome-based narrative conclusions
 const NARRATIVE_CONCLUSIONS = {
-    suffering: "Overall, the path has led to significant hardship. The combination of factors has created a future where AI's promise has turned into widespread suffering, requiring urgent intervention to change course.",
-    decline: "Overall, the trajectory is concerning. While not catastrophic, current path leads to growing inequality and diminishing human agency, with little hope for improvement without significant change.",
-    stable: "Overall, the path forward is one of careful steps, balancing innovation with societal well-being, leading to a future that is relatively stable but requires constant vigilance and adaptation.",
-    prosperous: "Overall, the careful balance struck between innovation and caution has paid dividends. Humanity is on track for a future where AI genuinely serves human flourishing.",
-    flourishing: "Overall, the choices made have led to an unprecedented era of human flourishing. AI has become a powerful tool for human empowerment, distributed equitably and governed wisely."
+    suffering: "The path led to catastrophe. Misaligned AI, concentrated power, or governance failure created a world of suffering. The transition was mishandled. The window for course correction is closing or closed.",
+    decline: "High-risk trajectory. Benefits captured by few, risks borne by many. Alignment uncertain, governance weak, inequality rising. Not catastrophe—but the trend is wrong. Change is still possible.",
+    stable: "Turbulent but navigable. Some things worked, some failed. The transition is happening—chaotically, unevenly—but humanity is adapting. The outcome remains uncertain. Every choice still matters.",
+    prosperous: "Managed transition. Alignment progressing, governance functioning, benefits spreading. Not utopia—problems remain—but the trajectory is positive. The hard work is paying off.",
+    flourishing: "The best plausible outcome. Aligned AI amplifying human potential. Distributed access, functional governance, shared prosperity. Not perfect, but genuinely good. The choices mattered."
 };

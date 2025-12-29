@@ -95,17 +95,17 @@
                         <button class="preset-btn active" data-preset="current">
                             <div class="preset-visual">
                                 <div class="mini-bars">
-                                    <span style="height: 40%"></span>
-                                    <span style="height: 35%"></span>
-                                    <span style="height: 60%"></span>
-                                    <span style="height: 70%"></span>
+                                    <span style="height: 65%"></span>
                                     <span style="height: 45%"></span>
+                                    <span style="height: 35%"></span>
                                     <span style="height: 40%"></span>
+                                    <span style="height: 30%"></span>
+                                    <span style="height: 60%"></span>
                                 </div>
                             </div>
                             <div class="preset-info">
                                 <div class="preset-name">Current</div>
-                                <div class="preset-desc">Today's trajectory</div>
+                                <div class="preset-desc">Dec 2025 trajectory</div>
                             </div>
                             <div class="preset-indicator"></div>
                         </button>
@@ -113,67 +113,67 @@
                             <div class="preset-visual">
                                 <div class="mini-bars accelerate">
                                     <span style="height: 90%"></span>
-                                    <span style="height: 85%"></span>
-                                    <span style="height: 95%"></span>
-                                    <span style="height: 80%"></span>
+                                    <span style="height: 25%"></span>
+                                    <span style="height: 20%"></span>
                                     <span style="height: 75%"></span>
-                                    <span style="height: 30%"></span>
+                                    <span style="height: 15%"></span>
+                                    <span style="height: 85%"></span>
                                 </div>
                             </div>
                             <div class="preset-info">
                                 <div class="preset-name">Accelerate</div>
-                                <div class="preset-desc">Maximum velocity</div>
+                                <div class="preset-desc">Race dynamics</div>
                             </div>
                             <div class="preset-indicator"></div>
                         </button>
                         <button class="preset-btn" data-preset="cautious">
                             <div class="preset-visual">
                                 <div class="mini-bars cautious">
-                                    <span style="height: 25%"></span>
-                                    <span style="height: 20%"></span>
-                                    <span style="height: 30%"></span>
                                     <span style="height: 40%"></span>
+                                    <span style="height: 80%"></span>
+                                    <span style="height: 70%"></span>
                                     <span style="height: 35%"></span>
-                                    <span style="height: 85%"></span>
+                                    <span style="height: 60%"></span>
+                                    <span style="height: 35%"></span>
                                 </div>
                             </div>
                             <div class="preset-info">
                                 <div class="preset-name">Cautious</div>
-                                <div class="preset-desc">Safety-first approach</div>
+                                <div class="preset-desc">Safety-first RSP</div>
                             </div>
                             <div class="preset-indicator"></div>
                         </button>
-                        <button class="preset-btn" data-preset="pause">
+                        <button class="preset-btn" data-preset="highrisk">
                             <div class="preset-visual">
                                 <div class="mini-bars pause">
+                                    <span style="height: 85%"></span>
                                     <span style="height: 15%"></span>
+                                    <span style="height: 15%"></span>
+                                    <span style="height: 85%"></span>
                                     <span style="height: 10%"></span>
-                                    <span style="height: 10%"></span>
-                                    <span style="height: 20%"></span>
-                                    <span style="height: 25%"></span>
                                     <span style="height: 90%"></span>
                                 </div>
                             </div>
                             <div class="preset-info">
-                                <div class="preset-name">Pause</div>
-                                <div class="preset-desc">Restrict development</div>
+                                <div class="preset-name">High-Risk</div>
+                                <div class="preset-desc">Worst plausible</div>
                             </div>
                             <div class="preset-indicator"></div>
                         </button>
-                        <button class="preset-btn" data-preset="balanced">
+                        <button class="preset-btn" data-preset="bestcase">
                             <div class="preset-visual">
                                 <div class="mini-bars balanced">
-                                    <span style="height: 50%"></span>
-                                    <span style="height: 50%"></span>
-                                    <span style="height: 50%"></span>
-                                    <span style="height: 50%"></span>
-                                    <span style="height: 50%"></span>
-                                    <span style="height: 50%"></span>
+                                    <span style="height: 55%"></span>
+                                    <span style="height: 85%"></span>
+                                    <span style="height: 80%"></span>
+                                    <span style="height: 25%"></span>
+                                    <span style="height: 75%"></span>
+                                    <span style="height: 45%"></span>
                                 </div>
                             </div>
                             <div class="preset-info">
-                                <div class="preset-name">Balanced</div>
-                                <div class="preset-desc">Middle ground</div>
+                                <div class="preset-name">Best-Case</div>
+                                <div class="preset-desc">Alignment succeeds</div>
                             </div>
                             <div class="preset-indicator"></div>
                         </button>
@@ -182,48 +182,85 @@
                 
                 <!-- Factor Cards -->
                 <div class="factors-container">
-                    <div class="factor-card" data-factor="autonomy">
+                    <div class="factor-card" data-factor="scaling">
                         <div class="factor-header">
                             <div class="factor-id">01</div>
                             <div class="factor-title-group">
-                                <span class="factor-title">AI Autonomy</span>
+                                <span class="factor-title">Capability Scaling</span>
                             </div>
                             <div class="factor-meta-inline">
                                 <div class="impact-dots">
                                     <span class="dot filled"></span>
                                     <span class="dot filled"></span>
                                     <span class="dot filled"></span>
-                                    <span class="dot"></span>
+                                    <span class="dot filled"></span>
                                     <span class="dot"></span>
                                 </div>
                                 <span class="meta-value high">HIGH</span>
                             </div>
                             <div class="factor-value-display">
-                                <span class="factor-value" id="autonomy-value">40</span>
+                                <span class="factor-value" id="scaling-value">65</span>
                                 <span class="factor-unit">%</span>
                             </div>
                         </div>
                         <div class="factor-body">
                             <div class="slider-container">
                                 <div class="slider-track-bg"></div>
-                                <div class="slider-track-fill" id="autonomy-fill" style="width: 40%"></div>
+                                <div class="slider-track-fill" id="scaling-fill" style="width: 65%"></div>
                                 <div class="slider-markers">
                                     <span></span><span></span><span></span><span></span><span></span>
                                 </div>
-                                <input type="range" id="autonomy" min="0" max="100" value="40">
+                                <input type="range" id="scaling" min="0" max="100" value="65">
                             </div>
                             <div class="factor-spectrum">
-                                <span class="spectrum-label left">HUMAN CONTROL</span>
-                                <span class="spectrum-label right">FULL AUTONOMY</span>
+                                <span class="spectrum-label left">PLATEAU</span>
+                                <span class="spectrum-label right">EXPONENTIAL</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="factor-card" data-factor="privacy">
+                    <div class="factor-card" data-factor="safety">
                         <div class="factor-header">
                             <div class="factor-id">02</div>
                             <div class="factor-title-group">
-                                <span class="factor-title">Data Privacy</span>
+                                <span class="factor-title">Safety Investment</span>
+                            </div>
+                            <div class="factor-meta-inline">
+                                <div class="impact-dots">
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                    <span class="dot filled"></span>
+                                </div>
+                                <span class="meta-value critical">CRIT</span>
+                            </div>
+                            <div class="factor-value-display">
+                                <span class="factor-value" id="safety-value">45</span>
+                                <span class="factor-unit">%</span>
+                            </div>
+                        </div>
+                        <div class="factor-body">
+                            <div class="slider-container">
+                                <div class="slider-track-bg"></div>
+                                <div class="slider-track-fill" id="safety-fill" style="width: 45%"></div>
+                                <div class="slider-markers">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                                <input type="range" id="safety" min="0" max="100" value="45">
+                            </div>
+                            <div class="factor-spectrum">
+                                <span class="spectrum-label left">MINIMAL</span>
+                                <span class="spectrum-label right">ALIGNMENT-FIRST</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="factor-card" data-factor="governance">
+                        <div class="factor-header">
+                            <div class="factor-id">03</div>
+                            <div class="factor-title-group">
+                                <span class="factor-title">Global Governance</span>
                             </div>
                             <div class="factor-meta-inline">
                                 <div class="impact-dots">
@@ -233,62 +270,25 @@
                                     <span class="dot filled"></span>
                                     <span class="dot"></span>
                                 </div>
-                                <span class="meta-value medium">MED</span>
-                            </div>
-                            <div class="factor-value-display">
-                                <span class="factor-value" id="privacy-value">35</span>
-                                <span class="factor-unit">%</span>
-                            </div>
-                        </div>
-                        <div class="factor-body">
-                            <div class="slider-container">
-                                <div class="slider-track-bg"></div>
-                                <div class="slider-track-fill" id="privacy-fill" style="width: 35%"></div>
-                                <div class="slider-markers">
-                                    <span></span><span></span><span></span><span></span><span></span>
-                                </div>
-                                <input type="range" id="privacy" min="0" max="100" value="35">
-                            </div>
-                            <div class="factor-spectrum">
-                                <span class="spectrum-label left">STRICT PROTECTION</span>
-                                <span class="spectrum-label right">OPEN ACCESS</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="factor-card" data-factor="speed">
-                        <div class="factor-header">
-                            <div class="factor-id">03</div>
-                            <div class="factor-title-group">
-                                <span class="factor-title">Development Speed</span>
-                            </div>
-                            <div class="factor-meta-inline">
-                                <div class="impact-dots">
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                    <span class="dot filled"></span>
-                                </div>
                                 <span class="meta-value high">HIGH</span>
                             </div>
                             <div class="factor-value-display">
-                                <span class="factor-value" id="speed-value">60</span>
+                                <span class="factor-value" id="governance-value">35</span>
                                 <span class="factor-unit">%</span>
                             </div>
                         </div>
                         <div class="factor-body">
                             <div class="slider-container">
                                 <div class="slider-track-bg"></div>
-                                <div class="slider-track-fill" id="speed-fill" style="width: 60%"></div>
+                                <div class="slider-track-fill" id="governance-fill" style="width: 35%"></div>
                                 <div class="slider-markers">
                                     <span></span><span></span><span></span><span></span><span></span>
                                 </div>
-                                <input type="range" id="speed" min="0" max="100" value="60">
+                                <input type="range" id="governance" min="0" max="100" value="35">
                             </div>
                             <div class="factor-spectrum">
-                                <span class="spectrum-label left">SLOW & STEADY</span>
-                                <span class="spectrum-label right">RAPID INNOVATION</span>
+                                <span class="spectrum-label left">FRAGMENTED</span>
+                                <span class="spectrum-label right">COORDINATED</span>
                             </div>
                         </div>
                     </div>
@@ -297,7 +297,7 @@
                         <div class="factor-header">
                             <div class="factor-id">04</div>
                             <div class="factor-title-group">
-                                <span class="factor-title">Economic Model</span>
+                                <span class="factor-title">Economic Response</span>
                             </div>
                             <div class="factor-meta-inline">
                                 <div class="impact-dots">
@@ -310,68 +310,68 @@
                                 <span class="meta-value medium">MED</span>
                             </div>
                             <div class="factor-value-display">
-                                <span class="factor-value" id="economy-value">70</span>
+                                <span class="factor-value" id="economy-value">40</span>
                                 <span class="factor-unit">%</span>
                             </div>
                         </div>
                         <div class="factor-body">
                             <div class="slider-container">
                                 <div class="slider-track-bg"></div>
-                                <div class="slider-track-fill" id="economy-fill" style="width: 70%"></div>
+                                <div class="slider-track-fill" id="economy-fill" style="width: 40%"></div>
                                 <div class="slider-markers">
                                     <span></span><span></span><span></span><span></span><span></span>
                                 </div>
-                                <input type="range" id="economy" min="0" max="100" value="70">
+                                <input type="range" id="economy" min="0" max="100" value="40">
                             </div>
                             <div class="factor-spectrum">
-                                <span class="spectrum-label left">UNIVERSAL SUPPORT</span>
-                                <span class="spectrum-label right">MARKET DRIVEN</span>
+                                <span class="spectrum-label left">MARKET SHOCK</span>
+                                <span class="spectrum-label right">MANAGED</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="factor-card" data-factor="environment">
+                    <div class="factor-card" data-factor="concentration">
                         <div class="factor-header">
                             <div class="factor-id">05</div>
                             <div class="factor-title-group">
-                                <span class="factor-title">Environmental Focus</span>
+                                <span class="factor-title">Power Distribution</span>
                             </div>
                             <div class="factor-meta-inline">
                                 <div class="impact-dots">
                                     <span class="dot filled"></span>
                                     <span class="dot filled"></span>
-                                    <span class="dot"></span>
+                                    <span class="dot filled"></span>
                                     <span class="dot"></span>
                                     <span class="dot"></span>
                                 </div>
-                                <span class="meta-value low">LOW</span>
+                                <span class="meta-value medium">MED</span>
                             </div>
                             <div class="factor-value-display">
-                                <span class="factor-value" id="environment-value">45</span>
+                                <span class="factor-value" id="concentration-value">30</span>
                                 <span class="factor-unit">%</span>
                             </div>
                         </div>
                         <div class="factor-body">
                             <div class="slider-container">
                                 <div class="slider-track-bg"></div>
-                                <div class="slider-track-fill" id="environment-fill" style="width: 45%"></div>
+                                <div class="slider-track-fill" id="concentration-fill" style="width: 30%"></div>
                                 <div class="slider-markers">
                                     <span></span><span></span><span></span><span></span><span></span>
                                 </div>
-                                <input type="range" id="environment" min="0" max="100" value="45">
+                                <input type="range" id="concentration" min="0" max="100" value="30">
                             </div>
                             <div class="factor-spectrum">
-                                <span class="spectrum-label left">SUSTAINABLE</span>
-                                <span class="spectrum-label right">EXTRACTION</span>
+                                <span class="spectrum-label left">CONCENTRATED</span>
+                                <span class="spectrum-label right">DISTRIBUTED</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="factor-card" data-factor="cooperation">
+                    <div class="factor-card" data-factor="timeline">
                         <div class="factor-header">
                             <div class="factor-id">06</div>
                             <div class="factor-title-group">
-                                <span class="factor-title">Global Cooperation</span>
+                                <span class="factor-title">AGI Timeline</span>
                             </div>
                             <div class="factor-meta-inline">
                                 <div class="impact-dots">
@@ -379,27 +379,27 @@
                                     <span class="dot filled"></span>
                                     <span class="dot filled"></span>
                                     <span class="dot filled"></span>
-                                    <span class="dot"></span>
+                                    <span class="dot filled"></span>
                                 </div>
-                                <span class="meta-value high">HIGH</span>
+                                <span class="meta-value critical">CRIT</span>
                             </div>
                             <div class="factor-value-display">
-                                <span class="factor-value" id="cooperation-value">40</span>
+                                <span class="factor-value" id="timeline-value">60</span>
                                 <span class="factor-unit">%</span>
                             </div>
                         </div>
                         <div class="factor-body">
                             <div class="slider-container">
                                 <div class="slider-track-bg"></div>
-                                <div class="slider-track-fill" id="cooperation-fill" style="width: 40%"></div>
+                                <div class="slider-track-fill" id="timeline-fill" style="width: 60%"></div>
                                 <div class="slider-markers">
                                     <span></span><span></span><span></span><span></span><span></span>
                                 </div>
-                                <input type="range" id="cooperation" min="0" max="100" value="40">
+                                <input type="range" id="timeline" min="0" max="100" value="60">
                             </div>
                             <div class="factor-spectrum">
-                                <span class="spectrum-label left">ISOLATIONISM</span>
-                                <span class="spectrum-label right">UNIFIED</span>
+                                <span class="spectrum-label left">GRADUAL (2030)</span>
+                                <span class="spectrum-label right">FAST (2026)</span>
                             </div>
                         </div>
                     </div>
@@ -463,27 +463,27 @@
                             <button class="year-node active" data-year="2025">
                                 <span class="year-dot"></span>
                                 <span class="year-label">2025</span>
-                                <span class="year-phase">Near Term</span>
+                                <span class="year-phase">ASL-3 Era</span>
                             </button>
                             <button class="year-node" data-year="2026">
                                 <span class="year-dot"></span>
                                 <span class="year-label">2026</span>
-                                <span class="year-phase">Transition</span>
+                                <span class="year-phase">Powerful AI</span>
                             </button>
                             <button class="year-node" data-year="2027">
                                 <span class="year-dot"></span>
                                 <span class="year-label">2027</span>
-                                <span class="year-phase">Inflection</span>
+                                <span class="year-phase">ASL-4 Threshold</span>
                             </button>
                             <button class="year-node" data-year="2028">
                                 <span class="year-dot"></span>
                                 <span class="year-label">2028</span>
-                                <span class="year-phase">Acceleration</span>
+                                <span class="year-phase">Post-AGI?</span>
                             </button>
                             <button class="year-node" data-year="2029">
                                 <span class="year-dot"></span>
                                 <span class="year-label">2029</span>
-                                <span class="year-phase">Maturation</span>
+                                <span class="year-phase">Alignment Crunch</span>
                             </button>
                             <button class="year-node" data-year="2030">
                                 <span class="year-dot"></span>

@@ -108,15 +108,31 @@ class NarrativeEngine {
         const values = this.getValues();
         let score = 0;
         
+        // New scoring logic based on research:
+        // Higher safety, governance, economy (managed), concentration (distributed) = better
+        // Higher scaling and timeline = more risk (need to balance with safety)
+        
         for (const key in values) {
             let adjustedValue = values[key];
-            if (key === 'autonomy' || key === 'speed') {
-                adjustedValue = 100 - adjustedValue;
+            
+            // Factors where higher = better outcome
+            // safety: more safety investment = better
+            // governance: more coordination = better
+            // economy: more managed transition = better (right side)
+            // concentration: more distributed = better (right side)
+            
+            // Factors where higher = more risk (invert for score)
+            // scaling: exponential scaling without safety = risk
+            // timeline: faster timeline = less time to prepare = risk
+            
+            if (key === 'scaling') {
+                // High scaling is risky unless safety is also high
+                const safetyValue = values['safety'] || 50;
+                adjustedValue = safetyValue > values[key] ? values[key] : 100 - (values[key] - safetyValue);
+                adjustedValue = Math.max(0, Math.min(100, adjustedValue));
             }
-            if (key === 'privacy') {
-                adjustedValue = 100 - adjustedValue;
-            }
-            if (key === 'environment') {
+            if (key === 'timeline') {
+                // Faster timeline (higher value) = more risk
                 adjustedValue = 100 - adjustedValue;
             }
             
@@ -255,15 +271,15 @@ class NarrativeEngine {
         let narrativeHTML = `<div class="narrative-intro">${yearData.intro}</div>`;
         
         const factorIcons = {
-            autonomy: '🤖',
-            privacy: '🔐',
-            speed: '⚡',
-            economy: '💰',
-            environment: '🌱',
-            cooperation: '🤝'
+            scaling: '📈',
+            safety: '🛡️',
+            governance: '🌐',
+            economy: '💼',
+            concentration: '⚖️',
+            timeline: '⏱️'
         };
         
-        const factorsToShow = ['autonomy', 'privacy', 'speed', 'economy', 'environment', 'cooperation'];
+        const factorsToShow = ['scaling', 'safety', 'governance', 'economy', 'concentration', 'timeline'];
         factorsToShow.forEach(factorKey => {
             const value = values[factorKey];
             const level = this.getImpactLevel(value);

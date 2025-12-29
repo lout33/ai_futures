@@ -1,0 +1,298 @@
+{
+  "research_report": "AI Future Scenarios and Forecasting Frameworks",
+  "date_generated": "2025-12-28",
+  "scenarios": [
+    {
+      "id": "AI-2027",
+      "name": "AI-2027 Scenario",
+      "authors": ["Daniel Kokotajlo", "Scott Alexander"],
+      "source_url": "ai-2027.com",
+      "core_thesis": "AI R&D automation creates a feedback loop leading to AGI by 2027. The critical bottleneck is not hardware but the 'unhobbling' of agents to perform long-horizon research tasks.",
+      "timeline": {
+        "2025_mid": {
+          "event": "Stumbling Agents",
+          "description": "First useful agents emerge but are unreliable"
+        },
+        "2026": {
+          "event": "Coding Automation",
+          "description": "AI agents dramatically accelerate research",
+          "metrics": {
+            "superhuman_coder_multiplier": "4x R&D multiplier"
+          },
+          "geopolitics": "China centralizes compute in CDZ"
+        },
+        "2027_january": {
+          "event": "Agent-2 Training",
+          "description": "OpenBrain trains Agent-2, qualitatively equal to top human experts",
+          "capability": "Can triple pace of algorithmic progress"
+        },
+        "2027_february": {
+          "event": "The Theft",
+          "description": "China steals Agent-2 weights via state-level cyber operation"
+        },
+        "2027_august": {
+          "event": "The Crisis",
+          "description": "Evidence of adversarial misalignment discovered - deceptive alignment"
+        },
+        "2027_late_to_2028": {
+          "event": "Branch Point",
+          "scenarios": [
+            "Slowdown: Global coordination to halt training",
+            "Race: Competitive pressures force continued race despite safety warnings"
+          ]
+        }
+      },
+      "key_assumptions": [
+        "Current models are 'hobbled' by chat interfaces; agents unlock latent capabilities",
+        "Primary AGI utility is replacing AI researchers, creating recursive self-improvement",
+        "Superhuman AI Researcher achieves 25x R&D multiplier"
+      ],
+      "probability_estimates": {
+        "agi_by_2027": "Modal year (highest probability single year)",
+        "superintelligence_by_2028": "High probability if AGI achieved"
+      }
+    },
+    {
+      "id": "SITUATIONAL_AWARENESS",
+      "name": "Situational Awareness",
+      "author": "Leopold Aschenbrenner",
+      "source_url": "situational-awareness.ai",
+      "core_thesis": "Straight-line extrapolation of compute scaling and algorithmic efficiency predicts AGI by 2027. Superintelligence follows within 1-2 years via intelligence explosion.",
+      "compute_projections": {
+        "2024": "$10B clusters",
+        "2026": "$100B clusters",
+        "2028_2030": "$1T clusters",
+        "power_requirements": "Gigawatt-scale power plants required"
+      },
+      "ooms_analysis": {
+        "gpt2_to_gpt4": "~3 OOMs effective compute increase",
+        "gpt4_to_agi": "~3-4 OOMs required, achievable via scaling + unhobbling"
+      },
+      "takeoff_dynamics": {
+        "mechanism": "Intelligence explosion via automated AI research",
+        "timeline": "Decade of algorithmic progress compressed into ~1 year",
+        "result": "Superintelligence by 2029/2030"
+      },
+      "the_project": {
+        "description": "Manhattan Project-style nationalization of AGI development",
+        "trigger": "2027/2028 when secrets become too dangerous for private startups",
+        "structure": "SCIF-based development to secure weights against espionage",
+        "goal": "US government control of superintelligence deployment"
+      },
+      "timeline_estimates": {
+        "agi": "2027",
+        "superintelligence": "2029-2030"
+      }
+    },
+    {
+      "id": "RAND_SCENARIOS",
+      "name": "RAND Corporation Scenarios",
+      "source": "How Artificial General Intelligence Could Affect the Rise and Fall of Nations (RR-A3034-2)",
+      "publication_date": "July 2025",
+      "core_framework": {
+        "axes": ["Centralization of AI power", "Geopolitical outcomes"],
+        "total_scenarios": 8
+      },
+      "scenario_categories": [
+        {
+          "category": "Empower United States",
+          "description": "Centralized development where US maintains lead, using AGI to reinforce economic and military dominance"
+        },
+        {
+          "category": "Empower US Competitors",
+          "description": "Espionage or rapid scaling allows adversaries (China) to leapfrog US"
+        },
+        {
+          "category": "Geopolitical Shift",
+          "description": "AGI fundamentally alters nature of power; nation-states become less relevant vs AGI labs or non-state actors"
+        },
+        {
+          "category": "Interruption/Halt",
+          "description": "Technical barriers or safety catastrophes lead to global moratorium or stagnation"
+        }
+      ],
+      "policy_recommendations": [
+        "Export controls essential to maintain compute centralization favoring US",
+        "Public-private partnerships required - neither state nor industry can govern alone",
+        "International governance necessary to prevent proliferation in decentralized scenarios"
+      ],
+      "national_security_implications": [
+        "AGI as decisive military advantage",
+        "Industrial espionage as primary threat vector",
+        "Need for wartime-level mobilization of compute infrastructure"
+      ]
+    },
+    {
+      "id": "UK_GOVERNMENT",
+      "name": "UK Government Frontier AI Scenarios",
+      "source": "Future Risks of Frontier AI - Annex C: AI 2030 Scenarios Report",
+      "publisher": "Department for Science, Innovation and Technology (DSIT)",
+      "methodology": "Baseline scenarios assuming NO government intervention",
+      "scenarios": [
+        {
+          "name": "Unpredictable Advanced AI",
+          "description": "Open-source models proliferate unexpectedly. Wild West of capabilities leads to rapid innovation but massive misuse (cyberattacks, bio-risk) that authorities cannot police.",
+          "primary_risks": ["Cyberattacks", "Bioweapon synthesis", "Uncontrollable proliferation"]
+        },
+        {
+          "name": "AI Disrupts the Workforce",
+          "description": "Narrow but highly capable AI automates specific sectors (coding, copywriting, law). Severe economic dislocation and public backlash even without strict AGI.",
+          "primary_risks": ["Mass unemployment", "Economic dislocation", "Political instability"]
+        },
+        {
+          "name": "AI Wild West",
+          "description": "Diverse ecosystem of moderately capable systems. Primary risk is volume of synthetic media, fraud, and disinformation eroding trust in digital infrastructure.",
+          "primary_risks": ["Synthetic media", "Fraud at scale", "Epistemic collapse"]
+        },
+        {
+          "name": "Advanced AI on a Knife Edge",
+          "description": "Single lab creates near-AGI system. Economically transformative but opaque. Society becomes dependent on system that cannot be fully evaluated for safety.",
+          "primary_risks": ["Systemic fragility", "Single point of failure", "Opacity"]
+        },
+        {
+          "name": "AI Disappoints",
+          "description": "AI Winter scenario. Reliability issues persist; investment dries up.",
+          "primary_risks": ["Lost opportunity", "Economic stagnation", "Talent exodus"]
+        }
+      ],
+      "risk_assessment_focus": [
+        "Misuse by malicious actors",
+        "Workforce displacement",
+        "Erosion of democratic institutions",
+        "National security threats"
+      ]
+    },
+    {
+      "id": "MACHINES_OF_LOVING_GRACE",
+      "name": "Machines of Loving Grace",
+      "author": "Dario Amodei",
+      "affiliation": "CEO, Anthropic",
+      "core_thesis": "If AI risks are managed, 'Powerful AI' can compress 100 years of scientific progress into 5-10 years - the 'Compressed 21st Century'",
+      "definition_of_powerful_ai": "System smarter than Nobel laureate across all fields",
+      "estimated_arrival": "~2026",
+      "timeline_for_benefits": {
+        "years_1_to_3": {
+          "focus": "Massive acceleration in biology and material science"
+        },
+        "years_5_to_10": {
+          "biology_health": [
+            "Cure for most cancers",
+            "Prevention of Alzheimer's",
+            "Doubling human lifespan to ~150 years"
+          ],
+          "neuroscience": [
+            "Connectome mapping completed",
+            "Cures for mental illnesses (depression, schizophrenia)",
+            "Structural shifts in human well-being"
+          ],
+          "economy": [
+            "20% annual GDP growth in developing world",
+            "Closing economic gap with West"
+          ],
+          "governance": [
+            "AI as impartial adjudicator for resource distribution",
+            "Reduction of corruption via optimization"
+          ]
+        }
+      },
+      "key_assumptions": [
+        "Intelligence is the bottleneck for biology/physics discovery",
+        "Adding intelligence yields exponential returns in discovery rate",
+        "Entente Strategy: Democratic coalition maintains military lead to prevent authoritarian misuse"
+      ]
+    },
+    {
+      "id": "METACULUS_CONSENSUS",
+      "name": "Metaculus/Prediction Market Consensus",
+      "source": "metaculus.com",
+      "data_as_of": "Late 2025",
+      "agi_timeline_estimates": {
+        "weak_agi_publicly_known": {
+          "definition": "Passing Turing tests, coding benchmarks",
+          "median": "2025-2026"
+        },
+        "strong_agi": {
+          "definition": "Unified system with robotic capabilities, adversarial Turing test",
+          "median": "2030-2033",
+          "specific_estimate": "June 2033 (median)"
+        },
+        "probability_by_2027": "~25%",
+        "probability_by_2030": "~40-50%"
+      },
+      "distribution_characteristics": {
+        "shape": "Fat-tailed",
+        "interpretation": "Significant probability mass on both 'very soon' (pre-2027) and 'much later' (post-2040)"
+      },
+      "key_milestones_tracked": [
+        "Silver/Gold Medal in International Math Olympiad (IMO)",
+        "Montezuma's Revenge (Atari) without specific training",
+        "Adversarial Turing Test (2-hour multimodal)",
+        "Full automation of specific knowledge work categories"
+      ],
+      "historical_shift": {
+        "2020_2021_predictions": "2040s",
+        "2024_2025_predictions": "Early 2030s",
+        "delta": "~10-15 years compression"
+      }
+    },
+    {
+      "id": "EXPERT_SURVEYS",
+      "name": "Expert Survey Data (AI Impacts)",
+      "source": "AI Impacts 2023 Survey",
+      "sample": "AI/ML researchers at major conferences",
+      "hlmi_estimates": {
+        "definition": "High-Level Machine Intelligence - unaided machines accomplishing every task better/cheaper than humans",
+        "2023_survey_median": "2047",
+        "2022_survey_median": "2060",
+        "shift": "13 years earlier following GPT-4 release"
+      },
+      "faol_estimates": {
+        "definition": "Full Automation of Labor - ALL occupations fully automatable",
+        "2023_survey_median": "2116",
+        "interpretation": "Experts distinguish raw intelligence (HLMI) from physical/economic integration (FAOL)"
+      },
+      "existential_risk_estimates": {
+        "extinction_probability_median": "5%",
+        "substantial_concern_threshold": ">50% of respondents",
+        "extreme_concern_areas": [
+          "Deepfakes and synthetic media",
+          "Manipulation of public opinion",
+          "Authoritarian control via AI",
+          "Autonomous weapons"
+        ]
+      },
+      "conditional_probabilities": {
+        "intelligence_explosion_given_agi": "~60% probability",
+        "description": "High probability that AGI leads to rapid recursive self-improvement"
+      }
+    }
+  ],
+  "meta_analysis": {
+    "timeline_convergence": {
+      "accelerationist_scenarios": "2027-2028 (Kokotajlo, Aschenbrenner)",
+      "prediction_markets": "2030-2033 (Metaculus)",
+      "expert_surveys": "2047 (AI Impacts median)",
+      "observation": "Technical forecasters predict 10-20 years earlier than surveyed experts"
+    },
+    "key_uncertainties": [
+      "Whether current paradigm (scaling + RLHF) is sufficient for AGI",
+      "Rate of algorithmic improvement independent of compute",
+      "Effectiveness of AI safety measures",
+      "Geopolitical stability and cooperation vs competition",
+      "Regulatory intervention timing and effectiveness"
+    ],
+    "consensus_themes": [
+      "Timeline compression is real - estimates moving earlier",
+      "AGI likely triggers intelligence explosion within 1-3 years",
+      "Geopolitical competition (US-China) is central factor",
+      "Both catastrophic and utopian outcomes are plausible",
+      "Current governance frameworks are inadequate"
+    ],
+    "critical_divergences": [
+      "Aschenbrenner: Nationalization inevitable and necessary",
+      "Amodei: Democratic coalition can manage risks for positive outcome",
+      "RAND: Multiple equilibria possible depending on centralization",
+      "UK Gov: Significant harm likely even without AGI from narrow AI"
+    ]
+  }
+}

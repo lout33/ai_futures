@@ -1,0 +1,304 @@
+{
+  "topic": "Economic Impact of AI 2025-2030",
+  "research_date": "2025-12-28",
+  "sources": {
+    "institutions_cited": ["McKinsey Global Institute", "Goldman Sachs Research", "IMF", "World Bank", "PwC", "IDC", "Brookings Institution", "Stanford Digital Economy Lab", "GitHub/Peng et al.", "LawGeex", "JPMorgan", "Autodesk", "GiveDirectly"],
+    "key_figures_cited": ["Dario Amodei (Anthropic CEO)", "Sam Altman (OpenAI CEO)", "Jason Furman (Economist)"],
+    "research_method": "Perplexity Pro Search with multi-step reasoning, December 2025"
+  },
+  
+  "job_displacement_forecasts": {
+    "mckinsey": {
+      "global_workers_changing_occupations_by_2030": {
+        "low_estimate": 75000000,
+        "high_estimate": 375000000,
+        "percentage_of_workforce": "3-14%"
+      },
+      "us_specific": {
+        "hours_automatable_by_2030": "30%",
+        "occupational_transitions_by_2030": 12000000,
+        "workers_in_shrinking_roles": 11800000,
+        "technically_automatable_work_hours": "57%",
+        "highly_automatable_jobs": "40%"
+      },
+      "most_affected_occupations": ["office support", "customer service", "food service", "production/manufacturing", "clerks", "administrative assistants", "cashiers", "retail sales", "call-center workers"],
+      "growing_sectors": ["healthcare", "STEM", "management", "business/legal", "transportation"]
+    },
+    "goldman_sachs": {
+      "global_jobs_affected": 300000000,
+      "jobs_exposed_us_europe": "66%",
+      "work_fully_automatable": "25%",
+      "gdp_impact": "7% boost to global GDP",
+      "occupation_automation_risk": {
+        "office_administrative_support": "46%",
+        "legal": "44%",
+        "engineering": "37%"
+      }
+    },
+    "imf": {
+      "global_employment_exposed_to_ai": "40%",
+      "by_economy_type": {
+        "advanced_economies": "60%",
+        "emerging_markets": "40%",
+        "low_income_countries": "26%"
+      },
+      "notes": "Half of exposed jobs may benefit from AI, half may see reduced demand/wages"
+    },
+    "world_bank": {
+      "finding": "White-collar industries more exposed than blue-collar",
+      "most_exposed_sectors": ["commerce", "public administration", "finance", "other services"]
+    },
+    "dario_amodei_claim": {
+      "source": "Anthropic CEO, 2025 interviews (Axios, Fortune, Business Insider)",
+      "claim": "50% of entry-level white-collar/office jobs eliminated within 5 years",
+      "affected_fields": ["technology", "finance", "law", "consulting"],
+      "predicted_unemployment_rate": "10-20%",
+      "context": "Criticized AI companies and governments for 'sugarcoating' displacement risks"
+    },
+    "white_vs_blue_collar_summary": {
+      "most_at_risk": "white-collar, routine cognitive, entry-level professional",
+      "relatively_protected_near_term": "construction, physical transportation, hands-on healthcare, caregiving"
+    }
+  },
+
+  "productivity_gains": {
+    "coding": {
+      "github_copilot_rct": {
+        "source": "Peng et al.",
+        "finding": "56% faster completion time for JavaScript tasks"
+      },
+      "experienced_developers_2025_trial": {
+        "context": "Realistic 20-minute to 4-hour tasks",
+        "finding": "19% INCREASE in completion time (negative productivity)",
+        "note": "Despite developers expecting 24% speedup"
+      },
+      "enterprise_surveys_2025": {
+        "self_reported_productivity_increase": "10-30%",
+        "ai_generated_code_share": "41%"
+      }
+    },
+    "legal": {
+      "lawgeex_nda_review": {
+        "ai_accuracy": "94%",
+        "lawyer_accuracy": "85%"
+      },
+      "document_review_cost_reduction": "70-90%",
+      "jpmorgan_coin_system": {
+        "annual_hours_compressed": 360000,
+        "result": "Seconds vs hours"
+      }
+    },
+    "healthcare": {
+      "clinical_decision_time_saved": "10-30%",
+      "staff_time_on_admin_tasks": "20-30%",
+      "claims_processing_efficiency_increase": "30%+"
+    },
+    "customer_service": {
+      "randomized_experiment": {
+        "issues_resolved_per_hour_increase": "13.8%",
+        "time_per_chat_reduction": "9%",
+        "chats_handled_per_hour_increase": "14%"
+      },
+      "industry_estimates_2024_2025": {
+        "operational_cost_reduction": "30%",
+        "productive_hours_added_per_agent_per_day": 1.2
+      }
+    },
+    "gdp_impact_projections": {
+      "pwc": {
+        "global_gdp_addition_by_2030": 15700000000000,
+        "percentage_uplift": "14%"
+      },
+      "mckinsey_generative_ai": {
+        "annual_value_low": 2600000000000,
+        "annual_value_high": 4400000000000,
+        "top_sectors": ["customer operations", "marketing/sales", "software engineering", "R&D"],
+        "broader_ai_annual_potential_by_2040": {
+          "low": 15500000000000,
+          "high": 22900000000000
+        }
+      },
+      "idc": {
+        "cumulative_impact_through_2030": 19900000000000,
+        "share_of_global_gdp_2030": "3.5%",
+        "multiplier_effect": "Each $1 AI spending generates $4.60 economic output"
+      },
+      "goldman_sachs": {
+        "global_gdp_boost_over_10_years": "7%",
+        "us_productivity_growth_through_2029": "1.7%/year",
+        "us_productivity_growth_early_2030s": "1.9%/year"
+      }
+    }
+  },
+
+  "labor_market_adaptation": {
+    "retraining_effectiveness": {
+      "traditional_programs": {
+        "programs_studied": ["JTPA", "WIA", "TAA"],
+        "result": "Small, often statistically insignificant earnings/employment gains"
+      },
+      "brookings_2025_review": {
+        "finding": "Benefits typically modest, short-lived, highly heterogeneous",
+        "recommendation": "Policymakers should be 'skeptical' that generic retraining offsets displacement"
+      },
+      "promising_approaches": ["Targeted tech-aligned retraining", "Personalized AI learning tools", "Domain-specific AI application training", "Work-based learning", "Strong job-placement support"]
+    },
+    "new_job_categories": {
+      "fastest_growing_titles_2025": {
+        "ai_engineer": "+143.2% YoY",
+        "prompt_engineer": "+135.8% YoY",
+        "ai_content_creator": "+134.5% YoY"
+      },
+      "emerging_technical_roles": ["AI engineer", "Machine learning engineer", "Computer vision engineer", "AI cybersecurity specialist", "Forward-deployed AI engineer"],
+      "emerging_hybrid_roles": ["AI-powered product manager", "AI solutions architect", "AI business development lead", "AI redesign lead"],
+      "emerging_governance_roles": ["Prompt engineer", "AI content creator", "Data trainer/curator", "AI ethicist/ethics officer"],
+      "fastest_growing_sectors": ["IT", "biotech", "staffing/recruiting", "consumer electronics"]
+    },
+    "wage_effects": {
+      "pattern": "Rising employment/wage shares at top and bottom, shrinking middle",
+      "polarization_estimate": "30% in studied labor markets",
+      "within_occupation_inequality": "High earners capture productivity gains, lower-paid workers do not",
+      "ai_skills_premium": "Significant wage premiums for programming, AI, cybersecurity skills",
+      "imf_warning": "40% global jobs exposed, risk of widening inequality"
+    },
+    "skills_in_demand": {
+      "ai_job_postings_share_2024": "1.62%",
+      "generative_ai_postings_growth_q1_2024": "38% QoQ",
+      "technical_skills": ["Python", "Deep learning frameworks", "Model deployment", "Computer vision", "NLP", "Reinforcement learning", "Prompt engineering", "LLM fine-tuning", "RAG", "MLOps"],
+      "complementary_skills": ["AI fluency", "Communication", "Domain expertise", "Product thinking", "Ethics/governance"]
+    },
+    "adoption_context": {
+      "us_firms_using_ai_spring_2024": "5.4%",
+      "previous_year": "3.7%"
+    }
+  },
+
+  "universal_basic_income": {
+    "active_pilots_2024_2025": {
+      "us_pilots": [
+        {"location": "Cook County, IL", "participants": 3250, "amount_monthly_usd": 500, "status": "Active through Dec 2024"},
+        {"location": "Denver, CO", "participants": 820, "status": "Concluded"},
+        {"location": "Chicago, IL", "participants": 5000, "amount_monthly_usd": 500, "duration_months": 12, "status": "Concluded"},
+        {"location": "Minneapolis, MN", "participants": 200, "amount_monthly_usd": 500, "status": "Active"}
+      ],
+      "international_pilots": [
+        {"location": "Marica, Brazil", "participants": 42000, "status": "Active monthly"},
+        {"location": "British Columbia, Canada", "target": "Individuals transitioning from care", "status": "Active monthly"},
+        {"location": "Kenya/Liberia", "program": "GiveDirectly", "participants": "Thousands", "duration": "Up to 12 years", "status": "Active"}
+      ],
+      "typical_amounts_usd": "400-1000/month",
+      "typical_duration_months": "12-36"
+    },
+    "pilot_results": {
+      "texas_illinois_study": {
+        "amount_monthly_usd": 1000,
+        "findings": ["Improved financial stability", "Improved health outcomes", "Improved employment", "No increased unemployment", "No increased substance abuse"]
+      }
+    },
+    "sam_altman_worldcoin": {
+      "mechanism": "Iris-scanning orbs for 'proof-of-personhood'",
+      "purpose": "Sybil-resistant digital IDs for AI-funded global UBI",
+      "status_2025": "No direct UBI distributions launched yet",
+      "current_focus": "Identity network growth",
+      "challenges": ["Privacy concerns", "Regulatory hurdles", "Bans in some regions"],
+      "vision_evolution": "Toward 'universal basic compute'",
+      "assessment": "Pilots/distributions are premature"
+    },
+    "political_feasibility": {
+      "key_challenge": "Trilemma of affordability, adequacy, and welfare simplification",
+      "wealthy_nations": "Could repurpose social spending (e.g., France, UK)",
+      "poorer_nations": "Struggle with funding",
+      "us_obstacles": ["Opposition over work disincentives", "Inflation risks", "Funding requires tax hikes"],
+      "assessment": "Full UBI remains politically challenging without major reforms"
+    }
+  },
+
+  "wealth_concentration": {
+    "ai_company_valuations_2025": {
+      "openai": {
+        "valuation_usd": 500000000000,
+        "projected_revenue_2025_usd": {"low": 13000000000, "high": 20000000000},
+        "context": "Secondary share sale backed by SoftBank, late 2025"
+      },
+      "anthropic": {
+        "valuation_usd": {"low": 183000000000, "high": 266000000000},
+        "context": "Post Series F round and IPO metrics"
+      },
+      "xai": {
+        "valuation_usd": {"low": 200000000000, "high": 230000000000},
+        "recent_funding_usd": 15000000000
+      }
+    },
+    "value_capture_analysis": {
+      "primary_beneficiaries": ["Microsoft", "Google", "Amazon"],
+      "mechanism": "Massive infrastructure investments",
+      "gdp_impact": "92% of U.S. GDP growth in H1 2025 from AI infrastructure",
+      "microsoft_ai_infra_spending_2025_usd": 80000000000,
+      "google_ai_infra_spending_2025_usd": 85000000000,
+      "us_private_ai_investment_2024_usd": 109000000000,
+      "enterprise_agentic_ai_spending_by_2028_usd": 51500000000
+    },
+    "power_concentration_concerns": {
+      "expert_warnings": {
+        "researcher_view": "AI enables extreme power concentration",
+        "economist_jason_furman": "AI infrastructure boosts GDP but creates unprecedented political control risks"
+      },
+      "labor_devaluation": "Automation devalues human labor, empowering small AI teams with vast digital workforces",
+      "institutional_risk": "Potential for AI-enabled teams to seize institutions or amass wealth",
+      "political_control": "AI firms controlling tax revenue and advanced tools gain unprecedented political power",
+      "proposed_mitigations": ["Alignment audits", "Capability sharing requirements"]
+    }
+  },
+
+  "investment_landscape": {
+    "vc_funding": {
+      "2022_global_ai_vc_usd": 46000000000,
+      "2023_global_ai_vc_usd": 50000000000,
+      "2023_yoy_growth": "9-15%",
+      "2024_global_ai_vc_usd": 110000000000,
+      "2024_yoy_growth": "62%",
+      "2024_ai_share_of_total_vc": "33%",
+      "2025_q3_ai_share_of_total_vc": "45-50%",
+      "2025_projected": "In line with or above 2024 ($110B+)"
+    },
+    "corporate_ai_spending_2025": {
+      "combined_big_4_capex_usd": 320000000000,
+      "yoy_growth_vs_2024": "40-60%",
+      "amazon": {
+        "capex_2024_usd": 77000000000,
+        "capex_2025_usd": {"low": 100000000000, "high": 105000000000},
+        "yoy_growth": "30-35%"
+      },
+      "microsoft": {
+        "capex_2024_usd": {"low": 50000000000, "high": 60000000000},
+        "ai_capex_2025_usd": 80000000000,
+        "ai_capex_fy2026_projection_usd": {"low": 80000000000, "high": 121000000000},
+        "yoy_growth": "50-60%"
+      },
+      "google_alphabet": {
+        "capex_2024_usd": {"low": 45000000000, "high": 48000000000},
+        "capex_2025_usd": {"low": 75000000000, "high": 85000000000},
+        "yoy_growth": "60-80%",
+        "context": "Roughly doubling historic capex run rate"
+      },
+      "meta": {
+        "capex_2024_usd": 39000000000,
+        "capex_2025_usd": {"low": 60000000000, "high": 65000000000},
+        "yoy_growth": "50-70%"
+      }
+    },
+    "trends": {
+      "ai_share_of_global_vc_trajectory": "20-30% (2023) -> 33% (2024) -> 45-50% (late 2025)",
+      "hyperscaler_pattern": "One-time 'step-up' in capex, AI now majority of incremental dollars",
+      "total_big_4_ai_infrastructure": "Low hundreds of billions USD annually"
+    }
+  },
+
+  "key_timelines": {
+    "2025": "AI adoption accelerates, 5.4% US firms using AI, major capex surge begins",
+    "2025-2027": "Amodei prediction window for 50% entry-level job displacement",
+    "2027-2028": "Enterprise agentic AI spending reaches $51.5B",
+    "2030": "McKinsey 12M US occupational transitions, 75-375M global workers changing jobs, $15.7T GDP impact (PwC), $19.9T cumulative AI economic impact (IDC)",
+    "2030s": "US productivity growth reaches 1.9%/year (Goldman Sachs)"
+  }
+}

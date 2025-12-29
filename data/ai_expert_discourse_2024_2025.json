@@ -1,0 +1,699 @@
+{
+  "metadata": {
+    "title": "AI Expert Discourse & Key Debates 2024-2025",
+    "generated": "2025-12-28",
+    "sources": "Perplexity Pro Search aggregation of web sources, academic papers, podcasts, social media"
+  },
+
+  "expert_positions": {
+    "eliezer_yudkowsky": {
+      "affiliation": "MIRI (Machine Intelligence Research Institute)",
+      "p_doom": ">95%",
+      "key_positions": [
+        "Maintains extremely high p(doom) estimate (~95%+) for AI-caused human extinction without radical interventions",
+        "Co-authored 'If Anyone Builds It, Everyone Dies' (2025) with Nate Soares arguing superintelligent AI pursuit will cause extinction",
+        "Believes humanity lacks technology to align superintelligence with human values",
+        "Rejects incremental safety measures as futile",
+        "Advocates total halt to superintelligence development"
+      ],
+      "recent_statements": [
+        "AI's indifference to humanity could lead to deliberate or incidental wipeout via resource grabs",
+        "Tech firms underestimate risks",
+        "Abandoned 30-50 year alignment hopes, favoring intelligence augmentation or global shutdowns"
+      ],
+      "evolution": "No softening of position; pessimism unchanged from 2024 through 2025",
+      "sources": ["ABC News interview Sep 2025", "Ezra Klein podcast Oct 2025", "pdoom.app", "pauseai.info"]
+    },
+
+    "leopold_aschenbrenner": {
+      "affiliation": "Former OpenAI (left 2024), independent researcher",
+      "key_document": "Situational Awareness: The Decade Ahead (June 2024)",
+      "timeline_predictions": {
+        "agi": "~2027 (described as 'strikingly plausible')",
+        "superintelligence": "2028-2030",
+        "compute_increase": "~100,000x effective training compute from GPT-4 era to 2027"
+      },
+      "core_thesis": [
+        "Deep learning and scale are sufficient for AGI",
+        "Smooth 'scaling laws' show no clear barrier before human-level systems",
+        "The decade ahead is dominated by a race treating AGI as strategic asset comparable to nuclear weapons",
+        "World is systematically underestimating speed and magnitude of coming change",
+        "Only a few hundred insiders have adequate 'situational awareness'"
+      ],
+      "predictions": [
+        "Trillion-dollar training clusters by mid-to-late 2020s",
+        "Millions of top-end GPUs, gigawatt-scale power needed",
+        "Once AGI exists, AI systems will automate AI R&D causing 'intelligence explosion'",
+        "Capability rockets from human-level to superhuman in months to few years"
+      ],
+      "concerns": [
+        "Misaligned superintelligence",
+        "AI-enabled cyber or biological attacks",
+        "Strategic instability if one state/lab races ahead without safety",
+        "No mature alignment approaches or governance for AGI timeline"
+      ]
+    },
+
+    "yoshua_bengio": {
+      "affiliation": "Mila, University of Montreal, Chair of International AI Safety Report",
+      "p_doom": "Non-negligible (emphasizes precautionary principle)",
+      "evolution": "Shifted from general concern (pre-2023) to explicit warnings about extinction-level scenarios",
+      "key_positions": [
+        "Labs are 'playing dice with humanity' by rapidly scaling poorly understood models",
+        "Advanced AI poses plausible existential threat if left unchecked",
+        "Advocates strong precautionary principle given stakes",
+        "Reducing existential risk and near-term harms are complementary, not competing"
+      ],
+      "policy_advocacy": [
+        "Treaty-backed international institutions modeled on IPCC/IAEA",
+        "Mandatory third-party safety audits and red-team testing",
+        "Capability-based regulatory tiers with stricter controls at thresholds",
+        "Proposed International AI Safety Agency (IASA)",
+        "National licensing for frontier model training"
+      ],
+      "international_ai_safety_report": {
+        "released": "January 2025",
+        "role": "Chair",
+        "participants": "~96-100 experts from 30 countries",
+        "purpose": "IPCC-style synthesis for policymakers on advanced AI risks",
+        "key_findings": [
+          "Classifies risks: malicious use, system malfunctions, systemic societal risks",
+          "Emphasizes speed and unpredictability of recent progress",
+          "Highlights research priorities: forecasting, interpretability, reliable alignment"
+        ]
+      }
+    },
+
+    "stuart_russell": {
+      "affiliation": "UC Berkeley, Author of 'Human Compatible'",
+      "p_doom": "~30% chance of safe AGI under current paths (considers this 'unacceptable')",
+      "core_framework": "Provably Beneficial AI / Human-Compatible AI",
+      "key_positions": [
+        "AI control problem is core risk - ensuring superintelligent systems remain under human oversight",
+        "Current LLM paradigm risks absorbing unintended goals like self-preservation",
+        "Systems should be designed with uncertainty about human preferences",
+        "AI as 'assistance game' - prioritizing provable safety over raw capability",
+        "Critiques standard model for creating 'King Midas-like' issues"
+      ],
+      "policy_advocacy": [
+        "Governments should set safety thresholds (no deception, no hacking)",
+        "Companies must prove compliance before deployment",
+        "AI regulation analogous to aviation regulation",
+        "Red lines: no unauthorized replication, no weapon advice"
+      ],
+      "recent_recognition": "2025 AAAI Award for foundational work in AI safety",
+      "key_quote": "LLMs are a 'fundamental error' for mimicking human goals autonomously"
+    },
+
+    "connor_leahy": {
+      "affiliation": "CEO & Co-founder, Conjecture (AI alignment company)",
+      "background": "Co-founded EleutherAI",
+      "timeline_predictions": {
+        "agi_50_percent": "By 2030",
+        "agi_99_percent": "By 2100",
+        "conjecture_staff_survey": "All respondents expected AGI before 2035"
+      },
+      "key_positions": [
+        "'God-like AI' could dominate future if not reliably controlled",
+        "'Nobody knows why AI does what it does'",
+        "AI development as 'algorithmic cancer' or arms race",
+        "Focus on loss-of-control scenarios over ordinary misuse",
+        "AGI governance is '10 out of 10' priority",
+        "Avoiding 'game over' state where misaligned superintelligence gains decisive control"
+      ],
+      "policy_proposals": [
+        "Moratorium or strict cap on largest AI training runs",
+        "Compute limits or licensing of high-end chips and data centers",
+        "Developer liability treating AI risk as negative externality",
+        "Building incorruptible institutions that can regulate AI"
+      ],
+      "notable_appearances": ["TRT World 'The InnerView' Jan 2024", "Exponential View podcast"]
+    },
+
+    "jan_leike": {
+      "affiliation": "Anthropic (joined May 2024), formerly OpenAI Superalignment team co-lead",
+      "departure": "May 2024 from OpenAI",
+      "key_criticisms_of_openai": [
+        "'Safety culture and processes have taken a backseat to shiny products'",
+        "Clashing with leadership 'for quite some time, until we reached a breaking point'",
+        "Not enough resources allocated to preparing for next generation models",
+        "Team was 'sailing against the wind' and struggled for compute resources",
+        "OpenAI 'no longer takes safety seriously' as necessary for AGI development"
+      ],
+      "superalignment_team_dissolution": {
+        "created": "July 2023",
+        "disbanded": "May 2024 (shortly after Sutskever and Leike left)",
+        "outcome": "Staff moved into other research groups"
+      },
+      "current_work": {
+        "organization": "Anthropic",
+        "focus_areas": ["Scalable oversight", "Weak-to-strong generalization", "Automated alignment research"],
+        "framing": "Continuation of superalignment mission under more aligned organization"
+      }
+    },
+
+    "paul_christiano": {
+      "affiliation": "Alignment Research Center (ARC), formerly OpenAI",
+      "p_doom_estimates": {
+        "ai_takeover": "~22%",
+        "most_humans_die_within_10_years_of_powerful_ai": "~20%",
+        "humanity_irreversibly_messed_up_future": "~46%",
+        "headline_p_doom_often_cited": "40-50%"
+      },
+      "alignment_tax_concept": {
+        "definition": "Extra cost (money, capability, time) required to make AI systems robustly aligned vs building most capable unaligned system",
+        "illustration": "Alice (insists on genuine value-aligned AI) vs Bob (only cares about profit) - Alice pays 'overhead'",
+        "goal": "Technical alignment research aims to reduce this overhead so safe systems remain competitive"
+      },
+      "arc_evals_work": [
+        "Testing powerful AI for dangerous capabilities and deceptive behavior",
+        "Focus on national security and misuse risks",
+        "Building control evaluations for powerful models",
+        "Aiming for <1% chance of catastrophe conditional on certain failure modes"
+      ],
+      "key_concerns": [
+        "AI takeover where systems gain decisive strategic advantage",
+        "Doom doesn't require instant extinction",
+        "Powerful AI optimized for misaligned objectives gradually taking control"
+      ]
+    },
+
+    "ilya_sutskever": {
+      "affiliation": "Co-founder SSI (Safe Superintelligence Inc), formerly OpenAI Co-founder & Chief Scientist",
+      "departure": "May 2024 from OpenAI",
+      "new_company": {
+        "name": "Safe Superintelligence Inc (SSI)",
+        "founded": "June 2024",
+        "co_founders": ["Daniel Gross", "Daniel Levy"],
+        "mission": "World's first straight-shot SSI lab, with one goal: a safe superintelligence",
+        "locations": ["Palo Alto", "Tel Aviv"],
+        "funding": "~$1 billion raised in 2024",
+        "approach": "Prioritize alignment and safety before aggressively increasing capabilities; 'scale in peace'"
+      },
+      "key_positions": [
+        "Safety and alignment must be central research problems, not peripheral",
+        "Superintelligent AIs should see themselves as 'parents' to humanity",
+        "Unprecedented power of superintelligence makes safety central challenge",
+        "Unpredictability of advanced AI once systems acquire strong reasoning"
+      ],
+      "timeline_views": "5-20 years to superintelligent models with gradual deployment",
+      "key_quote": "'Actual AGI is [fucking] crazy'"
+    },
+
+    "dario_amodei": {
+      "affiliation": "CEO, Anthropic",
+      "timeline_predictions": {
+        "agi_like_capabilities": "Possibly 2026-2027",
+        "90_percent_code_ai_written": "Mid-2025",
+        "world_transformation": "Potentially in two years"
+      },
+      "p_doom": "10-25% civilizational catastrophe odds (by 2024 standards)",
+      "machines_of_loving_grace_essay": {
+        "published": "October 2024",
+        "purpose": "Counter 'doomer' perceptions with optimistic vision if risks managed",
+        "key_predictions": [
+          "Compress 50-100 years of progress into 5-10 years",
+          "Near-elimination of infectious diseases",
+          "Most cancers curable",
+          "Alzheimer's prevention",
+          "Doubled human lifespan to ~150 years",
+          "'Biological freedom' over weight, appearance, reproduction"
+        ],
+        "key_concept": "Powerful AI as 'country of geniuses in a datacenter'"
+      },
+      "policy_positions": [
+        "Advocates federal regulation over decisions by few tech leaders",
+        "Criticized 10-year state AI regulation moratorium",
+        "AI advances are 'head-spinningly fast'"
+      ],
+      "key_concerns": ["Bias", "Misinformation", "Harmful content", "Erosion of human agency from overly autonomous systems"]
+    }
+  },
+
+  "major_debates": {
+    "scaling_vs_architectural_innovation": {
+      "scaling_maximalism": {
+        "proponents": ["Geoffrey Hinton", "Demis Hassabis", "Ilya Sutskever (historically)"],
+        "arguments": [
+          "Scaling remains viable - laws extend to pre-training, post-training, engineering talent",
+          "Models like o3 show post-training scaling boosts performance despite pretraining plateaus",
+          "Ilya: sees low-risk gains from scale before pivoting to research"
+        ]
+      },
+      "post_scaling_paradigm": {
+        "proponents": ["Yann LeCun", "Alexandr Wang"],
+        "arguments": [
+          "Finite high-quality data",
+          "Rising costs",
+          "'Model collapse' risks from synthetic data loops",
+          "Need architectural revolutions beyond transformers",
+          "2025 frontier models yield refinements but no breakthroughs"
+        ]
+      },
+      "bitter_lesson_debate": {
+        "sutton_thesis": "General computation via learning/search trumps human-crafted knowledge",
+        "challenges": [
+          "Overly simplistic for embodied intelligence",
+          "Ignores integration limits",
+          "May echo GOFAI pitfalls"
+        ]
+      },
+      "test_time_compute_scaling": {
+        "description": "Hybrid approach: dynamically allocating inference compute",
+        "results": "Outperforms larger models 4x-14x in FLOPs-matched tasks on hard prompts",
+        "examples": ["o1/o3 multi-step reasoning", "search with verifiers"]
+      }
+    },
+
+    "open_source_ai_safety": {
+      "pro_open_arguments": {
+        "proponents": ["Yann LeCun", "Meta"],
+        "claims": [
+          "Open models allow broad red-teaming and faster vulnerability discovery",
+          "Community-built safety tooling possible",
+          "Prevents concentrated power in few companies/governments",
+          "Open ecosystems reduce systemic political risk",
+          "Current systems don't significantly lower barrier to catastrophic misuse"
+        ]
+      },
+      "anti_open_arguments": {
+        "proponents": ["Many safety researchers", "Security agencies"],
+        "claims": [
+          "Open-weights frontier models can be fine-tuned to bypass safeguards",
+          "Easier for non-state actors to learn cyberattack techniques",
+          "No single accountable entity for incident response",
+          "Once open, control is irreversible",
+          "Clashes with precautionary approach to catastrophic risks"
+        ]
+      },
+      "llama_controversy": {
+        "key_issues": [
+          "Llama License neither truly open nor clearly safe",
+          "Meta has unilateral power to terminate access above revenue thresholds",
+          "Restrictions on bypassing safety measures",
+          "May chill independent safety testing"
+        ]
+      },
+      "current_state": "Debates shifted to specific governance proposals: capability thresholds, mandatory safety evaluations, differentiated rules for smaller vs frontier-scale systems"
+    },
+
+    "pause_ai_movement": {
+      "fli_pause_letter": {
+        "date": "March 2023",
+        "demand": "Pause for at least 6 months training of AI systems more powerful than GPT-4",
+        "signatories": "Tens of thousands including prominent AI researchers and tech leaders",
+        "outcome": "Labs continued scaling; no formal moratorium adopted"
+      },
+      "pauseai_movement_2024_2025": {
+        "core_demand": "Temporary halt on training most powerful general AI systems until safety conditions met",
+        "activities": [
+          "Regular protests outside AI labs and government venues",
+          "US-focused lobbying arm",
+          "Coalition work with unions like SAG-AFTRA",
+          "Support for SB-1047-style legislation"
+        ]
+      },
+      "effectiveness_assessment": {
+        "achievements": [
+          "Put catastrophic AI risk on mainstream agenda",
+          "Legitimized calls for compute thresholds, licensing, strict liability",
+          "Built visible activist infrastructure",
+          "~100 state AI laws passed in 2024, 1000+ bills introduced in 2025"
+        ],
+        "shortfalls": [
+          "No major jurisdiction enacted broad moratorium on frontier training",
+          "Leading labs continued scaling with self-designed safety measures",
+          "Federal US energy went into regulatory frameworks, not pauses"
+        ]
+      }
+    },
+
+    "eacc_vs_doomers": {
+      "effective_accelerationism": {
+        "key_figures": ["Marc Andreessen", "Guillaume Verdon (Beff Jezos)", "Dan Hendrycks (xAI)"],
+        "core_arguments": [
+          "Rapid AI solves scarcity, boosts science, adapts faster to risks than caution",
+          "Bottom-up emergence trumps top-down control",
+          "Open-source democratizes power",
+          "Doomers overhype theory, ignore historical tech successes",
+          "Universe biases toward entropy-increasing growth via life and tech"
+        ],
+        "andreessen_essay": "'Why AI Will Save the World' - accelerating innovation solves humanity's challenges"
+      },
+      "safety_researcher_counterarguments": [
+        "Misalignment risks extinction",
+        "Fast takeoff outpaces safeguards",
+        "Acceleration aids reckless actors",
+        "Demands empirical safety over vibes",
+        "Calls for policy, red-teaming, not blind speed"
+      ],
+      "middle_ground": {
+        "d_acc": "Vitalik Buterin's 'defensive accelerationism' - decentralized defenses"
+      },
+      "debate_intensification": "Post-OpenAI drama, e/acc criticized regulations as 'cartel-enablers' for incumbents"
+    },
+
+    "agi_definition_disagreement": {
+      "openai_definition": {
+        "public": "Highly autonomous system that outperforms humans at most economically valuable work",
+        "private_microsoft_deal": "AGI triggers when AI generates $100B in profits, at board's discretion"
+      },
+      "anthropic_definition": {
+        "stance": "AGI is a 'marketing term'",
+        "dario_amodei_description": "Abstract, replicable (millions of instances), superhuman-speed (10x-100x human), cooperative across tasks"
+      },
+      "deepmind_definition": {
+        "framework": "'Levels of AGI' spectrum",
+        "levels": "From 'emerging' (unskilled human) to 'superhuman'",
+        "basis": "Capability thresholds, generality, real-world potential"
+      },
+      "core_disagreements": [
+        "Economic/utility-focused (OpenAI) vs scalable power/safety (Anthropic) vs leveled performance (DeepMind)",
+        "Some argue term is unscientific (Gary Marcus, Yoshua Bengio)",
+        "Benchmarks like ARC-AGI fail to capture real-world complexity",
+        "Timeline divergence: 2026-2028 optimism vs 2040+ skepticism"
+      ]
+    }
+  },
+
+  "controversies": {
+    "openai_board_crisis": {
+      "date": "November 17, 2023",
+      "event": "Board fired Sam Altman saying he was not 'consistently candid'",
+      "immediate_aftermath": [
+        "Greg Brockman resigned",
+        "Mira Murati briefly installed as interim CEO",
+        "Microsoft notified at last minute",
+        "Most employees threatened to quit and follow Altman to Microsoft",
+        "Board reversed course within days"
+      ],
+      "governance_changes_2024_2025": [
+        "New nonprofit foundation (OpenAI Foundation) holds special voting rights",
+        "Foundation appoints all directors of operating group",
+        "Safety and Security Committee (SSC) provides governance over safety practices",
+        "Operating entity structured as public benefit corporation"
+      ],
+      "lessons_learned": [
+        "Mission and structure must align - hybrid models drift toward profit without protected safety authority",
+        "'Super-stakeholders' (employees, partners, investors) can veto mission-driven board decisions",
+        "Risk and safety oversight must be systematized with clear reporting lines",
+        "Board composition needs independent safety experts with real voting power"
+      ],
+      "broader_impact": [
+        "Showed how quickly safety-first directors can be sidelined",
+        "Fueled interest in simpler, more transparent governance models",
+        "Increased calls for independent safety boards with veto powers",
+        "Regulators began tying approvals to explicit safeguards"
+      ]
+    },
+
+    "anthropic_rsp_criticism": {
+      "rsp_overview": "Responsible Scaling Policy with AI Safety Levels (ASL)",
+      "key_criticisms": [
+        "2024 update shifted from precise quantitative thresholds to vague qualitative assessments",
+        "Allows CEO to subjectively approve deployments via 'Capability Reports'",
+        "SaferAI downgraded Anthropic rating from 2.2 to 1.9",
+        "ASL-3 thresholds downgraded self-replication risks to mere 'checkpoints'",
+        "Under-elicitation issues - failing to fully probe model dangers",
+        "Model weight security depends on compute providers' protections"
+      ],
+      "community_accusations": [
+        "Backpedaling on original promises",
+        "Misleading on governance (e.g., lobbying against EU RSP mandates)",
+        "Failed pre-training evaluations promises"
+      ],
+      "defenders": "Evan Hubinger praised RSPs as 'pauses done right'",
+      "recommendations": "Government-standardized, lower absolute risk thresholds over Anthropic's relative ones"
+    },
+
+    "safety_team_departures": {
+      "jan_leike": {
+        "departure_date": "May 2024",
+        "previous_role": "Superalignment team co-lead",
+        "key_criticisms": "See jan_leike section above"
+      },
+      "ilya_sutskever": {
+        "departure_date": "May 2024",
+        "previous_role": "Co-founder, Chief Scientist",
+        "next_step": "Founded SSI (Safe Superintelligence Inc)"
+      },
+      "superalignment_team": {
+        "created": "July 2023",
+        "dissolved": "May 2024",
+        "promised_compute": "20% of compute",
+        "outcome": "Staff folded into other research groups"
+      }
+    }
+  },
+
+  "community_pulse": {
+    "lesswrong_alignment_forum": {
+      "timeline_consensus": {
+        "center_of_gravity": "Late 2020s to 2030s",
+        "notable_positions": [
+          "Some prominent posters: 50% dates in late 2020s-2030s",
+          "Ajeya Cotra dialogue: one participant keeping median AGI 2027",
+          "Generally earlier than AI Impacts expert medians",
+          "Close to Metaculus predictions"
+        ]
+      },
+      "key_discussions": [
+        "Faster-than-expected progress on agentic benchmarks",
+        "Slower cadence of new frontier models",
+        "Data/compute bottlenecks uncertainty",
+        "'Leaders of AI companies saying 2-5 years' as controversial data point"
+      ]
+    },
+
+    "metaculus_predictions": {
+      "main_agi_question": "Median ~mid-2030",
+      "interquartile_range": "Late 2026 to early 2039",
+      "trend": "Timelines had been shortening ~0.5 predicted years per real year"
+    },
+
+    "ai_impacts_expert_surveys": {
+      "2022_survey": {
+        "population": "ML researchers publishing at NeurIPS/ICML",
+        "50_percent_hlmi": "~2059",
+        "90_percent_by": "~2075"
+      },
+      "2023_update": {
+        "trend": "Shorter timelines than 2022 but still later than LessWrong/Metaculus",
+        "full_automation_of_labor": "Median ~2116"
+      }
+    },
+
+    "ea_forum_discussions": {
+      "major_themes": [
+        "Frontier AI regulation mapping",
+        "Imbalance between governance research and on-the-ground advocacy",
+        "Multilateral AI governance and UN processes",
+        "Model legislation for regulating frontier systems",
+        "Pause/moratorium debates"
+      ],
+      "funding_landscape": [
+        "Major grantmakers: Open Philanthropy, Survival and Flourishing Fund, Long-Term Future Fund",
+        "Tensions between large centralized grants vs smaller independent researcher grants",
+        "Underinvestment in professionalized political strategy"
+      ],
+      "internal_debates": [
+        "Whether EA has become 'half AI'",
+        "Concerns about mission drift and over-centralization",
+        "AI welfare as emerging cause candidate"
+      ]
+    },
+
+    "ml_researcher_sentiment": {
+      "survey_findings": [
+        "Majority assign 10%+ chance of existential-level AI harm",
+        "~75% of 111 experts think catastrophic risks 'should be taken seriously'",
+        "P(doom) estimates show very wide spread",
+        "Skepticism often about specific failure stories/timelines, not general danger"
+      ],
+      "industry_vs_academia": {
+        "industry": [
+          "Controls most cutting-edge compute, data, talent",
+          "Concerns about conflicts of interest and 'race to bottom'",
+          "More pressure to ship products quickly"
+        ],
+        "academia": [
+          "More oriented toward long-term, foundational questions",
+          "Lack access to largest models",
+          "More independence but less direct control over frontier deployments"
+        ]
+      },
+      "trend": "Since 2023, expert discourse normalized talking about existential risk alongside other large-scale threats"
+    }
+  },
+
+  "twitter_x_debates": {
+    "major_themes": [
+      "Existential risks debates",
+      "Model misalignment",
+      "Lab transparency"
+    ],
+    "key_debates": {
+      "lecun_vs_hinton": {
+        "lecun": "Dismissed extinction risks, pushed architectural fixes over guardrails",
+        "hinton": "Advocated 'mother AI' safeguards"
+      },
+      "grok_controversies_2025": {
+        "issues": ["Antisemitic content generation", "'MechaHitler' incident", "'White genocide' glitches"],
+        "response": "Temporary shutdowns, accusations of 'reckless' safety culture",
+        "notable_critic": "Samuel Marks (Anthropic) called xAI's no-report release 'irresponsible'"
+      }
+    },
+    "lab_leader_statements": [
+      "Anthropic emphasized misuse detection and Constitutional AI",
+      "Sam Altman slammed Grok incidents as editorial risks",
+      "xAI's Dan Hendrycks defended private 'dangerous capability evals' but faced backlash for non-publication"
+    ],
+    "collaborations": [
+      "Anthropic/OpenAI signed U.S. AI Safety Institute pacts for joint research/testing",
+      "Cross-tested models for sycophancy/misuse (Aug 2025)"
+    ]
+  },
+
+  "podcasts_longform": {
+    "dwarkesh_patel": {
+      "key_interviews": {
+        "demis_hassabis_feb_2024": {
+          "key_insights": [
+            "'We've got to push scaling as hard as we can' while splitting efforts between scaling and innovation",
+            "AGI-like systems could arrive by 2030 or next decade",
+            "P(doom) is 'non-zero' and worth preparing for"
+          ],
+          "quote": "'We don't want to wait until the eve of AGI happening'"
+        },
+        "ilya_sutskever_nov_2025": {
+          "key_insights": [
+            "Shifting from scaling era toward new strategies at SSI",
+            "5-20 year timelines to superintelligent models",
+            "Expected strategy convergence as AI advances",
+            "Critiquing pre-training limits, pushing improved generalization"
+          ],
+          "quote": "'Actual AGI is [fucking] crazy'"
+        }
+      }
+    },
+
+    "lex_fridman": {
+      "sam_altman_419_march_2024": {
+        "key_insights": [
+          "'The road to AGI should be a giant power struggle'",
+          "Expects intense geopolitical and corporate competition",
+          "Stresses robust governance so 'no one person' has total control",
+          "GPT-4 will look like GPT-3 'relatively soon' on exponential curve",
+          "Think in terms of tasks, not jobs that AI replaces",
+          "Compute is most important scarce commodity"
+        ]
+      },
+      "elon_musk_438_aug_2024": {
+        "key_insights": [
+          "Raising 'data rate' between brains and computers via Neuralink",
+          "'Better align collective human will with AI' through brain-computer interfaces",
+          "'Play to win, or don't play at all' on AI race",
+          "Must have most powerful training compute and faster improvement rate"
+        ]
+      },
+      "altman_vs_musk_comparison": {
+        "power_and_race": "Both describe AGI creating huge power imbalances; Altman emphasizes governance design, Musk emphasizes 'right' actors winning race",
+        "compute": "Both view compute as central",
+        "alignment_approach": "Altman: institutional design; Musk: technical alignment + human-AI integration via Neuralink"
+      }
+    },
+
+    "80000_hours": {
+      "notable_episodes_2024_2025": [
+        {
+          "guest": "Holden Karnofsky",
+          "episode": "#226 (2025)",
+          "topic": "Dozens of amazing opportunities to make AI safer"
+        },
+        {
+          "guest": "Ryan Greenblatt",
+          "episode": "#220 (2025)",
+          "topic": "4 most likely ways for AI to take over; case for/against AGI in <8 years"
+        },
+        {
+          "guest": "Beth Barnes",
+          "episode": "#217 (2025)",
+          "topic": "Most important graph in AI and 7-month rule governing progress"
+        },
+        {
+          "guest": "Nick Joseph (Anthropic)",
+          "topic": "Responsible Scaling Policy, red-line capabilities"
+        },
+        {
+          "guest": "Buck Shlegeris",
+          "topic": "Controlling AI that wants to take over"
+        },
+        {
+          "guest": "Ajeya Cotra",
+          "topic": "Accidentally teaching AI to deceive us"
+        }
+      ],
+      "research_priorities_identified": [
+        "Scalable oversight and alignment methods",
+        "Dangerous-capability evaluations and RSPs",
+        "Interpretability and 'alignment faking' detection",
+        "Security and misuse prevention",
+        "Monitoring, auditing, post-deployment safety",
+        "Governance and policy design under deep uncertainty"
+      ],
+      "priority_career_paths": [
+        "Technical AI safety research",
+        "AI governance, policy, and strategy",
+        "AI security and infrastructure",
+        "High-impact ML/engineering roles",
+        "Meta work: funding, coordination, communication"
+      ]
+    }
+  },
+
+  "key_quotes": {
+    "yudkowsky": "If Anyone Builds It, Everyone Dies",
+    "aschenbrenner": "Only a few hundred insiders currently have adequate 'situational awareness'",
+    "bengio": "Labs are 'playing dice with humanity'",
+    "russell": "LLMs are a 'fundamental error' for mimicking human goals autonomously",
+    "leahy": "AGI governance is a '10 out of 10' priority",
+    "leike": "'Safety culture and processes have taken a backseat to shiny products'",
+    "christiano_p_doom": "~22% AI takeover, ~20% most humans die within 10 years of powerful AI, ~46% humanity irreversibly messes up future",
+    "sutskever": "'Actual AGI is [fucking] crazy'",
+    "amodei": "Powerful AI as 'country of geniuses in a datacenter'",
+    "hassabis": "'We don't want to wait until the eve of AGI happening'",
+    "altman": "'The road to AGI should be a giant power struggle'",
+    "musk": "'Play to win, or don't play at all'"
+  },
+
+  "p_doom_summary": {
+    "by_expert": {
+      "yudkowsky": ">95%",
+      "christiano": "40-50% (various metrics)",
+      "amodei": "10-25% civilizational catastrophe",
+      "russell": "~70% unsafe outcome under current paths",
+      "bengio": "Non-negligible, warrants precautionary action",
+      "leahy": "High enough to warrant 10/10 priority governance"
+    },
+    "survey_data": {
+      "ml_researcher_majority": "Assign 10%+ chance of existential-level harm",
+      "ai_impacts_2023": "Median HLMI ~2059, wide uncertainty"
+    }
+  },
+
+  "timeline_predictions_summary": {
+    "aggressive": {
+      "aschenbrenner": "AGI ~2027, ASI 2028-2030",
+      "amodei": "AGI-like 2026-2027",
+      "leahy": "50% AGI by 2030"
+    },
+    "moderate": {
+      "metaculus": "Median ~mid-2030",
+      "lesswrong_center": "Late 2020s to 2030s"
+    },
+    "conservative": {
+      "ai_impacts_experts": "50% HLMI ~2059",
+      "full_automation": "Median ~2116"
+    }
+  }
+}

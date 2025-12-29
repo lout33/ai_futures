@@ -1,0 +1,763 @@
+{
+  "metadata": {
+    "title": "AI Safety Frameworks and Governance 2025-2030",
+    "generated": "2025-12-28",
+    "scope": "Comprehensive analysis of AI safety frameworks, regulations, and governance mechanisms",
+    "sources": "Perplexity Pro Search with citations from official documents, policy papers, and news sources"
+  },
+
+  "lab_safety_frameworks": {
+    "anthropic_rsp": {
+      "name": "Responsible Scaling Policy (RSP)",
+      "description": "Graduated AI Safety Levels (ASL) that scale safeguards with model capabilities, inspired by biosafety levels",
+      "current_version": "Updated May 2025",
+      "asl_levels": {
+        "ASL-1": {
+          "definition": "Basic models with minimal risks (e.g., chess bots)",
+          "requirements": "Basic misuse prevention",
+          "security": "Standard practices",
+          "current_models": ["Simple ML models", "Non-generative systems"]
+        },
+        "ASL-2": {
+          "definition": "Baseline for current AI deployments with standard risks",
+          "requirements": [
+            "Model cards",
+            "Usage Policy enforcement",
+            "Constitutional AI training",
+            "Vulnerability reporting",
+            "Bug bounties"
+          ],
+          "security": "Protection against opportunistic attackers via vendor reviews and physical measures",
+          "current_models": ["Claude Sonnet 4"]
+        },
+        "ASL-3": {
+          "definition": "Heightened risks requiring enhanced safeguards",
+          "deployment_standard": [
+            "Robust threat modeling",
+            "Defense-in-depth",
+            "Red-teaming",
+            "Rapid remediation",
+            "Continuous monitoring",
+            "Trusted user criteria",
+            "Third-party assurances"
+          ],
+          "security_standard": [
+            "Protection against non-state actors (hacktivists, cybercrime groups)",
+            "MITRE ATT&CK framework implementation",
+            "Security perimeters",
+            "Lifecycle security",
+            "Regular audits",
+            "5-10% employee resourcing for security"
+          ],
+          "current_models": ["Claude Opus 4", "Claude Opus 4.1"],
+          "activation_date": "May 2025"
+        },
+        "ASL-4": {
+          "definition": "State-level threat protection (forthcoming)",
+          "requirements": "Counter state-level threats with stricter standards",
+          "security": "Expected to require nation-state level defenses",
+          "current_models": [],
+          "status": "No models classified yet; specifications being developed"
+        }
+      },
+      "capability_triggers": {
+        "CBRN-3": {
+          "threshold": "Model significantly aids basic-technical-background actors (e.g., undergrad STEM) in creating/deploying CBRN weapons",
+          "triggers_level": "ASL-3"
+        },
+        "CBRN-4": {
+          "threshold": "Substantially uplifts moderately resourced state programs (e.g., novel designs, acceleration)",
+          "triggers_level": "ASL-4"
+        },
+        "AI_RD_4": {
+          "threshold": "Fully automates entry-level remote Anthropic researcher work; checkpoint at >50% success on 2-8 hour software tasks",
+          "triggers_level": "ASL-3 Security + affirmative misalignment case"
+        },
+        "AI_RD_5": {
+          "threshold": "Causes dramatic scaling acceleration (e.g., recursive self-improvement)",
+          "triggers_level": "ASL-4 Security minimum"
+        }
+      },
+      "evaluation_process": {
+        "preliminary_testing": "4x Effective Compute triggers comprehensive testing",
+        "oversight": "CEO and RSO (Responsible Scaling Officer) oversight",
+        "frequency": "Before major model releases and at compute thresholds"
+      }
+    },
+
+    "openai_preparedness_framework": {
+      "name": "Preparedness Framework",
+      "current_version": "Version 2 (April 2025)",
+      "risk_categories": {
+        "tracked_categories": [
+          {
+            "name": "Biological and Chemical",
+            "description": "Risks of accelerating bioweapon development or chemical threats",
+            "high_threshold": "Counterfactual aid to novices in creating threats",
+            "critical_threshold": "Full novel threat cycle capability"
+          },
+          {
+            "name": "Cybersecurity",
+            "description": "Risks of scaling cyberattacks or enabling novel cyber capabilities",
+            "high_threshold": "End-to-end operations on hardened targets",
+            "critical_threshold": "Zero-day exploit generation"
+          },
+          {
+            "name": "AI Self-improvement",
+            "description": "Risks of accelerating AI R&D beyond human control",
+            "high_threshold": "Significant acceleration of AI research",
+            "critical_threshold": "Superhuman R&D capabilities"
+          }
+        ],
+        "removed_categories": ["Persuasion", "Model Autonomy"]
+      },
+      "deployment_thresholds": {
+        "high_capability": {
+          "definition": "Amplifies existing harm pathways",
+          "example": "Novice bioweapon aid",
+          "requirements": "High-standard safeguards (misuse prevention, security) before external deployment"
+        },
+        "critical_capability": {
+          "definition": "Introduces novel pathways for harm",
+          "example": "Novel CDC Class A agent creation",
+          "requirements": "Halts development until Critical safeguards specified; applies during development"
+        }
+      },
+      "evaluation_methods": {
+        "capabilities_reports": "Compile scalable evaluations and deep dives to assess threshold crossings",
+        "pre_mitigation_scoring": "Pre-mitigation risks scored; post-mitigation must drop sufficiently",
+        "safety_advisory_group": "SAG reviews capabilities reports",
+        "evaluation_types": [
+          "Automated scalable evaluations (proxies for thresholds)",
+          "Expert deep dives (red-teaming)",
+          "Wet lab testing for bio risks"
+        ]
+      },
+      "governance": {
+        "decision_authority": "Safety Advisory Group (SAG)",
+        "safeguards_reports": "Verify mitigation; unmet risks block deployment"
+      }
+    },
+
+    "deepmind_frontier_safety_framework": {
+      "name": "Frontier Safety Framework (FSF)",
+      "current_version": "Version 3.0 (September 2025)",
+      "description": "Structured approach to identify, evaluate, and mitigate severe risks from frontier AI models advancing toward AGI",
+      "high_risk_domains": [
+        "Autonomy",
+        "Biosecurity",
+        "Cybersecurity",
+        "Machine Learning R&D",
+        "Harmful Manipulation (new in v3)"
+      ],
+      "critical_capability_levels": {
+        "definition": "Capability thresholds where unmitigated models pose heightened risk of severe harm",
+        "examples": [
+          "Cybersecurity breaches",
+          "Biological weapon design",
+          "Autonomous AI acceleration of R&D",
+          "Manipulation that systematically alters beliefs/behaviors",
+          "Resisting shutdown (misalignment indicator)"
+        ],
+        "version_3_additions": [
+          "Harmful manipulation CCL",
+          "Misalignment indicators (e.g., shutdown resistance)"
+        ]
+      },
+      "security_requirements": {
+        "model_exfiltration_prevention": "Industry-leading protections scalable by risk level",
+        "heightened_security_trigger": "Pre-deployment at CCL thresholds",
+        "safety_case_reviews": "Required for external launches and large internal rollouts"
+      },
+      "evaluation_methods": {
+        "early_warning_suites": [
+          "Persuasion/deception tests",
+          "Cyber capability tests",
+          "Self-proliferation tests",
+          "Self-reasoning tests"
+        ],
+        "frequency": "Run periodically to detect CCL proximity",
+        "holistic_risk_assessments": {
+          "steps": [
+            "Systematic capability analysis",
+            "Risk identification",
+            "Acceptability judgments before mitigations"
+          ]
+        },
+        "ongoing_monitoring": "Automated instrumental reasoning detection for deceptive alignment"
+      }
+    }
+  },
+
+  "regulatory_landscape": {
+    "eu_ai_act": {
+      "status": "In force (entered August 1, 2024)",
+      "enforcement_timeline": {
+        "august_2024": "AI Act enters into force",
+        "february_2025": "General provisions (definitions, AI literacy) and prohibitions on 'unacceptable risk' AI systems apply",
+        "august_2025": [
+          "GPAI/foundation model rules apply (Chapter V)",
+          "EU-level governance operational (AI Office, AI Board, scientific panel)",
+          "Member States designate national competent authorities",
+          "National penalty rules adopted"
+        ],
+        "august_2026": "Main rules for high-risk AI (Annex III) and transparency obligations (Article 50) apply",
+        "august_2027": "Rules for high-risk AI in regulated products (medical devices, machinery) fully applicable"
+      },
+      "gpai_requirements": {
+        "all_gpai_providers": [
+          "Technical documentation and model cards",
+          "Information to downstream deployers for compliance",
+          "Training data documentation and copyright compliance",
+          "State-of-the-art safety and security framework",
+          "Cybersecurity protections",
+          "Incident reporting to AI Office"
+        ]
+      },
+      "systemic_risk_threshold": {
+        "compute_threshold": "10^25 FLOPs training compute",
+        "notification_requirement": "Notify AI Office within two weeks of crossing threshold",
+        "rebuttal_option": "Providers may argue model doesn't pose systemic risk despite threshold",
+        "commission_designation": "Can designate based on high-impact capabilities even below threshold"
+      },
+      "systemic_risk_obligations": [
+        "Model evaluations and adversarial testing",
+        "Safety and security model report to AI Office",
+        "Comprehensive systemic-risk management",
+        "Serious-incident reporting and corrective actions"
+      ],
+      "penalties": {
+        "gpai_violations": "Up to €15 million or 3% of global annual turnover",
+        "misleading_information": "Up to €7.5 million or 1% of global turnover",
+        "prohibited_practices": "Up to €35 million or 7% of global annual revenue",
+        "sme_provisions": "Proportionate fines using lower of fixed amount or percentage"
+      }
+    },
+
+    "us_federal_policy": {
+      "biden_eo_14110": {
+        "title": "Safe, Secure, and Trustworthy Development and Use of AI",
+        "issued": "October 2023",
+        "status": "REVOKED (January 20, 2025)",
+        "original_requirements": [
+          "Safety testing disclosures for frontier models",
+          "Agency AI governance structures",
+          "Creation of US AI Safety Institute at NIST"
+        ],
+        "revocation": "Trump Executive Order 'Initial Rescissions of Harmful Executive Orders and Actions'"
+      },
+      "trump_administration_2025": {
+        "eo_14179": {
+          "title": "Removing Barriers to American Leadership in Artificial Intelligence",
+          "issued": "January 23, 2025",
+          "focus": "Enhancing US 'AI dominance', minimizing regulatory burdens"
+        },
+        "ai_action_plan": {
+          "title": "Winning the Race: America's AI Action Plan",
+          "released": "July 2025",
+          "actions": "90+ policy actions across national security, innovation, infrastructure"
+        },
+        "nist_changes": {
+          "old_name": "US AI Safety Institute (AISI)",
+          "new_name": "Center for AI Standards and Innovation (CAISI)",
+          "focus_shift": "From safety to competitiveness and standards",
+          "framework_revisions": "Remove references to 'misinformation', 'DEI', 'climate change' from AI Risk Management Framework"
+        },
+        "federal_preemption": {
+          "eo_title": "Ensuring a National Policy Framework for Artificial Intelligence",
+          "action": "DOJ directed to challenge conflicting state AI laws and assert federal primacy"
+        }
+      },
+      "current_approach": {
+        "governance_style": "Voluntary, standards-based",
+        "primary_framework": "NIST AI Risk Management Framework (revised)",
+        "chief_ai_officers": "Under review/unwinding",
+        "reporting_requirements": "Lifted mandatory safety reporting from EO 14110"
+      }
+    },
+
+    "us_state_laws": {
+      "california_sb_1047": {
+        "title": "Safe and Secure Innovation for Frontier Artificial Intelligence Models Act",
+        "status": "VETOED (September 29, 2024)",
+        "governor": "Gavin Newsom",
+        "veto_reasons": [
+          "Regulated based on model size/cost rather than deployment context",
+          "Stringent standards to even basic functions",
+          "False sense of security focusing only on large models",
+          "Not informed by empirical trajectory analysis"
+        ],
+        "successor_legislation": {
+          "sb_53": {
+            "title": "Transparency in Frontier Artificial Intelligence Act",
+            "status": "Enacted 2025",
+            "focus": "Transparency and reporting obligations (not liability framework)"
+          },
+          "ab_853": {
+            "title": "California AI Transparency Act update",
+            "status": "2025",
+            "focus": "AI transparency requirements"
+          }
+        }
+      },
+      "new_york_raise_act": {
+        "title": "Responsible AI Safety and Education Act",
+        "status": "SIGNED INTO LAW (December 19, 2025)",
+        "effective_date": "January 1, 2027",
+        "thresholds": {
+          "training_compute": "10^26 FLOPs",
+          "training_cost": "$100 million",
+          "scope": "Frontier AI model developers only"
+        },
+        "requirements": [
+          "Risk management and safety policies",
+          "Safeguards against catastrophic misuse (cyber, bio, critical infrastructure)",
+          "Capabilities evaluations before/after release",
+          "Incident and capability reporting to state",
+          "Security measures for model weights and training data",
+          "Documentation of training practices and safety mitigations"
+        ],
+        "enforcement": {
+          "authority": "New York Attorney General",
+          "first_violation": "Up to $1 million",
+          "subsequent_violations": "Up to $3 million"
+        },
+        "legal_challenges": "Expected federal preemption and First Amendment challenges"
+      },
+      "new_york_city_ll144": {
+        "title": "Automated Employment Decision Tools (AEDT) Law",
+        "status": "In effect since January 1, 2023",
+        "requirements": [
+          "Annual independent bias audit",
+          "Public summary of results",
+          "10 business days notice to candidates"
+        ],
+        "penalties": {
+          "first_violation": "Up to $500",
+          "subsequent_violations": "Up to $1,500"
+        }
+      }
+    },
+
+    "china_ai_regulations": {
+      "overview": "Strict oversight by CAC balancing innovation with security and content control",
+      "key_regulations": {
+        "generative_ai_measures": {
+          "effective": "September 1, 2025 (labeling requirements)",
+          "requirements": [
+            "Algorithm registration with CAC",
+            "Security assessments for misinformation risks",
+            "Explicit AI-generated content labels (visible markers)",
+            "Training data legality verification",
+            "Approval via two-tier filing system"
+          ],
+          "approved_services": "800+ services approved by mid-2025"
+        },
+        "algorithmic_recommendations": {
+          "source": "2022 Measures for Internet Recommendation Algorithms",
+          "prohibitions": [
+            "Monopolistic practices",
+            "Excessive price discrimination",
+            "Fake news generation"
+          ],
+          "user_rights": "Opt-out option",
+          "2025_updates": "PIPL compliance for behavioral pricing by April 2026, bias audits, data retention"
+        },
+        "foundation_models": {
+          "requirements": [
+            "CAC filing",
+            "Security reviews for corpus/model safety",
+            "Compliance with TC260-003 (2024) national standards"
+          ],
+          "ai_plus_plan": {
+            "date": "August 2025",
+            "focus": "Data/IP rights, computing power, open-source efforts"
+          }
+        }
+      },
+      "enforcement_2025": {
+        "actions": [
+          "54 apps removed in Shanghai",
+          "26 website AI functions removed",
+          "Penalties for unfiled LLMs and privacy breaches"
+        ],
+        "campaigns": "Multiple rounds targeting misinformation and PIPL issues"
+      },
+      "upcoming_changes": {
+        "cybersecurity_law_amendments": {
+          "effective": "January 2026",
+          "additions": "AI support for R&D/ethics, risk assessments, higher fines"
+        },
+        "december_2025_draft": "AI-human interaction disclosure requirements"
+      }
+    },
+
+    "uk_approach": {
+      "ai_safety_institute": {
+        "original_name": "UK AI Safety Institute",
+        "current_name": "UK AI Security Institute (AISI)",
+        "rebrand_date": "February 2025",
+        "status": "Directorate in Department for Science, Innovation and Technology",
+        "focus_shift": "From general safety to national security and serious misuse risks"
+      },
+      "evaluation_work": {
+        "models_evaluated": "30+ frontier models",
+        "domains": ["Cyber", "Chem-bio", "Alignment"],
+        "2025_activities": [
+          "Stress-testing agentic behavior",
+          "Self-replication risk probing",
+          "Sandbagging detection (models hiding capabilities)",
+          "Jailbreak robustness benchmarks",
+          "Universal jailbreak testing (found in every model)"
+        ]
+      },
+      "regulatory_approach": "Light, innovation-friendly; Institute provides evaluation rather than acting as regulator",
+      "us_partnership": {
+        "mou_date": "April 1, 2024",
+        "title": "UK-US MoU on Science of AI Safety",
+        "activities": [
+          "Information sharing",
+          "Joint testing exercises",
+          "Expert personnel exchanges"
+        ]
+      },
+      "international_role": "Network Coordinator for International Network for Advanced AI Measurement, Evaluation and Science"
+    }
+  },
+
+  "international_coordination": {
+    "ai_safety_summits": {
+      "bletchley_park_2023": {
+        "date": "November 2023",
+        "location": "UK",
+        "signatories": 28,
+        "key_countries": ["US", "China", "UK", "EU members"],
+        "bletchley_declaration_commitments": [
+          "Identify AI safety risks through scientific research",
+          "Build risk-based policies",
+          "Foster international cooperation on frontier AI",
+          "Safety testing before model release"
+        ],
+        "outcomes": [
+          "International advisory panel established",
+          "State of Science report on AI risks commissioned",
+          "Company commitments from Google, Meta, OpenAI"
+        ]
+      },
+      "seoul_2024": {
+        "date": "May 2024",
+        "location": "South Korea",
+        "seoul_declaration": "Safe, innovative, and inclusive AI",
+        "statement_of_intent": "AI Safety Science",
+        "frontier_ai_safety_commitments": [
+          "Transparency via public updates",
+          "Red-teaming",
+          "Cybersecurity enhancements",
+          "Accountability frameworks",
+          "Safety framework publication planned"
+        ]
+      },
+      "paris_2025": {
+        "date": "February 2025",
+        "location": "France",
+        "outcomes": [
+          "International AI Safety Report on capabilities and risks",
+          "Launch of Current AI ($400M for public-interest projects)",
+          "91-partner coalition on AI environmental impact"
+        ],
+        "declaration_status": {
+          "proposed": "Inclusive and sustainable AI declaration",
+          "signatories": 61,
+          "declined": ["United States", "United Kingdom"]
+        },
+        "investments": "€100 billion French AI commitment announced"
+      }
+    },
+
+    "un_initiatives": {
+      "general_assembly_resolutions": {
+        "a_res_79_325": {
+          "date": "August 26, 2025",
+          "establishes": [
+            "Independent International Scientific Panel on AI",
+            "Global Dialogue on AI Governance (annual at UN events)"
+          ]
+        },
+        "a_78_l_49": {
+          "date": "March 2024",
+          "focus": "Safe, secure AI aligned with human rights and SDGs"
+        }
+      },
+      "high_level_advisory_body": {
+        "report": "Governing AI for Humanity (2024)",
+        "seven_measures": [
+          "International scientific panel on AI",
+          "UN policy dialogues",
+          "AI standards exchange",
+          "Global AI capacity network",
+          "Global AI fund ($1-3 billion target)",
+          "AI data framework",
+          "UN AI office"
+        ],
+        "priority": "Bridge governance gaps for Global South nations"
+      },
+      "global_digital_compact": {
+        "adopted": "September 2024 (Summit of the Future)",
+        "ai_objectives": [
+          "Transparency",
+          "Safety",
+          "Human control",
+          "Fairness",
+          "Agile governance"
+        ],
+        "commitments": [
+          "Refrain from information flow restrictions violating international law",
+          "Promote human oversight of AI",
+          "Create AI Scientific Panel and annual dialogues"
+        ]
+      }
+    },
+
+    "g7_g20_frameworks": {
+      "hiroshima_ai_process": {
+        "launched_by": "G7",
+        "framework_agreed": "December 2023",
+        "description": "First international framework combining guiding principles and code of conduct for advanced AI",
+        "code_of_conduct_elements": [
+          "Pre-deployment and post-deployment risk assessment",
+          "Monitoring and addressing misuse post-deployment",
+          "Governance structures and transparency measures",
+          "Research on AI safety, robustness, bias, disinformation",
+          "Environmental impact consideration"
+        ],
+        "implementation": {
+          "2024_activities": "Stakeholder engagement, monitoring mechanisms development",
+          "oecd_pilot": "July 2024 - reporting framework for HAIP code application"
+        }
+      },
+      "g20_direction": {
+        "brazil_2024": {
+          "focus": "Capacity building and inclusion for developing countries",
+          "ministerial_declaration": "Risk-based approaches, support domestic regulatory development"
+        },
+        "themes": [
+          "Equitable access and digital public infrastructure",
+          "International cooperation on standards",
+          "Linking to UN processes",
+          "AI as global public good requiring collective stewardship"
+        ]
+      },
+      "coordination_mechanisms": [
+        "OECD (monitoring HAIP, updating AI principles)",
+        "Global Partnership on AI (GPAI)",
+        "UN High-Level Advisory Body",
+        "Council of Europe AI Convention",
+        "ISO/IEC standardization"
+      ]
+    },
+
+    "bilateral_agreements": {
+      "us_uk": {
+        "mou_date": "April 1, 2024",
+        "title": "Science of AI Safety MoU",
+        "activities": [
+          "Research sharing",
+          "Safety evaluations",
+          "Joint testing exercises",
+          "Personnel exchanges"
+        ]
+      },
+      "note": "US-EU TTC and US-China dialogues ongoing but limited formal AI safety agreements"
+    }
+  },
+
+  "compute_governance": {
+    "us_chip_export_controls": {
+      "october_2022_rules": {
+        "threshold": "TPP above ~1.5 petaflops AND 600 GB/s network bandwidth",
+        "effect": "Banned NVIDIA A100 and H100 exports to China",
+        "enforcement": "BIS licensing requirements"
+      },
+      "october_2023_updates": {
+        "changes": [
+          "Removed network bandwidth criteria",
+          "Halved TPP threshold to ~0.8 petaflops",
+          "Target chips ≥ half A100 power"
+        ],
+        "effect": "Closed H800 loophole, banned H100 equivalents",
+        "expanded_scope": "43 additional countries with China ties"
+      },
+      "december_2024_rules": {
+        "focus": "High-bandwidth memory (HBM) limits (2 GB/s/mm² density)",
+        "preserved": "H20 exports (compliant variant)"
+      },
+      "2025_developments": {
+        "trump_policy": "Conditional H200 exports to approved Chinese buyers with 25% US government fee",
+        "approach_shift": "From bans to revenue-sharing model"
+      },
+      "nvidia_compliant_chips": {
+        "h800": "Created 2022, later banned in 2023",
+        "h20": "Created 2023, ~15% H200 power, still exportable"
+      },
+      "enforcement_mechanism": "Foreign Direct Product Rule applies to foreign-made items using US tech"
+    },
+
+    "training_run_reporting": {
+      "us_proposed_rule": {
+        "source": "BIS proposed rule (September 2024) implementing EO 14110",
+        "threshold": "10^26 FLOPs training compute",
+        "alternative_threshold": "Computing clusters with >10^20 OP/s and >300 Gbit/s networking",
+        "reporting_frequency": "Quarterly",
+        "required_information": [
+          "Training run details",
+          "Red-teaming results",
+          "Safety measures"
+        ],
+        "estimated_scope": "~15 companies",
+        "current_status": "Under review following EO 14110 revocation"
+      },
+      "eu_threshold": {
+        "level": "10^25 FLOPs",
+        "triggers": "Systemic risk classification",
+        "status": "Enforceable from August 2025"
+      },
+      "ny_raise_act_threshold": {
+        "level": "10^26 FLOPs OR $100M training cost",
+        "status": "Effective January 2027"
+      }
+    },
+
+    "compute_monitoring_proposals": {
+      "tiered_thresholds": {
+        "concept": "Graduated oversight based on compute levels",
+        "example": "US Responsible Advanced AI Act draft - pre-registration for lower compute, permits for higher"
+      },
+      "kyc_for_cloud": {
+        "source": "EO 13984 and BIS January 2024 proposal",
+        "requirements": [
+          "Customer identification programs for IaaS providers",
+          "Reporting of foreign transactions for large AI training",
+          "Restrictions on high-risk users"
+        ],
+        "purpose": "Curb malicious cyber activities"
+      }
+    }
+  },
+
+  "key_safety_debates": {
+    "alignment_vs_capabilities_racing": {
+      "tension": "Rapid capability advancement may outpace safety research",
+      "alignment_advocate_position": [
+        "Use AI to automate safety research to keep pace",
+        "Risk of uncontrollable systems without sufficient restraint",
+        "Need deliberate slowdown if alignment lags"
+      ],
+      "capabilities_racing_concern": [
+        "Competitive pressure reduces safety investment",
+        "First-mover advantage incentivizes speed over caution",
+        "International competition (US-China) exacerbates pressure"
+      ],
+      "current_state": "Nearly 90% of notable models from industry by 2025"
+    },
+
+    "open_source_vs_closed_safety": {
+      "open_source_pros": [
+        "Transparency enables collaborative safety research",
+        "Faster vulnerability identification and fixes",
+        "Broader innovation and access",
+        "Democratization of AI capabilities"
+      ],
+      "open_source_cons": [
+        "Easier misuse by bad actors",
+        "Potential for cyberattacks and bioweapon assistance",
+        "Bypassing safeguards through fine-tuning",
+        "Data poisoning risks"
+      ],
+      "closed_model_arguments": [
+        "Better monitoring of misuse",
+        "Preserved safety filters",
+        "Controlled deployment and access"
+      ],
+      "industry_positions": {
+        "openai_anthropic": "Emphasize closed models for safety monitoring",
+        "hugging_face_meta": "Stress democratization and open access",
+        "emerging_consensus": "Hybrid approaches blending transparency and control"
+      }
+    },
+
+    "voluntary_commitments_vs_regulation": {
+      "voluntary_approach": {
+        "examples": ["White House AI commitments 2023-2024", "Frontier AI Safety Commitments (Seoul)"],
+        "pros": [
+          "Flexibility and adaptability",
+          "Industry-led standards",
+          "Faster implementation than legislation"
+        ],
+        "cons": [
+          "Enforcement difficulties",
+          "Profit pressure may override commitments",
+          "Slow to evolve with technology"
+        ]
+      },
+      "regulatory_approach": {
+        "examples": ["EU AI Act", "NY RAISE Act"],
+        "pros": [
+          "Binding oversight",
+          "Clear penalties for non-compliance",
+          "Level playing field"
+        ],
+        "cons": [
+          "Risk of over-regulation stifling innovation",
+          "Slow legislative process",
+          "May not keep pace with technology"
+        ]
+      },
+      "research_findings": "Game-theoretic models suggest voluntary sanctions can achieve better short-term outcomes, but binding regulation needed for long-term stability"
+    }
+  },
+
+  "key_thresholds_summary": {
+    "compute_thresholds": {
+      "eu_systemic_risk": "10^25 FLOPs",
+      "us_eo_14110_proposed": "10^26 FLOPs",
+      "ny_raise_act": "10^26 FLOPs OR $100M",
+      "anthropic_comprehensive_testing": "4x Effective Compute triggers"
+    },
+    "capability_triggers": {
+      "anthropic_asl3_cbrn": "Significantly aids undergrad-level actors in CBRN creation",
+      "anthropic_asl4_cbrn": "Substantially uplifts state programs",
+      "anthropic_ai_rd": ">50% success on 2-8 hour software tasks",
+      "openai_high_bio": "Counterfactual aid to novices",
+      "openai_critical_bio": "Full novel threat cycle",
+      "openai_critical_cyber": "Zero-day exploits"
+    }
+  },
+
+  "timeline_2025_2030": {
+    "2025": {
+      "january": "Trump revokes EO 14110, issues EO 14179",
+      "february": "Paris AI Action Summit; UK AISI rebranded to Security Institute",
+      "april": "UK-US AI Safety MoU anniversary",
+      "july": "US AI Action Plan released",
+      "august": "EU AI Act GPAI rules take effect (10^25 FLOPs threshold)",
+      "september": "DeepMind FSF v3.0; China generative AI labeling",
+      "december": "NY RAISE Act signed"
+    },
+    "2026": {
+      "january": "China Cybersecurity Law amendments effective; NY RAISE Act compliance prep",
+      "august": "EU AI Act high-risk AI rules (Annex III) apply"
+    },
+    "2027": {
+      "january": "NY RAISE Act effective",
+      "august": "EU AI Act regulated products rules fully applicable"
+    },
+    "2028_2030": {
+      "expected": [
+        "International AI Safety Report updates",
+        "Potential ASL-4 models and frameworks",
+        "Compute governance evolution",
+        "UN AI governance mechanisms maturation"
+      ]
+    }
+  }
+}
