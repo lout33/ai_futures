@@ -311,13 +311,10 @@ class NarrativeEngine {
             const sectionContent = yearData.sections[factorKey][level];
             
             narrativeHTML += `
-                <div class="narrative-section-block" data-factor="${factorKey}">
-                    <div class="section-header" onclick="window.narrativeEngine.toggleSection(this)">
+                <div class="narrative-section-block expanded" data-factor="${factorKey}">
+                    <div class="section-header">
                         <span class="section-icon">${factorIcons[factorKey]}</span>
                         <span class="section-title">${FACTORS[factorKey].name}</span>
-                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
                     </div>
                     <p class="section-content">${sectionContent}</p>
                 </div>
