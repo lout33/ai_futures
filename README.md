@@ -4,7 +4,7 @@
 
 An interactive narrative engine that simulates diverging AI futures based on six key factors: capability scaling, safety investment, governance, economic response, power distribution, and AGI timeline.
 
-🔗 **Live Demo:** [aifutures.app](https://aifutures.app) *(coming soon)*
+🔗 **Live Demo:** [ai-futures.vercel.app](https://ai-futures.vercel.app)
 
 ---
 
