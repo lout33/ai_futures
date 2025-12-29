@@ -1,10 +1,14 @@
 # AI Futures Simulator
 
+[![GitHub](https://img.shields.io/badge/GitHub-Open%20Source-181717?logo=github)](https://github.com/lout33/ai_futures)
+
 **Explore how different choices shape the future of AI.**
 
 An interactive narrative engine that simulates diverging AI futures based on six key factors: capability scaling, safety investment, governance, economic response, power distribution, and AGI timeline.
 
 🔗 **Live Demo:** [ai-futures.vercel.app](https://ai-futures.vercel.app)
+
+📂 **Source Code:** [github.com/lout33/ai_futures](https://github.com/lout33/ai_futures)
 
 ---
 
@@ -39,8 +43,8 @@ Help people navigate the AI transition by showing that **the future isn't fixed*
 
 ```bash
 # Clone the repository
-git clone https://github.com/lout33/ai-futures-simulator.git
-cd ai-futures-simulator
+git clone https://github.com/lout33/ai_futures.git
+cd ai_futures
 
 # Open in browser (no build step required)
 open index.html
@@ -50,7 +54,7 @@ python -m http.server 8000
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lout33/ai-futures-simulator)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/lout33/ai_futures)
 
 Or manually:
 ```bash
@@ -194,7 +198,7 @@ Inspired by:
 Questions? Feedback? Want to collaborate?
 
 - GitHub: [@lout33](https://github.com/lout33)
-- Project Issues: [GitHub Issues](https://github.com/lout33/ai-futures-simulator/issues)
+- Project Issues: [GitHub Issues](https://github.com/lout33/ai_futures/issues)
 
 ---
 
